@@ -21,6 +21,115 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/bookspeaks-serif-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://bookspeaks.app/#organization",
+   "name": "BookSpeaks",
+   "url": "https://bookspeaks.app/",
+   "logo": "https://bookspeaks.app/assets/img/apple-touch-icon.png",
+   "email": "support@bookspeaks.app",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "support@bookspeaks.app",
+    "url": "https://bookspeaks.app/support/",
+    "availableLanguage": [
+     "en",
+     "ru"
+    ]
+   }
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://bookspeaks.app/#app",
+   "name": "BookSpeaks",
+   "url": "https://bookspeaks.app/",
+   "description": "BookSpeaks is an iPhone app that reads your own EPUB, FB2 and TXT books aloud: offline voices on the phone, a whole audiobook made in advance, or natural AI voices. No subscription, no account, no ads.",
+   "inLanguage": "en",
+   "operatingSystem": "iOS",
+   "applicationCategory": "MultimediaApplication",
+   "image": "https://bookspeaks.app/assets/img/og.jpg",
+   "creativeWorkStatus": "Coming soon to the App Store",
+   "publisher": {
+    "@id": "https://bookspeaks.app/#organization"
+   },
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "Free",
+     "price": "0",
+     "priceCurrency": "USD",
+     "description": "Import and read your books. 1 hour of offline listening. 2 credits to try server voices."
+    },
+    {
+     "@type": "Offer",
+     "name": "Offline forever",
+     "price": "14.99",
+     "priceCurrency": "USD",
+     "description": "Offline listening, forever. 5 credits included. One payment, not a subscription."
+    },
+    {
+     "@type": "Offer",
+     "name": "3 credits",
+     "price": "2.99",
+     "priceCurrency": "USD",
+     "description": "For streamed AI voices and pre-generated audiobooks."
+    },
+    {
+     "@type": "Offer",
+     "name": "10 credits",
+     "price": "9.99",
+     "priceCurrency": "USD",
+     "description": "For streamed AI voices and pre-generated audiobooks."
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://bookspeaks.app/#faq",
+   "inLanguage": "en",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Which books can I open?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "EPUB, FB2 and TXT files without DRM. Books bought with copy protection cannot be opened. BookSpeaks does not sell books."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need internet?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Only for streamed AI voices and while an audiobook is being pre-generated. Offline voices and finished audiobooks play with no connection."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is there a subscription?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Offline listening is a single $14.99 purchase, and credits are bought in packs when you want them."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Are the voices human?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Every voice is AI speech, not a recording of a human narrator."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>

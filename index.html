@@ -1,35 +1,195 @@
 <!doctype html>
 <html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BookSpeaks — Your books, read aloud</title>
-<link rel="stylesheet" href="/landing.css">
-<!-- DRAFT: not published. -->
-<div class="wrap top"><span>BookSpeaks</span><a href="/ru/" hreflang="ru">Русский</a></div>
-<section class="hero"><div class="wrap"><div class="copy">
-<h1>Your books, read aloud</h1>
-<p>Turn your own EPUB, FB2 and TXT books into an audiobook — and read them too.</p>
-<!-- TODO: Apple's official App Store badge -->
-<a class="badge" href="https://apps.apple.com/app/id6818035285">Download on the App Store</a>
-<img src="/img/hero.jpg" alt="" width="1600" height="933">
-</div></div></section>
-<section class="features"><div class="wrap">
-<div class="feature"><img src="/img/feature-listen.jpg" alt="" width="1200" height="900" loading="lazy"><div><h2>Listen with voices on your iPhone</h2><p>Download an AI voice once and it reads on the device, offline. Until then the built-in Apple voice reads. Playback speed, sleep timer and lock-screen controls.</p></div><img class="shot" src="/img/store-en-02-listen.jpg" alt="BookSpeaks player: Pride and Prejudice ready to play with the offline voice Emma, speed and sleep timer" width="600" height="1303" loading="lazy"></div>
-<div class="feature"><img src="/img/feature-read.jpg" alt="" width="1200" height="900" loading="lazy"><div><h2>Read, and keep your place</h2><p>Switch between Read and Listen at any time. Paged reading in light and dark styles, with progress and time left for every book.</p></div><img class="shot" src="/img/store-en-03-read.jpg" alt="BookSpeaks reader: a page of Pride and Prejudice with the Read and Listen switch" width="600" height="1303" loading="lazy"></div>
-<div class="feature"><img src="/img/feature-mail.jpg" alt="" width="1200" height="900" loading="lazy"><div><h2>Send a book by mail or AirDrop</h2><p>BookSpeaks gives you an address of your own: mail a book to it from any mailbox and it appears in your library. Or add it from Files, AirDrop or «Open in».</p></div><img class="shot" src="/img/store-en-05-mail.jpg" alt="BookSpeaks library with a new book that arrived by mail, waiting to be added" width="600" height="1303" loading="lazy"></div>
-<div class="feature"><img class="shot" src="/img/store-en-01-library.jpg" alt="BookSpeaks library: the book you are reading now and your books on this iPhone" width="600" height="1303" loading="lazy"><p>No account and no ads. BookSpeaks does not sell books: it reads the files you already have. Books with DRM cannot be opened.</p></div>
-</div></section>
-<section class="pricing"><div class="wrap">
-<h2>Pricing</h2>
-<ul>
-<li><strong>Free</strong>Import and read, 1 hour of offline listening, 2 starting credits</li>
-<li><strong>$14.99 once</strong>«Offline forever» + 5 credits</li>
-<li><strong>$2.99</strong>3 credits</li>
-<li><strong>$9.99</strong>10 credits</li>
-</ul>
-<p>Server voices spend credits: pre-generation is paid per book, streaming takes 2 credits an hour. No subscription.</p>
-</div></section>
-<footer><div class="wrap">
-<p><a href="/">Home</a> · <a href="/support/">Support</a> · <a href="/privacy/">Privacy</a></p>
-<p><a href="mailto:support@bookspeaks.app">support@bookspeaks.app</a></p>
-</div></footer>
+<meta name="description" content="BookSpeaks is an iPhone app that reads your own EPUB books aloud: offline voices on the phone, natural AI voices, or a whole audiobook made in advance. No subscription, no account, no ads.">
+<link rel="canonical" href="https://bookspeaks.app/">
+<link rel="alternate" hreflang="en" href="https://bookspeaks.app/">
+<link rel="alternate" hreflang="ru" href="https://bookspeaks.app/ru/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bookspeaks.app/">
+<meta property="og:title" content="BookSpeaks — Your books, read aloud">
+<meta property="og:description" content="An iPhone app that reads your own EPUB books aloud. Offline voices on the phone, natural AI voices, no subscription.">
+<meta property="og:image" content="https://bookspeaks.app/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/bookspeaks-serif-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="/" aria-label="BookSpeaks, home">
+      <img src="/assets/img/icon.webp" alt="" width="40" height="40">
+      <span>BookSpeaks</span>
+    </a>
+    <nav class="top-nav" aria-label="Page">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <a class="lang" href="/ru/" hreflang="ru" lang="ru">Русский</a>
+    <span class="pill">Coming soon</span>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <picture class="hero-art">
+    <source media="(max-width: 899px)" srcset="/assets/img/hero-800.webp">
+    <img src="/assets/img/hero-1400.webp" alt="" width="1400" height="1195" fetchpriority="high">
+  </picture>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Your books, read&nbsp;aloud</h1>
+      <p class="lede">BookSpeaks is an iPhone app that reads your own EPUB books to you — with voices that work offline on the phone, or natural AI voices from our server. You can read them, too.</p>
+      <p class="soon"><span class="soon-dot" aria-hidden="true"></span>Coming soon to the App Store</p>
+      <p class="hero-note">No subscription · No account · No ads</p>
+    </div>
+    <img class="hero-screen" src="/assets/img/screen-listen.webp" width="660" height="1434" fetchpriority="high"
+      alt="BookSpeaks player: Pride and Prejudice by Jane Austen, with the Read and Listen switch, a play button, playback speed, a sleep timer and an offline voice selected">
+  </div>
+</section>
+
+<section class="gallery" aria-labelledby="gallery-title">
+  <div class="wrap">
+    <h2 id="gallery-title">Inside the app</h2>
+    <p class="section-lede">A library of your own files, a player that stays out of the way, and a list of voices to choose from.</p>
+  </div>
+  <ul class="shots" tabindex="0" aria-label="App screenshots, scroll sideways">
+    <li><img src="/assets/img/shot-01-library.webp" width="720" height="1564" loading="lazy"
+      alt="Your books. Read or listen. The BookSpeaks library: the book you are reading now with the time left, and the covers of your books on this iPhone"></li>
+    <li><img src="/assets/img/shot-02-listen.webp" width="720" height="1564" loading="lazy"
+      alt="Listen at your own pace. The BookSpeaks player with the book cover, a progress bar, playback speed, skip buttons and a sleep timer"></li>
+    <li><img src="/assets/img/shot-04-voice.webp" width="720" height="1564" loading="lazy"
+      alt="AI voices on your iPhone. The voice list: offline voices that run on the phone with no internet, and voices for a pre-generated audiobook"></li>
+  </ul>
+</section>
+
+<section class="ways" id="features" aria-labelledby="ways-title">
+  <div class="wrap ways-grid">
+    <div class="ways-head">
+      <h2 id="ways-title">Three ways to listen</h2>
+      <p class="section-lede">Every voice in BookSpeaks is AI speech, not a human narrator. You choose where it is made.</p>
+      <img class="art" src="/assets/img/art-listen.webp" alt="" width="960" height="720" loading="lazy">
+    </div>
+    <ol class="ways-list">
+      <li>
+        <p class="tag">No internet</p>
+        <h3>Offline voices on the phone</h3>
+        <p>The voice runs on your iPhone itself, so it needs no connection: it works on a plane, in the metro or far from any signal.</p>
+      </li>
+      <li>
+        <p class="tag">Streamed · paid in credits</p>
+        <h3>Natural AI voices from our server</h3>
+        <p>For a more natural sound, the book is voiced on our server and streamed to you as you listen. This needs a connection and spends credits.</p>
+      </li>
+      <li>
+        <p class="tag">Made once · then offline</p>
+        <h3>A pre-generated audiobook</h3>
+        <p>Our server voices the whole book in advance, for credits. After that the audiobook is on your phone and plays without internet.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="read" aria-labelledby="read-title">
+  <div class="wrap read-grid">
+    <img class="art" src="/assets/img/art-read.webp" alt="" width="960" height="720" loading="lazy">
+    <div>
+      <h2 id="read-title">Bring your own books</h2>
+      <p class="section-lede">Import the EPUB files you already have, as long as they have no DRM. Read them on screen or listen to them — reading is free.</p>
+      <p class="section-lede">BookSpeaks does not sell books. There is no account to create and there are no ads.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <h2 id="pricing-title">Pay once. No subscription.</h2>
+    <p class="section-lede">Start free. Buy offline listening once and keep it. Credits are only for the voices made on our server.</p>
+    <div class="plans">
+      <article class="plan">
+        <h3>Free</h3>
+        <p class="price">$0</p>
+        <ul>
+          <li>Import and read your books</li>
+          <li>1 hour of offline listening</li>
+          <li>2 credits to try server voices</li>
+        </ul>
+      </article>
+      <article class="plan plan-main">
+        <h3>Offline forever</h3>
+        <p class="price">$14.99 <span>once</span></p>
+        <ul>
+          <li>Offline listening, forever</li>
+          <li>5 credits included</li>
+          <li>One payment, not a subscription</li>
+        </ul>
+      </article>
+      <article class="plan">
+        <h3>Credits</h3>
+        <p class="price">from $2.99</p>
+        <ul class="packs">
+          <li><span>3 credits</span><b>$2.99</b></li>
+          <li><span>10 credits</span><b>$9.99</b></li>
+        </ul>
+        <p class="plan-note">For streamed AI voices and pre-generated audiobooks. Buy them when you need them.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <h2 id="faq-title">Plain answers</h2>
+    <dl class="qa">
+      <div>
+        <dt>Which books can I open?</dt>
+        <dd>EPUB files without DRM. Books bought with copy protection cannot be opened. BookSpeaks does not sell books.</dd>
+      </div>
+      <div>
+        <dt>Do I need internet?</dt>
+        <dd>Only for streamed AI voices and while an audiobook is being pre-generated. Offline voices and finished audiobooks play with no connection.</dd>
+      </div>
+      <div>
+        <dt>Is there a subscription?</dt>
+        <dd>No. Offline listening is a single $14.99 purchase, and credits are bought in packs when you want them.</dd>
+      </div>
+      <div>
+        <dt>Are the voices human?</dt>
+        <dd>No. Every voice is AI speech, not a recording of a human narrator.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <div class="foot-brand">
+      <img src="/assets/img/icon.webp" alt="" width="40" height="40" loading="lazy">
+      <div>
+        <p class="foot-name">BookSpeaks</p>
+        <p>Coming soon to the App Store</p>
+      </div>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="/support/">Support</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/ru/" hreflang="ru" lang="ru">Русский</a>
+      <a href="mailto:support@bookspeaks.app">support@bookspeaks.app</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

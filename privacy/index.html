@@ -45,8 +45,8 @@ send to be voiced: a book you order for server voicing, or the sentences an onli
 
 <h2>Server voicing</h2>
 <p>If you order a book to be voiced ahead of time on our server, paid in credits, the app sends that book's text
-(split into sentences, with the chosen voice and language) to our server. The server passes the text to a rented GPU
-machine at our GPU provider, which turns it into audio. The GPU machine keeps the text only while it voices it and is
+(split into sentences, with the chosen voice and language) to our server. The server passes the text to a GPU machine
+rented from our GPU provider, Lium, and that machine turns it into audio. The GPU machine keeps the text only while it voices it and is
 removed when the job ends; the audio is deleted from it as soon as our server collects it. Our server deletes the
 audio when the app has downloaded it, and at most 48 hours after it was made; it keeps the job record with the text
 for 7 days after the job ends, then deletes it when it next handles a request. If our automatic check finds a sentence
@@ -54,8 +54,9 @@ that was voiced badly, the server log keeps what the check heard for that senten
 you do not order are never sent.</p>
 
 <h2>Online voices</h2>
-<p>The online voices Eve and Rex read over the internet and spend 2 credits per hour. While one reads, the app sends
-each sentence to our server, which passes it to OpenRouter and xAI to turn it into speech and streams the audio back.
+<p>The online voices read over the internet and spend credits for every hour of listening. While one reads, the app
+sends each sentence to our server, which passes it through OpenRouter to the company whose model speaks that voice —
+Google (the Gemini voices) or xAI (the Grok voices Eve and Rex) — to turn it into speech, and streams the audio back.
 Our server does not keep the text or the audio: it records only the request, the day and the credits spent, and keeps
 that with your credit record (below). Offline voices and the Apple voice never send text anywhere.</p>
 
@@ -112,7 +113,9 @@ a Worker that stores nothing itself). Cloudflare keeps a record of each mail —
 delivery status — for 31 days.</li>
 <li><b>Our server host</b> (Vultr), where book.slotik.app runs, in Poland (EU).</li>
 <li><b>Our GPU provider</b> (Lium) runs the machines that voice a book you order; they see its text while voicing it.</li>
-<li><b>OpenRouter and xAI</b> turn the sentences an online voice reads into speech.</li>
+<li><b>OpenRouter</b> receives each sentence an online voice reads and passes it to the company whose model speaks
+that voice.</li>
+<li><b>Google</b> (Gemini text-to-speech) and <b>xAI</b> (Grok voices) turn those sentences into speech.</li>
 <li><b>Apple</b> processes purchases and tells our server about them and about refunds.</li>
 <li><b>Hugging Face</b> serves voice files when you download a voice. It sees your IP address and the file requested,
 nothing about you or your books.</li>
@@ -161,8 +164,8 @@ before they ship.</p>
 
 <h2>Озвучка на сервере</h2>
 <p>Если вы заказываете озвучку книги заранее на нашем сервере за кредиты, приложение отправляет текст этой книги
-(по предложениям, с выбранным голосом и языком) на наш сервер. Сервер передаёт текст арендованной GPU-машине нашего
-поставщика вычислений, которая превращает его в звук. GPU-машина держит текст только пока озвучивает его и удаляется
+(по предложениям, с выбранным голосом и языком) на наш сервер. Сервер передаёт текст GPU-машине, арендованной
+у нашего поставщика вычислений Lium, и она превращает его в звук. GPU-машина держит текст только пока озвучивает его и удаляется
 после окончания заказа; звук стирается с неё, как только наш сервер его забрал. Наш сервер удаляет звук, когда
 приложение его скачало, и не позже чем через 48 часов после создания; запись заказа с текстом он хранит 7 дней после
 окончания заказа и удаляет её при следующем обращении к серверу. Если наша автоматическая проверка находит плохо
@@ -170,8 +173,9 @@ before they ship.</p>
 Книги, которые вы не заказывали, никуда не отправляются.</p>
 
 <h2>Онлайн-голоса</h2>
-<p>Онлайн-голоса Eve и Rex читают через интернет и тратят 2 кредита в час. Пока такой голос читает, приложение
-отправляет каждое предложение на наш сервер, а он передаёт его OpenRouter и xAI, чтобы превратить в речь, и
+<p>Онлайн-голоса читают через интернет и тратят кредиты за каждый час прослушивания. Пока такой голос читает, приложение
+отправляет каждое предложение на наш сервер, а он передаёт его через OpenRouter компании, чья модель озвучивает этот
+голос, — Google (голоса Gemini) или xAI (голоса Grok: Eve и Rex), — чтобы превратить в речь, и
 возвращает звук в приложение. Наш сервер не хранит ни текст, ни звук: он записывает только запрос, день и потраченные кредиты и хранит это вместе
 с записью о ваших кредитах (ниже). Офлайн-голоса и голос Apple никуда не отправляют текст.</p>
 
@@ -232,7 +236,9 @@ Worker, который сам ничего не хранит). Cloudflare хра
 <li><b>Хостинг нашего сервера</b> book.slotik.app (Vultr), страна: Польша (ЕС).</li>
 <li><b>Наш поставщик GPU</b> (Lium) даёт машины, которые озвучивают заказанную книгу; они видят её текст, пока
 озвучивают.</li>
-<li><b>OpenRouter и xAI</b> превращают в речь предложения, которые читает онлайн-голос.</li>
+<li><b>OpenRouter</b> получает каждое предложение, которое читает онлайн-голос, и передаёт его компании, чья модель
+озвучивает этот голос.</li>
+<li><b>Google</b> (синтез речи Gemini) и <b>xAI</b> (голоса Grok) превращают эти предложения в речь.</li>
 <li><b>Apple</b> проводит покупки и сообщает нашему серверу о них и о возвратах.</li>
 <li><b>Hugging Face</b> отдаёт файлы голосов, когда вы скачиваете голос. Он видит ваш IP-адрес и запрошенный файл,
 но ничего о вас и ваших книгах.</li>

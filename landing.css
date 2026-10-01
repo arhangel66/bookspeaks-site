@@ -5,7 +5,7 @@ body{margin:0;background:var(--bg);color:var(--text);font:17px/1.5 system-ui,-ap
 a{color:var(--accent-text)}
 img{display:block;max-width:100%;height:auto}
 .wrap{max-width:72rem;margin:auto;padding:0 1.25rem}
-.top{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;font-weight:700}
+.top{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem;font-weight:700}
 .top a{font-weight:600;font-size:15px}
 .hero{background:#fff}
 .hero h1{font-size:40px;line-height:1.1;letter-spacing:.2px;margin:1rem 0 .75rem}
@@ -15,6 +15,8 @@ img{display:block;max-width:100%;height:auto}
 @media (min-width:900px){
   /* the photo is 960px wide at this height; fade its left edge into the page white */
   .hero{background:linear-gradient(to right,#fff calc(100% - 960px),rgb(255 255 255/0) calc(100% - 720px)),#fff url(img/hero.jpg) right center/auto 560px no-repeat;height:560px;display:flex;align-items:center}
+  /* a flex item shrinks to its content and centres; full width keeps its left edge on the header's */
+  .hero .wrap{width:100%}
   .hero .copy{max-width:42%}
   .hero h1{font-size:52px}
   .hero img{display:none}
@@ -24,8 +26,19 @@ img{display:block;max-width:100%;height:auto}
 .feature img{border-radius:20px}
 .feature h2{font-size:28px;line-height:1.15;margin:0 0 .5rem}
 .feature p{margin:0}
+.feature .shot{width:14rem;justify-self:center;box-shadow:0 8px 24px rgb(20 27 46/.12)}
 @media (min-width:900px){
-  .feature{grid-template-columns:1fr 1fr;gap:3rem}
+  .feature{grid-template-columns:1fr 1fr 14rem;gap:3rem}
+  .feature:nth-child(even){grid-template-columns:14rem 1fr 1fr}
   .feature:nth-child(even) img{order:2}
+  /* the store shot stays beside the text: art | text | shot, mirrored on even rows */
+  .feature:nth-child(even) .shot{order:-1}
+  .feature>p{grid-column:span 2}
 }
+.pricing{padding:3rem 0}
+.pricing h2{font-size:28px;line-height:1.15;margin:0 0 1.25rem}
+.pricing ul{list-style:none;margin:0 0 1.25rem;padding:0;display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}
+.pricing li{background:var(--surface);border-radius:20px;padding:1.25rem}
+.pricing strong{display:block;font-size:24px;margin-bottom:.25rem}
+.pricing p{color:var(--secondary);margin:0}
 footer{border-top:1px solid var(--divider);padding:1.5rem 0 2rem;color:var(--secondary);font-size:15px}

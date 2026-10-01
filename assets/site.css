@@ -90,8 +90,7 @@ h3 { font-size: 1.25rem; line-height: 1.3; }
 .way h3 { font: 600 1.75rem/1.15 var(--serif); color: var(--headline); letter-spacing: -0.01em; text-wrap: balance; }
 .way p { color: var(--muted); text-wrap: pretty; }
 .way .tag { color: var(--cobalt-text); margin: 0; }
-.way .samples, .way-note { margin-top: auto; padding-top: 1rem; }
-.way-note { border-top: 1px solid var(--line); font-size: 0.9375rem; }
+.way .samples { margin-top: auto; padding-top: 1rem; }
 .way .sample { background: var(--paper); }
 .way .sample:hover { background: var(--line); }
 /* the streamed way is the highest quality: the ink card, as the highlighted plan */

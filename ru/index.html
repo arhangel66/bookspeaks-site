@@ -1,35 +1,196 @@
 <!doctype html>
 <html lang="ru">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BookSpeaks — Ваши книги вслух</title>
-<link rel="stylesheet" href="/landing.css">
-<!-- DRAFT: not published. -->
-<div class="wrap top"><span>BookSpeaks</span><a href="/" hreflang="en">English</a></div>
-<section class="hero"><div class="wrap"><div class="copy">
-<h1>Ваши книги вслух</h1>
-<p>Ваши книги EPUB, FB2 и TXT становятся аудиокнигой — и их можно читать глазами.</p>
-<!-- TODO: Apple's official App Store badge -->
-<a class="badge" href="https://apps.apple.com/app/id6818035285">Загрузите в App Store</a>
-<img src="/img/hero.jpg" alt="" width="1600" height="933">
-</div></div></section>
-<section class="features"><div class="wrap">
-<div class="feature"><img src="/img/feature-listen.jpg" alt="" width="1200" height="900" loading="lazy"><div><h2>Слушайте голосом на iPhone</h2><p>Загрузите голос ИИ один раз, и он читает прямо на телефоне, без интернета. До загрузки читает встроенный голос Apple. Скорость, таймер сна и управление с экрана блокировки.</p></div><img class="shot" src="/img/store-ru-02-listen.jpg" alt="Плеер BookSpeaks: «Мёртвые души» готовы к прослушиванию, скорость и таймер сна" width="600" height="1303" loading="lazy"></div>
-<div class="feature"><img src="/img/feature-read.jpg" alt="" width="1200" height="900" loading="lazy"><div><h2>Читайте, место сохраняется</h2><p>Переключайтесь между «Читать» и «Слушать» в любой момент. Постраничное чтение в светлой и тёмной теме, прогресс и оставшееся время для каждой книги.</p></div><img class="shot" src="/img/store-ru-03-read.jpg" alt="Чтение в BookSpeaks: страница книги с переключателем «Читать» и «Слушать»" width="600" height="1303" loading="lazy"></div>
-<div class="feature"><img src="/img/feature-mail.jpg" alt="" width="1200" height="900" loading="lazy"><div><h2>Отправьте книгу письмом или через AirDrop</h2><p>У вас свой адрес BookSpeaks: отправьте на него книгу с любой почты — и она появится в библиотеке. Или добавьте её из «Файлов», через AirDrop или «Открыть в».</p></div><img class="shot" src="/img/store-ru-05-mail.jpg" alt="Библиотека BookSpeaks с новой книгой, пришедшей по почте, ждёт добавления" width="600" height="1303" loading="lazy"></div>
-<div class="feature"><img class="shot" src="/img/store-ru-01-library.jpg" alt="Библиотека BookSpeaks: книга, которую вы читаете сейчас, и ваши книги на этом iPhone" width="600" height="1303" loading="lazy"><p>Без аккаунта и рекламы. BookSpeaks не продаёт книги: он читает файлы, которые у вас уже есть. Книги с DRM не открываются.</p></div>
-</div></section>
-<section class="pricing"><div class="wrap">
-<h2>Цены</h2>
-<ul>
-<li><strong>Бесплатно</strong>Импорт и чтение, час офлайн-прослушивания, 2 стартовых кредита</li>
-<li><strong>$14.99 один раз</strong>«Офлайн навсегда» + 5 кредитов</li>
-<li><strong>$2.99</strong>3 кредита</li>
-<li><strong>$9.99</strong>10 кредитов</li>
-</ul>
-<p>Голоса на сервере тратят кредиты: предгенерация оплачивается за книгу, чтение через интернет — 2 кредита в час. Без подписки.</p>
-</div></section>
-<footer><div class="wrap">
-<p><a href="/ru/">Главная</a> · <a href="/support/#ru">Поддержка</a> · <a href="/privacy/#ru">Конфиденциальность</a></p>
-<p><a href="mailto:support@bookspeaks.app">support@bookspeaks.app</a></p>
-</div></footer>
+<meta name="description" content="BookSpeaks — приложение для iPhone, которое читает вслух ваши книги EPUB: офлайн-голоса прямо на телефоне, естественные голоса ИИ или целая аудиокнига, озвученная заранее. Без подписки, аккаунта и рекламы.">
+<link rel="canonical" href="https://bookspeaks.app/ru/">
+<link rel="alternate" hreflang="en" href="https://bookspeaks.app/">
+<link rel="alternate" hreflang="ru" href="https://bookspeaks.app/ru/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://bookspeaks.app/ru/">
+<meta property="og:title" content="BookSpeaks — Ваши книги вслух">
+<meta property="og:description" content="Приложение для iPhone, которое читает вслух ваши книги EPUB. Офлайн-голоса на телефоне, естественные голоса ИИ, без подписки.">
+<meta property="og:image" content="https://bookspeaks.app/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/bookspeaks-serif-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="/ru/" aria-label="BookSpeaks, главная">
+      <img src="/assets/img/icon.webp" alt="" width="40" height="40">
+      <span>BookSpeaks</span>
+    </a>
+    <nav class="top-nav" aria-label="Страница">
+      <a href="#features">Возможности</a>
+      <a href="#pricing">Цены</a>
+    </nav>
+    <a class="lang" href="/" hreflang="en" lang="en">English</a>
+    <span class="pill">Скоро</span>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <picture class="hero-art">
+    <source media="(max-width: 899px)" srcset="/assets/img/hero-800.webp">
+    <img src="/assets/img/hero-1400.webp" alt="" width="1400" height="1195" fetchpriority="high">
+  </picture>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Ваши книги вслух</h1>
+      <p class="lede">BookSpeaks — приложение для iPhone, которое читает вам ваши собственные книги EPUB: голосами, которые работают офлайн прямо на телефоне, или естественными голосами ИИ с нашего сервера. Читать глазами тоже можно.</p>
+      <p class="soon"><span class="soon-dot" aria-hidden="true"></span>Скоро в App Store</p>
+      <p class="hero-note">Без подписки · Без аккаунта · Без рекламы</p>
+    </div>
+    <img class="hero-screen" src="/assets/img/ru-screen-listen.webp" width="660" height="1434" fetchpriority="high"
+      alt="Плеер BookSpeaks: «Мёртвые души» Николая Гоголя, переключатель «Читать» и «Слушать», кнопка воспроизведения, скорость, таймер сна и выбранный офлайн-голос">
+  </div>
+</section>
+
+<section class="gallery" aria-labelledby="gallery-title">
+  <div class="wrap">
+    <h2 id="gallery-title">Что внутри</h2>
+    <p class="section-lede">Библиотека из ваших файлов, плеер, который не отвлекает от книги, и список голосов на выбор.</p>
+  </div>
+  <ul class="shots" tabindex="0" aria-label="Экраны приложения, листайте вбок">
+    <li><img src="/assets/img/ru-shot-01-library.webp" width="720" height="1564" loading="lazy"
+      alt="Ваши книги. Читать и слушать. Библиотека BookSpeaks: книга, которую вы читаете сейчас, с оставшимся временем, и обложки ваших книг на этом iPhone"></li>
+    <li><img src="/assets/img/ru-shot-02-listen.webp" width="720" height="1564" loading="lazy"
+      alt="Слушайте в своём темпе. Плеер BookSpeaks: обложка книги, полоса прогресса, скорость, кнопки перемотки и таймер сна"></li>
+    <li><img src="/assets/img/ru-shot-04-voice.webp" width="720" height="1564" loading="lazy"
+      alt="Голоса ИИ на вашем iPhone. Список голосов: офлайн-голоса, которые работают на телефоне без интернета, и голоса для предгенерации аудиокниги"></li>
+  </ul>
+</section>
+
+<section class="ways" id="features" aria-labelledby="ways-title">
+  <div class="wrap ways-grid">
+    <div class="ways-head">
+      <h2 id="ways-title">Три способа слушать</h2>
+      <p class="section-lede">Все голоса в BookSpeaks — синтез речи ИИ, а не живые дикторы. Вы выбираете, где голос создаётся.</p>
+      <img class="art" src="/assets/img/art-listen.webp" alt="" width="960" height="720" loading="lazy">
+    </div>
+    <ol class="ways-list">
+      <li>
+        <p class="tag">Без интернета</p>
+        <h3>Офлайн-голоса на телефоне</h3>
+        <p>Голос работает прямо на вашем iPhone, поэтому связь ему не нужна: он читает в самолёте, в метро и там, где сеть не ловит.</p>
+      </li>
+      <li>
+        <p class="tag">Через интернет · за кредиты</p>
+        <h3>Естественные голоса ИИ с нашего сервера</h3>
+        <p>Чтобы звучало естественнее, книгу озвучивает наш сервер и передаёт звук, пока вы слушаете. Для этого нужна связь, и тратятся кредиты.</p>
+      </li>
+      <li>
+        <p class="tag">Один раз · потом офлайн</p>
+        <h3>Предгенерация аудиокниги</h3>
+        <p>Наш сервер заранее озвучивает всю книгу за кредиты. После этого аудиокнига лежит на телефоне и играет без интернета.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="read" aria-labelledby="read-title">
+  <div class="wrap read-grid">
+    <img class="art" src="/assets/img/art-read.webp" alt="" width="960" height="720" loading="lazy">
+    <div>
+      <h2 id="read-title">Книги — ваши</h2>
+      <p class="section-lede">Добавьте файлы EPUB, которые у вас уже есть, — подойдут любые без DRM. Читайте их с экрана или слушайте: чтение бесплатно.</p>
+      <p class="section-lede">BookSpeaks не продаёт книги. Заводить аккаунт не нужно, рекламы нет.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <h2 id="pricing-title">Один платёж. Без подписки.</h2>
+    <p class="section-lede">Начните бесплатно. Офлайн-прослушивание покупается один раз и остаётся с вами. Кредиты нужны только для голосов с нашего сервера.</p>
+    <div class="plans">
+      <article class="plan">
+        <h3>Бесплатно</h3>
+        <p class="price">$0</p>
+        <ul>
+          <li>Импорт и чтение ваших книг</li>
+          <li>1 час офлайн-прослушивания</li>
+          <li>2 кредита, чтобы попробовать голоса с сервера</li>
+        </ul>
+      </article>
+      <article class="plan plan-main">
+        <h3>Офлайн навсегда</h3>
+        <p class="price">$14.99 <span>один раз</span></p>
+        <ul>
+          <li>Офлайн-прослушивание без ограничений, навсегда</li>
+          <li>Плюс 5 кредитов</li>
+          <li>Разовая покупка, не подписка</li>
+        </ul>
+      </article>
+      <article class="plan">
+        <h3>Кредиты</h3>
+        <p class="price">от $2.99</p>
+        <ul class="packs">
+          <li><span>3 кредита</span><b>$2.99</b></li>
+          <li><span>10 кредитов</span><b>$9.99</b></li>
+        </ul>
+        <p class="plan-note">Для голосов ИИ через интернет и для предгенерации аудиокниг. Покупайте, когда понадобятся.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <h2 id="faq-title">Коротко о главном</h2>
+    <dl class="qa">
+      <div>
+        <dt>Какие книги можно открыть?</dt>
+        <dd>Файлы EPUB без DRM. Купленные книги с защитой от копирования не откроются. Сам BookSpeaks книги не продаёт.</dd>
+      </div>
+      <div>
+        <dt>Нужен ли интернет?</dt>
+        <dd>Только для голосов ИИ с сервера и на время предгенерации аудиокниги. Офлайн-голоса и готовые аудиокниги играют без связи.</dd>
+      </div>
+      <div>
+        <dt>Есть ли подписка?</dt>
+        <dd>Нет. Офлайн-прослушивание — одна покупка за $14.99, а кредиты продаются пакетами: берёте, когда нужны.</dd>
+      </div>
+      <div>
+        <dt>Это голоса живых людей?</dt>
+        <dd>Нет. Каждый голос — синтез речи ИИ, а не запись живого диктора.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <div class="foot-brand">
+      <img src="/assets/img/icon.webp" alt="" width="40" height="40" loading="lazy">
+      <div>
+        <p class="foot-name">BookSpeaks</p>
+        <p>Скоро в App Store</p>
+      </div>
+    </div>
+    <nav class="foot-nav" aria-label="Подвал">
+      <a href="/support/#ru">Поддержка</a>
+      <a href="/privacy/#ru">Конфиденциальность</a>
+      <a href="/" hreflang="en" lang="en">English</a>
+      <a href="mailto:support@bookspeaks.app">support@bookspeaks.app</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

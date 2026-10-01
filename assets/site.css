@@ -22,7 +22,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
-@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+@media (prefers-reduced-motion: no-preference) { html, .ways-row { scroll-behavior: smooth; } }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 1.0625rem/1.6 var(--sans); }
 img { max-width: 100%; height: auto; display: block; }
 h1, h2, h3, p, ul, ol, dl, dd { margin: 0; }
@@ -81,16 +81,34 @@ h3 { font-size: 1.25rem; line-height: 1.3; }
 .shots li { flex: 0 0 min(78vw, 22.5rem); scroll-snap-align: start; }
 .shots img { width: 100%; border-radius: 1.75rem; box-shadow: 0 24px 48px -24px rgb(20 27 46 / 0.4); }
 
-/* three ways */
+/* three ways: one card per way, a swipe row with a peek of the next card below 1000px, side by side above */
 .ways, .read, .faq { padding-block: 4.5rem; }
-.ways-grid { display: grid; gap: 1.5rem; }
+.ways-row { position: relative; display: flex; gap: 1rem; margin-top: 2.25rem; padding: 0.25rem 1.25rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 1.25rem; scrollbar-width: none; }
+.ways-row::-webkit-scrollbar { display: none; }
+.ways-row:focus-visible { outline-offset: -3px; }
+.way { flex: 0 0 min(86%, 26rem); scroll-snap-align: start; display: flex; flex-direction: column; gap: 0.75rem; background: var(--mist); border-radius: 1.5rem; padding: 1.75rem 1.5rem; }
+.way h3 { font: 600 1.75rem/1.15 var(--serif); color: var(--headline); letter-spacing: -0.01em; text-wrap: balance; }
+.way p { color: var(--muted); text-wrap: pretty; }
+.way .tag { color: var(--cobalt-text); margin: 0; }
+.way .samples, .way-note { margin-top: auto; padding-top: 1rem; }
+.way-note { border-top: 1px solid var(--line); font-size: 0.9375rem; }
+.way .sample { background: var(--paper); }
+.way .sample:hover { background: var(--line); }
+/* the streamed way is the highest quality: the ink card, as the highlighted plan */
+.way-best { background: var(--ink); color: #fff; }
+.way-best h3 { color: #fff; }
+.way-best p { color: #C9D2E8; }
+.way-best .tag { color: var(--gold); }
+.way-best :focus-visible { outline-color: var(--gold); }
+/* the dots are made by the inline script; each is a 44px tall tap target around a 10px dot */
+.ways-dots { display: flex; justify-content: center; margin-top: 0.5rem; }
+.ways-dots button { height: 2.75rem; padding: 0 0.6875rem; border: 0; background: none; cursor: pointer; }
+.ways-dots button::before { content: ""; display: block; width: 0.625rem; height: 0.625rem; border-radius: 99px; background: #8A94B0; }
+.ways-dots [aria-current="true"]::before { width: 1.5rem; background: var(--cobalt-text); }
 .art { -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent), linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
   -webkit-mask-composite: source-in;
   mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent), linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
   mask-composite: intersect; }
-.ways-head .art { width: min(100%, 26rem); margin: 1rem auto 0; }
-.ways-list li { padding-block: 1.75rem; border-top: 1px solid var(--line); }
-.ways-list p:not(.tag) { color: var(--muted); margin-top: 0.5rem; max-width: 34rem; text-wrap: pretty; }
 .tag { font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--cobalt-text); margin-bottom: 0.5rem; }
 /* voice samples: native audio players, turned into play / pause pills by the page's inline script */
 .samples { display: flex; flex-wrap: wrap; gap: 0.625rem; margin-top: 1.125rem; }
@@ -165,12 +183,17 @@ h3 { font-size: 1.25rem; line-height: 1.3; }
   .read { padding-bottom: 7rem; }
   .shots { justify-content: center; gap: 2rem; overflow: visible; padding-inline: 2.5rem; margin-top: 3.5rem; }
   .shots li { flex: 0 1 22.5rem; }
-  .ways-grid { grid-template-columns: 5fr 6fr; gap: 5rem; align-items: start; }
-  .ways-head .art { margin-top: 2rem; }
+  .ways-row { padding-inline: 2.5rem; scroll-padding-inline: 2.5rem; }
   .read-grid { grid-template-columns: 5fr 6fr; gap: 5rem; }
   .plans { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; align-items: stretch; }
   .plan { padding: 2.5rem 2.25rem; }
   .foot-row { grid-template-columns: 1fr auto; align-items: center; }
+}
+
+@media (min-width: 1000px) {
+  .ways-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; width: min(100% - 5rem, 72rem); margin: 3.5rem auto 0; padding: 0; overflow: visible; }
+  .way { padding: 2.25rem 1.75rem; }
+  .ways-dots { display: none; }
 }
 
 /* privacy and support: one reading column */

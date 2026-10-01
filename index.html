@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BookSpeaks — Your books, read aloud</title>
-<meta name="description" content="BookSpeaks is an iPhone app that reads your own EPUB, FB2 and TXT books aloud: offline voices on the phone, natural AI voices, or a whole audiobook made in advance. No subscription, no account, no ads.">
+<meta name="description" content="BookSpeaks is an iPhone app that reads your own EPUB, FB2 and TXT books aloud: offline voices on the phone, a whole audiobook made in advance, or natural AI voices. No subscription, no account, no ads.">
 <link rel="canonical" href="https://bookspeaks.app/">
 <link rel="alternate" hreflang="en" href="https://bookspeaks.app/">
 <link rel="alternate" hreflang="ru" href="https://bookspeaks.app/ru/">
@@ -78,38 +78,36 @@
 </section>
 
 <section class="ways" id="features" aria-labelledby="ways-title">
-  <div class="wrap ways-grid">
-    <div class="ways-head">
-      <h2 id="ways-title">Three ways to listen</h2>
-      <p class="section-lede">Every voice in BookSpeaks is AI speech, not a human narrator. Here is how they sound.</p>
-      <img class="art" src="/assets/img/art-listen.webp" alt="" width="960" height="720" loading="lazy">
-    </div>
-    <ol class="ways-list">
-      <li>
-        <p class="tag">On your iPhone</p>
-        <h3>Listen on your phone, no internet</h3>
-        <p>Offline voices run on your iPhone itself: no connection, no credits. The first hour is free; a single $14.99 purchase makes it unlimited, forever.</p>
-        <div class="samples">
-          <label>Sarah <audio controls preload="none" src="/assets/audio/sample-sarah.m4a" aria-label="Play sample: Sarah"></audio></label>
-          <label>Fenrir <audio controls preload="none" src="/assets/audio/sample-fenrir.m4a" aria-label="Play sample: Fenrir"></audio></label>
-        </div>
-      </li>
-      <li>
-        <p class="tag">Made once · then offline</p>
-        <h3>A whole audiobook, made in advance</h3>
-        <p>Have a whole book voiced ahead of time for a few credits. The finished audiobook stays on your phone and plays with no internet.</p>
-      </li>
-      <li>
-        <p class="tag">Highest quality · paid in credits</p>
-        <h3>Our best voices, streamed</h3>
-        <p>The highest quality we have: the book is voiced on our server and streamed as you listen. It needs a connection and is paid in credits.</p>
-        <div class="samples">
-          <label>Eve · AI voice <audio controls preload="none" src="/assets/audio/sample-eve.m4a" aria-label="Play sample: Eve · AI voice"></audio></label>
-          <label>Rex · AI voice <audio controls preload="none" src="/assets/audio/sample-rex.m4a" aria-label="Play sample: Rex · AI voice"></audio></label>
-        </div>
-      </li>
-    </ol>
+  <div class="wrap">
+    <h2 id="ways-title">Three ways to listen</h2>
+    <p class="section-lede">Every voice in BookSpeaks is AI speech, not a human narrator. Here is how they sound.</p>
   </div>
+  <ol class="ways-row" tabindex="0" aria-label="Three ways to listen, scroll sideways">
+    <li class="way">
+      <p class="tag">1 of 3</p>
+      <h3>Offline on your phone</h3>
+      <p>Offline voices run on your iPhone itself: no connection, no credits. The first hour is free; a single $14.99 purchase makes it unlimited, forever.</p>
+      <div class="samples">
+        <label>Sarah <audio controls preload="none" src="/assets/audio/sample-sarah.m4a" aria-label="Play sample: Sarah"></audio></label>
+        <label>Fenrir <audio controls preload="none" src="/assets/audio/sample-fenrir.m4a" aria-label="Play sample: Fenrir"></audio></label>
+      </div>
+    </li>
+    <li class="way">
+      <p class="tag">2 of 3</p>
+      <h3>Generated on our server</h3>
+      <p>Have a whole book voiced ahead of time for a few credits.</p>
+      <p class="way-note">The finished audiobook stays on your phone and plays with no internet.</p>
+    </li>
+    <li class="way way-best">
+      <p class="tag">3 of 3 · Highest quality</p>
+      <h3>Streamed as you listen</h3>
+      <p>The highest quality we have: the book is voiced on our server and streamed as you listen. It needs a connection and is paid in credits.</p>
+      <div class="samples">
+        <label>Eve · AI voice <audio controls preload="none" src="/assets/audio/sample-eve.m4a" aria-label="Play sample: Eve · AI voice"></audio></label>
+        <label>Rex · AI voice <audio controls preload="none" src="/assets/audio/sample-rex.m4a" aria-label="Play sample: Rex · AI voice"></audio></label>
+      </div>
+    </li>
+  </ol>
 </section>
 
 <section class="read" aria-labelledby="read-title">
@@ -206,7 +204,7 @@
   </div>
 </footer>
 <script>
-/* the site's only script: turns each voice sample's native player into a play / pause pill */
+/* the site's only script: turns each voice sample's native player into a play / pause pill… */
 document.querySelectorAll('.samples audio').forEach(function (audio) {
   var button = document.createElement('button');
   button.type = 'button';
@@ -223,6 +221,30 @@ document.querySelectorAll('.samples audio').forEach(function (audio) {
   audio.controls = false;
   audio.parentNode.replaceWith(button, audio);
 });
+/* and puts three dots under the swipe row of cards: the current card's dot is marked, a dot scrolls to its card,
+   and so does focus on a card's button, which the browser leaves half hidden */
+var row = document.querySelector('.ways-row'), cards = [].slice.call(row.children), dots = document.createElement('div');
+function getCardCentre(card) { return card.offsetLeft + card.offsetWidth / 2; }
+function showCard(card) { row.scrollTo({ left: card.offsetLeft - cards[0].offsetLeft }); }
+function markCurrentDot() {
+  var rowCentre = row.scrollLeft + row.clientWidth / 2;
+  var current = cards.reduce(function (nearest, card) {
+    return Math.abs(getCardCentre(card) - rowCentre) < Math.abs(getCardCentre(nearest) - rowCentre) ? card : nearest;
+  });
+  cards.forEach(function (card, index) { dots.children[index].setAttribute('aria-current', card === current); });
+}
+dots.className = 'ways-dots';
+cards.forEach(function (card) {
+  var dot = document.createElement('button');
+  dot.type = 'button';
+  dot.setAttribute('aria-label', card.querySelector('h3').textContent);
+  dot.onclick = function () { showCard(card); };
+  card.addEventListener('focusin', function () { showCard(card); });
+  dots.append(dot);
+});
+row.after(dots);
+row.onscroll = markCurrentDot;
+markCurrentDot();
 </script>
 </body>
 </html>

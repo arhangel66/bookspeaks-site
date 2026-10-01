@@ -82,24 +82,34 @@
   <div class="wrap ways-grid">
     <div class="ways-head">
       <h2 id="ways-title">Три способа слушать</h2>
-      <p class="section-lede">Все голоса в BookSpeaks — синтез речи ИИ, а не живые дикторы. Вы выбираете, где голос создаётся.</p>
+      <p class="section-lede">Все голоса в BookSpeaks — синтез речи ИИ, а не живые дикторы. Послушайте, как они звучат.</p>
       <img class="art" src="/assets/img/art-listen.webp" alt="" width="960" height="720" loading="lazy">
     </div>
     <ol class="ways-list">
       <li>
-        <p class="tag">Без интернета</p>
-        <h3>Офлайн-голоса на телефоне</h3>
-        <p>Голос работает прямо на вашем iPhone, поэтому связь ему не нужна: он читает в самолёте, в метро и там, где сеть не ловит.</p>
-      </li>
-      <li>
-        <p class="tag">Через интернет · за кредиты</p>
-        <h3>Естественные голоса ИИ с нашего сервера</h3>
-        <p>Чтобы звучало естественнее, книгу озвучивает наш сервер и передаёт звук, пока вы слушаете. Для этого нужна связь, и тратятся кредиты.</p>
+        <p class="tag">На вашем iPhone</p>
+        <h3>Слушайте на телефоне без интернета</h3>
+        <p>Офлайн-голоса работают прямо на iPhone: ни связь, ни кредиты не нужны. Первый час бесплатно, а разовая покупка за $14.99 снимает ограничение навсегда.</p>
+        <div class="samples">
+          <label>Sarah <audio controls preload="none" src="/assets/audio/sample-sarah.m4a" aria-label="Прослушать образец: Sarah"></audio></label>
+          <label>Fenrir <audio controls preload="none" src="/assets/audio/sample-fenrir.m4a" aria-label="Прослушать образец: Fenrir"></audio></label>
+        </div>
+        <p class="samples-note">Образцы записаны на английском.</p>
       </li>
       <li>
         <p class="tag">Один раз · потом офлайн</p>
-        <h3>Предгенерация аудиокниги</h3>
-        <p>Наш сервер заранее озвучивает всю книгу за кредиты. После этого аудиокнига лежит на телефоне и играет без интернета.</p>
+        <h3>Вся книга, озвученная заранее</h3>
+        <p>Предгенерация: за несколько кредитов сервер заранее озвучит книгу целиком. Готовая аудиокнига остаётся на телефоне и играет без интернета.</p>
+      </li>
+      <li>
+        <p class="tag">Лучшее качество · за кредиты</p>
+        <h3>Лучшие голоса — через интернет</h3>
+        <p>Самое высокое качество: книгу озвучивает наш сервер и передаёт звук, пока вы слушаете. Нужна связь, оплата — кредитами.</p>
+        <div class="samples">
+          <label>Eve · AI voice <audio controls preload="none" src="/assets/audio/sample-eve.m4a" aria-label="Прослушать образец: Eve · AI voice"></audio></label>
+          <label>Rex · AI voice <audio controls preload="none" src="/assets/audio/sample-rex.m4a" aria-label="Прослушать образец: Rex · AI voice"></audio></label>
+        </div>
+        <p class="samples-note">Образцы записаны на английском.</p>
       </li>
     </ol>
   </div>
@@ -198,5 +208,24 @@
     </nav>
   </div>
 </footer>
+<script>
+/* the site's only script: turns each voice sample's native player into a play / pause pill */
+document.querySelectorAll('.samples audio').forEach(function (audio) {
+  var button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'sample';
+  button.textContent = audio.parentNode.textContent.trim();
+  button.setAttribute('aria-label', audio.getAttribute('aria-label'));
+  button.setAttribute('aria-pressed', 'false');
+  button.onclick = function () { audio.paused ? audio.play() : audio.pause(); };
+  audio.onplay = function () {
+    document.querySelectorAll('.samples audio').forEach(function (other) { if (other !== audio) other.pause(); });
+    button.setAttribute('aria-pressed', 'true');
+  };
+  audio.onpause = audio.onended = function () { button.setAttribute('aria-pressed', 'false'); };
+  audio.controls = false;
+  audio.parentNode.replaceWith(button, audio);
+});
+</script>
 </body>
 </html>

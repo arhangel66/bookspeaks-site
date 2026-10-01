@@ -81,24 +81,32 @@
   <div class="wrap ways-grid">
     <div class="ways-head">
       <h2 id="ways-title">Three ways to listen</h2>
-      <p class="section-lede">Every voice in BookSpeaks is AI speech, not a human narrator. You choose where it is made.</p>
+      <p class="section-lede">Every voice in BookSpeaks is AI speech, not a human narrator. Here is how they sound.</p>
       <img class="art" src="/assets/img/art-listen.webp" alt="" width="960" height="720" loading="lazy">
     </div>
     <ol class="ways-list">
       <li>
-        <p class="tag">No internet</p>
-        <h3>Offline voices on the phone</h3>
-        <p>The voice runs on your iPhone itself, so it needs no connection: it works on a plane, in the metro or far from any signal.</p>
-      </li>
-      <li>
-        <p class="tag">Streamed · paid in credits</p>
-        <h3>Natural AI voices from our server</h3>
-        <p>For a more natural sound, the book is voiced on our server and streamed to you as you listen. This needs a connection and spends credits.</p>
+        <p class="tag">On your iPhone</p>
+        <h3>Listen on your phone, no internet</h3>
+        <p>Offline voices run on your iPhone itself: no connection, no credits. The first hour is free; a single $14.99 purchase makes it unlimited, forever.</p>
+        <div class="samples">
+          <label>Sarah <audio controls preload="none" src="/assets/audio/sample-sarah.m4a" aria-label="Play sample: Sarah"></audio></label>
+          <label>Fenrir <audio controls preload="none" src="/assets/audio/sample-fenrir.m4a" aria-label="Play sample: Fenrir"></audio></label>
+        </div>
       </li>
       <li>
         <p class="tag">Made once · then offline</p>
-        <h3>A pre-generated audiobook</h3>
-        <p>Our server voices the whole book in advance, for credits. After that the audiobook is on your phone and plays without internet.</p>
+        <h3>A whole audiobook, made in advance</h3>
+        <p>Have a whole book voiced ahead of time for a few credits. The finished audiobook stays on your phone and plays with no internet.</p>
+      </li>
+      <li>
+        <p class="tag">Highest quality · paid in credits</p>
+        <h3>Our best voices, streamed</h3>
+        <p>The highest quality we have: the book is voiced on our server and streamed as you listen. It needs a connection and is paid in credits.</p>
+        <div class="samples">
+          <label>Eve · AI voice <audio controls preload="none" src="/assets/audio/sample-eve.m4a" aria-label="Play sample: Eve · AI voice"></audio></label>
+          <label>Rex · AI voice <audio controls preload="none" src="/assets/audio/sample-rex.m4a" aria-label="Play sample: Rex · AI voice"></audio></label>
+        </div>
       </li>
     </ol>
   </div>
@@ -197,5 +205,24 @@
     </nav>
   </div>
 </footer>
+<script>
+/* the site's only script: turns each voice sample's native player into a play / pause pill */
+document.querySelectorAll('.samples audio').forEach(function (audio) {
+  var button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'sample';
+  button.textContent = audio.parentNode.textContent.trim();
+  button.setAttribute('aria-label', audio.getAttribute('aria-label'));
+  button.setAttribute('aria-pressed', 'false');
+  button.onclick = function () { audio.paused ? audio.play() : audio.pause(); };
+  audio.onplay = function () {
+    document.querySelectorAll('.samples audio').forEach(function (other) { if (other !== audio) other.pause(); });
+    button.setAttribute('aria-pressed', 'true');
+  };
+  audio.onpause = audio.onended = function () { button.setAttribute('aria-pressed', 'false'); };
+  audio.controls = false;
+  audio.parentNode.replaceWith(button, audio);
+});
+</script>
 </body>
 </html>

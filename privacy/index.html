@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — BookSpeaks</title>
+<style>body{max-width:42rem;margin:auto;padding:1rem;font-family:system-ui,sans-serif;line-height:1.5}</style>
+<!-- DRAFT: not published. Effective date 2026-10-01 is planned. Source of truth: docs/store/privacy.md -->
+<p><a href="#ru" lang="ru">Русская версия</a></p>
+
+<h1>BookSpeaks privacy policy</h1>
+<p>Effective date: 1 October 2026. This policy covers BookSpeaks 1.0 for iPhone.</p>
+
+<h2>In short</h2>
+<p>BookSpeaks has no account and no tracking, and no third-party analytics, advertising or crash reporting SDKs. Reading
+and offline voices work on your iPhone, and your library and reading position are kept there. Our server is used for
+sending books to the app by e-mail, for voicing a book you order, for the online voices, for your credits and
+purchases, and for our own usage records, and it keeps as little as that needs.</p>
+
+<h2>What is kept on your iPhone</h2>
+<p>Books you add from Files, AirDrop or «Open in», your library, bookmarks, reading and listening position,
+settings, downloaded voices and the count of your free offline hour. We do not receive them, except the text you
+send to be voiced: a book you order for server voicing, or the sentences an online voice reads (below).</p>
+
+<h2>Server voicing</h2>
+<p>If you order a book to be voiced ahead of time on our server, paid in credits, the app sends that book's text
+(split into sentences, with the chosen voice and language) to our server. The server passes the text to a rented GPU
+machine at our GPU provider, which turns it into audio. The GPU machine keeps the text only while it voices it and is
+removed when the job ends; the audio is deleted from it as soon as our server collects it. Our server deletes the
+audio when the app has downloaded it, and at most 48 hours after it was made; it keeps the job record with the text
+for up to 7 days after the job ends, then deletes it. Books you do not order are never sent.</p>
+
+<h2>Online voices</h2>
+<p>The online voices Eve and Rex read over the internet and spend 2 credits per hour. While one reads, the app sends
+each sentence to our server, which passes it to OpenRouter and xAI to turn it into speech and streams the audio back.
+Our server does not keep the text or the audio: it records only the request, the day and the credits spent. Offline
+voices and the Apple voice never send text anywhere.</p>
+
+<h2>Purchases and credits</h2>
+<p>Purchases are made through Apple; we never see your card or Apple ID. To keep your credit balance, our server
+records, under the appTransactionID that the App Store gives your copy of the app: the App Store transaction ids of
+your purchases, the product and credits bought, the free credits granted, the credits held and spent for each voicing
+order and for online listening, and refunds Apple reports to us. This record is kept while your copy of the app may use its credits, until you ask us to delete it. Nightly backups of it are
+kept for 30 days.</p>
+
+<h2>What our server receives and keeps</h2>
+<p>When you open the «add by mail» screen, listen with an online voice or download a Russian voice («Света» or
+«Дима»), the app registers with our server (book.slotik.app). For mail, the server keeps:</p>
+<ul>
+<li><b>Device token.</b> A random token issued to the app, kept in the iPhone keychain. The server stores only its
+hash, not the token. It is not the advertising ID or any Apple device ID. Kept until you ask us to delete it.</li>
+<li><b>Your personal BookSpeaks address</b> (random letters @bookspeaks.app). Kept until you ask us to delete it.
+When you change the address, the old one is retired and never given to anyone else.</li>
+<li><b>Approved senders</b>: the e-mail addresses you allow to send you books, and your rule for other senders
+(ask or reject). Kept until you remove them in the app or ask us to delete them.</li>
+<li><b>Mailed books.</b> A book file sent to your address, with its title, author and cover, is kept until the app
+downloads it, and at most 7 days. The text and headers of the e-mail are not kept.</li>
+<li><b>Addresses of unknown senders.</b> If someone not on your list mails you, their address is kept with the held
+book until you accept or decline it, or with the rejection note, at most 7 days.</li>
+<li><b>Short-lived security records</b>: the number of mails per device (24 hours) and the IP address used to
+register (24 hours), to stop abuse.</li>
+</ul>
+<p>The 7-day limit is enforced when the server next handles mail for any device, so a file can outlive 7 days by the
+time until that next request.</p>
+
+<h2>Usage data</h2>
+<p>The app sends our own server short events about how it is used: first launch, a book imported (its format and
+whether by file or mail), listening started and listening time, voice samples played and the voice chosen, a voicing
+order shown and confirmed (hours, credits, wait), the purchase screen shown, and a failed purchase with Apple's error
+type. Our server adds purchases, refunds and voicing jobs (credits, audio hours, cost). Each event has its time, the
+App Store country and the app version. They never contain book text, titles, file names or anything you type; a book
+is marked by a random number made only for this, not the id used elsewhere. Events are linked to your appTransactionID,
+not to your name or e-mail; we do not use the advertising ID and do not ask to track you. We use them only to
+understand which features matter and to check purchases, not for tracking or advertising, and we do not share them.
+They are deleted after 13 months; only totals are kept. Backups can hold an event up to 30 days longer.</p>
+
+<h2>Server logs</h2>
+<p>Like any web server, ours writes access logs: IP address, time and the requested address. Because the app sends an
+approved sender's e-mail address as part of the request address, these logs can contain sender addresses. Logs are
+used only to run and protect the service and are kept for up to 30 days.</p>
+
+<h2>Who processes data for us</h2>
+<ul>
+<li><b>Cloudflare</b> receives mail sent to @bookspeaks.app and passes it to our server (Email Routing and a Worker
+that stores nothing itself).</li>
+<li><b>Our server host</b> (Vultr), where book.slotik.app runs, in Poland (EU).</li>
+<li><b>Our GPU provider</b> (Lium) runs the machines that voice a book you order; they see its text while voicing it.</li>
+<li><b>OpenRouter and xAI</b> turn the sentences an online voice reads into speech.</li>
+<li><b>Apple</b> processes purchases and tells our server about them and about refunds.</li>
+<li><b>Hugging Face</b> serves voice files when you download a voice. It sees your IP address and the file requested,
+nothing about you or your books.</li>
+</ul>
+<p>We do not sell or share your data, and we do not use it for advertising.</p>
+
+<h2>Deleting your data</h2>
+<p>In the app you can remove an approved sender, change your address, decline a held book and discard a failed
+import. The app cannot yet delete everything the server keeps about your device. To delete it, write to
+<a href="mailto:support@bookspeaks.app">support@bookspeaks.app</a> from any address and include your BookSpeaks
+address (Settings → mail). We delete the device record, the address, the sender list and any waiting books within
+30 days. Ask in the same letter and we also delete your credit balance and purchase record within 30 days;
+unspent credits are lost.</p>
+<p>Deleting the app removes your books from the iPhone, but not the device token in the iPhone keychain: if you
+install BookSpeaks again, it reconnects to the same server record. Ask us to delete it as above.</p>
+
+<h2>Children</h2>
+<p>BookSpeaks is not directed at children under 13 and we do not knowingly collect their data. If you believe a child
+has sent us data, write to us and we will delete it.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, we will update this page and its effective date. New kinds of data will be described here
+before they ship.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:support@bookspeaks.app">support@bookspeaks.app</a></p>
+
+<hr>
+<p><a href="/">Home</a> · <a href="/support/">Support</a> · <a href="/privacy/">Privacy</a></p>
+<hr>
+
+<section id="ru" lang="ru">
+<h1>Политика конфиденциальности BookSpeaks</h1>
+<p>Действует с 1 октября 2026 года. Относится к BookSpeaks 1.0 для iPhone.</p>
+
+<h2>Коротко</h2>
+<p>В BookSpeaks нет учётной записи и слежки, нет сторонних SDK аналитики, рекламы и отчётов о сбоях. Чтение и
+офлайн-голоса работают на iPhone, библиотека и место чтения хранятся на нём. Наш сервер нужен для отправки книг в
+приложение по почте, для озвучки заказанной книги, для онлайн-голосов, для ваших кредитов и покупок и для наших
+собственных записей об использовании и хранит лишь то, что для этого необходимо.</p>
+
+<h2>Что хранится на iPhone</h2>
+<p>Книги, добавленные из «Файлов», через AirDrop или «Открыть в», библиотека, закладки, место чтения и
+прослушивания, настройки, скачанные голоса и счётчик бесплатного офлайн-часа. Мы их не получаем, кроме текста,
+который вы отдаёте на озвучку: книги, заказанной для озвучки на сервере, или предложений, которые читает
+онлайн-голос (ниже).</p>
+
+<h2>Озвучка на сервере</h2>
+<p>Если вы заказываете озвучку книги заранее на нашем сервере за кредиты, приложение отправляет текст этой книги
+(по предложениям, с выбранным голосом и языком) на наш сервер. Сервер передаёт текст арендованной GPU-машине нашего
+поставщика вычислений, которая превращает его в звук. GPU-машина держит текст только пока озвучивает его и удаляется
+после окончания заказа; звук стирается с неё, как только наш сервер его забрал. Наш сервер удаляет звук, когда
+приложение его скачало, и не позже чем через 48 часов после создания; запись заказа с текстом он хранит до 7 дней
+после окончания заказа, затем удаляет. Книги, которые вы не заказывали, никуда не отправляются.</p>
+
+<h2>Онлайн-голоса</h2>
+<p>Онлайн-голоса Eve и Rex читают через интернет и тратят 2 кредита в час. Пока такой голос читает, приложение
+отправляет каждое предложение на наш сервер, а он передаёт его OpenRouter и xAI, чтобы превратить в речь, и
+возвращает звук в приложение. Наш сервер не хранит ни текст, ни звук: он записывает только запрос, день и
+потраченные кредиты. Офлайн-голоса и голос Apple никуда не отправляют текст.</p>
+
+<h2>Покупки и кредиты</h2>
+<p>Покупки проходят через Apple; мы не видим вашу карту и Apple ID. Чтобы вести баланс кредитов, наш сервер хранит
+под appTransactionID, который App Store выдаёт вашей копии приложения: номера транзакций App Store ваших покупок,
+купленный продукт и кредиты, выданные бесплатные кредиты, кредиты, удержанные и потраченные на каждый заказ озвучки
+и на онлайн-прослушивание, и возвраты, о которых сообщает Apple. Эта запись хранится, пока ваша копия приложения может тратить кредиты, или до вашей просьбы удалить её. Ночные резервные копии хранятся
+30 дней.</p>
+
+<h2>Что получает и хранит наш сервер</h2>
+<p>Когда вы открываете экран «добавить по почте», слушаете онлайн-голосом или скачиваете русский голос («Света» или
+«Дима»), приложение регистрируется на нашем сервере (book.slotik.app). Для почты сервер хранит:</p>
+<ul>
+<li><b>Токен устройства.</b> Случайный токен, выданный приложению и хранящийся в связке ключей iPhone. Сервер хранит
+только его хеш, а не сам токен. Это не рекламный идентификатор и не идентификатор устройства Apple. Хранится, пока
+вы не попросите его удалить.</li>
+<li><b>Ваш личный адрес BookSpeaks</b> (случайные буквы @bookspeaks.app). Хранится, пока вы не попросите его удалить.
+При смене адреса старый выводится из работы и никому больше не выдаётся.</li>
+<li><b>Разрешённые отправители</b>: адреса, с которых вам можно присылать книги, и правило для остальных
+(спрашивать или отклонять). Хранятся, пока вы не удалите их в приложении или не попросите удалить нас.</li>
+<li><b>Присланные книги.</b> Файл книги, пришедший на ваш адрес, с названием, автором и обложкой хранится, пока
+приложение его не скачает, но не дольше 7 дней. Текст и заголовки письма не сохраняются.</li>
+<li><b>Адреса незнакомых отправителей.</b> Если вам пишет кто-то не из списка, его адрес хранится вместе с
+задержанной книгой, пока вы её не примете или не отклоните, или вместе с отметкой об отказе, не дольше 7 дней.</li>
+<li><b>Короткие записи для защиты</b>: число писем на устройство (24 часа) и IP-адрес при регистрации (24 часа),
+чтобы не допустить злоупотреблений.</li>
+</ul>
+<p>Срок 7 дней проверяется, когда сервер в следующий раз обрабатывает почту любого устройства, поэтому файл может
+пролежать чуть дольше 7 дней — до этого следующего запроса.</p>
+
+<h2>Данные об использовании</h2>
+<p>Приложение отправляет нашему собственному серверу короткие события о том, как им пользуются: первый запуск,
+добавленная книга (формат и откуда — файл или почта), начало прослушивания и время прослушивания, прослушанные
+образцы голосов и выбранный голос, показанный и подтверждённый заказ озвучки (часы, кредиты, ожидание), показ экрана
+покупки и неудачная покупка с типом ошибки Apple. Сервер добавляет покупки, возвраты и заказы озвучки (кредиты, часы
+аудио, стоимость). У каждого события есть время, страна App Store и версия приложения. В них никогда нет текста,
+названий, имён файлов книг и ничего, что вы вводите; книга помечена случайным номером, созданным только для этого.
+События связаны с вашим appTransactionID, а не с именем или почтой; мы не используем рекламный идентификатор и не
+просим разрешения на отслеживание. Мы используем их только чтобы понимать, какие функции важны, и проверять покупки, —
+не для слежки и рекламы, и никому их не передаём. Они удаляются через 13 месяцев; остаются только итоговые цифры.
+Резервные копии могут хранить событие до 30 дней дольше.</p>
+
+<h2>Журналы сервера</h2>
+<p>Как любой веб-сервер, наш ведёт журналы доступа: IP-адрес, время и запрошенный адрес. Приложение передаёт адрес
+разрешённого отправителя в адресе запроса, поэтому в журналах могут оказаться адреса отправителей. Журналы нужны
+только для работы и защиты сервиса и хранятся до 30 дней.</p>
+
+<h2>Кто обрабатывает данные для нас</h2>
+<ul>
+<li><b>Cloudflare</b> принимает письма на @bookspeaks.app и передаёт их нашему серверу (Email Routing и Worker,
+который сам ничего не хранит).</li>
+<li><b>Хостинг нашего сервера</b> book.slotik.app (Vultr), страна: Польша (ЕС).</li>
+<li><b>Наш поставщик GPU</b> (Lium) даёт машины, которые озвучивают заказанную книгу; они видят её текст, пока
+озвучивают.</li>
+<li><b>OpenRouter и xAI</b> превращают в речь предложения, которые читает онлайн-голос.</li>
+<li><b>Apple</b> проводит покупки и сообщает нашему серверу о них и о возвратах.</li>
+<li><b>Hugging Face</b> отдаёт файлы голосов, когда вы скачиваете голос. Он видит ваш IP-адрес и запрошенный файл,
+но ничего о вас и ваших книгах.</li>
+</ul>
+<p>Мы не продаём и не передаём ваши данные и не используем их для рекламы.</p>
+
+<h2>Удаление данных</h2>
+<p>В приложении можно удалить разрешённого отправителя, сменить адрес, отклонить задержанную книгу и убрать
+неудавшийся импорт. Удалить всё, что сервер хранит о вашем устройстве, приложение пока не умеет. Для этого напишите
+на <a href="mailto:support@bookspeaks.app">support@bookspeaks.app</a> с любого адреса и укажите свой адрес BookSpeaks
+(Настройки → почта). Мы удалим запись устройства, адрес, список отправителей и ждущие книги в течение 30 дней.
+Попросите в том же письме, и в течение 30 дней мы удалим и баланс кредитов с записью о покупках; неистраченные
+кредиты при этом пропадут.</p>
+<p>Удаление приложения стирает книги с iPhone, но не токен устройства в связке ключей: после повторной установки
+BookSpeaks снова подключится к той же записи на сервере. Чтобы её удалить, напишите нам, как сказано выше.</p>
+
+<h2>Дети</h2>
+<p>BookSpeaks не предназначен для детей младше 13 лет, и мы сознательно не собираем их данные. Если вы считаете, что
+ребёнок передал нам данные, напишите нам, и мы их удалим.</p>
+
+<h2>Изменения</h2>
+<p>Если политика изменится, мы обновим эту страницу и дату вступления в силу. Новые виды данных мы опишем здесь до
+их выхода.</p>
+
+<h2>Связь</h2>
+<p><a href="mailto:support@bookspeaks.app">support@bookspeaks.app</a></p>
+
+<hr>
+<p><a href="/ru/">Главная</a> · <a href="/support/#ru">Поддержка</a> · <a href="/privacy/#ru">Конфиденциальность</a></p>
+</section>

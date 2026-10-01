@@ -1,0 +1,31 @@
+/* Colours are the app's day look, WholeBook/Theme/Theme.swift; its day type is the system font. */
+:root{--bg:#FFFFFF;--surface:#F2F5FC;--hero:#EEF3FD;--text:#141B2E;--secondary:#7A8399;--accent:#2F66E0;--accent-text:#2457C8;--divider:#E6EAF2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.5 system-ui,-apple-system,sans-serif}
+a{color:var(--accent-text)}
+img{display:block;max-width:100%;height:auto}
+.wrap{max-width:72rem;margin:auto;padding:0 1.25rem}
+.top{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;font-weight:700}
+.top a{font-weight:600;font-size:15px}
+.hero{background:#fff}
+.hero h1{font-size:40px;line-height:1.1;letter-spacing:.2px;margin:1rem 0 .75rem}
+.hero p{color:var(--secondary);font-size:19px;margin:0 0 1.5rem}
+.badge{display:inline-block;background:var(--text);color:#fff;text-decoration:none;font-weight:600;padding:.8rem 1.4rem;border-radius:12px}
+.hero img{margin-top:1.5rem}
+@media (min-width:900px){
+  /* the photo is 960px wide at this height; fade its left edge into the page white */
+  .hero{background:linear-gradient(to right,#fff calc(100% - 960px),rgb(255 255 255/0) calc(100% - 720px)),#fff url(img/hero.jpg) right center/auto 560px no-repeat;height:560px;display:flex;align-items:center}
+  .hero .copy{max-width:42%}
+  .hero h1{font-size:52px}
+  .hero img{display:none}
+}
+.features{background:var(--hero);padding:3rem 0}
+.feature{display:grid;gap:1.25rem;align-items:center;margin-bottom:2.5rem}
+.feature img{border-radius:20px}
+.feature h2{font-size:28px;line-height:1.15;margin:0 0 .5rem}
+.feature p{margin:0}
+@media (min-width:900px){
+  .feature{grid-template-columns:1fr 1fr;gap:3rem}
+  .feature:nth-child(even) img{order:2}
+}
+footer{border-top:1px solid var(--divider);padding:1.5rem 0 2rem;color:var(--secondary);font-size:15px}

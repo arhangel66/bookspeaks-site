@@ -1,6 +1,6 @@
 # BookSpeaks
 
-> BookSpeaks is an iPhone app that reads your own EPUB, FB2 and TXT books aloud: offline voices on the phone, a whole audiobook made in advance, or natural AI voices streamed from our server. You can read the books on screen, too. No subscription, no account, no ads.
+> BookSpeaks is an iPhone app that reads your own EPUB, FB2 and TXT books aloud: offline voices on the phone, a whole audiobook made in advance, or natural AI voices streamed over the internet. You can read the books on screen, too. No subscription, no account, no ads.
 
 Status: Coming soon to the App Store. The app cannot be downloaded yet and there is no store link.
 
@@ -25,7 +25,7 @@ How to use it: BookSpeaks is an app for people. It has no API, no MCP server and
 
 - Offline on your phone: offline voices run on the iPhone itself, with no connection and no credits. The first hour is free; a single $14.99 purchase makes it unlimited, forever.
 - Generated on our server: a whole book is voiced ahead of time for a few credits. The finished audiobook stays on the phone and plays with no internet.
-- Streamed as you listen: the highest quality. The book is voiced on our server and streamed as you listen; it needs a connection and is paid in credits.
+- Streamed as you listen: the highest quality. Natural AI voices streamed over the internet as you listen; it needs a connection and costs 2 or 3 credits per hour, depending on the voice.
 
 ## Pricing
 

@@ -46,7 +46,7 @@ Have a whole book voiced ahead of time for a few credits. The finished audiobook
 
 #### Streamed as you listen
 
-The highest quality we have: the book is voiced on our server and streamed as you listen. It needs a connection and is paid in credits.
+The highest quality we have: natural AI voices streamed over the internet as you listen. It needs a connection and costs 2 or 3 credits per hour, depending on the voice.
 
 - Eve · AI voice
 
@@ -154,7 +154,7 @@ BookSpeaks читает вслух ваши книги EPUB, FB2 и TXT на iPh
 
 #### Стриминг
 
-Самое высокое качество: книгу озвучивает наш сервер и передаёт звук, пока вы слушаете. Нужна связь, оплата — кредитами.
+Самое высокое качество: естественные голоса ИИ читают через интернет, пока вы слушаете. Нужна связь; стоит 2 или 3 кредита в час — зависит от голоса.
 
 - Eve · ИИ-голос
 
@@ -260,7 +260,7 @@ You can have an English or Russian book voiced ahead of time on our server. It t
 
 #### Online voices
 
-The online voices Eve and Rex read over the internet and spend 2 credits per hour of listening, charged 1 credit for each started 30 minutes of audio. Offline voices spend no credits.
+Online voices read over the internet and spend credits while you listen. The Gemini voices (the default) spend 3 credits per hour of listening; the Grok voices Eve and Rex spend 2 credits per hour, charged 1 credit for each started 30 minutes of audio.
 
 #### Restore purchases
 
@@ -308,7 +308,7 @@ BookSpeaks можно попробовать бесплатно: 1 час офл
 
 #### Онлайн-голоса
 
-Онлайн-голоса Eve и Rex читают через интернет и тратят 2 кредита в час прослушивания: 1 кредит списывается за каждые начатые 30 минут звука. Офлайн-голоса кредиты не тратят.
+Онлайн-голоса читают через интернет и тратят кредиты, пока вы слушаете. Голоса Gemini (они выбраны по умолчанию) тратят 3 кредита в час прослушивания; голоса Grok — Eve и Rex — 2 кредита в час: 1 кредит списывается за каждые начатые 30 минут звука.
 
 #### Восстановить покупки
 

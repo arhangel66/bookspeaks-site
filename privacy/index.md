@@ -1,10 +1,10 @@
 # BookSpeaks privacy policy
 
-Effective date: 1 October 2026. This policy covers BookSpeaks 1.0 for iPhone.
+Effective date: 2 October 2026. This policy covers BookSpeaks 1.0 for iPhone.
 
 ## In short
 
-BookSpeaks has no account and no tracking, and no third-party analytics, advertising or crash reporting SDKs. Reading and offline voices work on your iPhone, and your library and reading position are kept there. Our server is used for sending books to the app by e-mail, for voicing a book you order, for the online voices, for your credits and purchases, and for our own usage records, and it keeps as little as that needs.
+BookSpeaks has no account, no advertising and no tracking. To see how the app is used and to fix crashes it uses Google's Firebase Analytics and Crashlytics, without the advertising ID. Reading and offline voices work on your iPhone, and your library and reading position are kept there. Our server is used for sending books to the app by e-mail, for voicing a book you order, for the online voices, for your credits and purchases, and for our own usage records, and it keeps as little as that needs.
 
 ## What is kept on your iPhone
 
@@ -44,6 +44,12 @@ The 7-day and 24-hour limits are enforced when the server next handles a request
 
 The app sends our own server short events about how it is used: first launch, a book imported (its format and whether by file or mail), listening started and listening time, voice samples played and the voice chosen, a voicing order shown and confirmed (hours, credits, wait), the purchase screen shown, and a failed purchase with Apple's error type. Our server adds purchases, refunds and voicing jobs (credits, audio hours, cost). Each event has its time, the App Store country and the app version. They never contain book text, titles, file names or anything you type; a book is marked by a random number made only for this, not the id used elsewhere. Events are linked to your appTransactionID, not to your name or e-mail; we do not use the advertising ID and do not ask to track you. We use them only to understand which features matter and to check purchases, not for tracking or advertising, and we do not share them. They are deleted after 13 months; only totals are kept. Backups can hold an event up to 32 days longer.
 
+The app also uses Firebase Analytics, a Google service, to count how it is used. It sends Google events such as the first launch, sessions, screens opened, purchases (product and price) and the kinds of events listed above, with a random app-instance ID that Firebase makes for this copy of the app, the device model, iOS version, app version and language, and an approximate location (country, region, city) that Google derives from your IP address. These events never contain book text, titles, file names or anything you type, and they are not linked to your appTransactionID, your name or your e-mail. We have turned off the advertising ID, and Firebase data is not used for advertising or tracking. Google keeps this event data for 14 months; after that only totals remain. We cannot find your Firebase data by your e-mail or BookSpeaks address, so it is not deleted on request: it ages out after 14 months. The records our own server keeps — purchases, credits and voicing costs — stay as described above.
+
+## Crash reports
+
+If the app crashes, Firebase Crashlytics, a Google service, sends Google a crash report: where in the code the app stopped (the stack trace) and its state at that moment, the device model, iOS version, app version, the last app events before the crash, and a random installation ID made by Firebase. A crash report contains no book text and is not linked to your appTransactionID, your name or your e-mail. Google keeps crash reports and their installation IDs for 90 days, then deletes them.
+
 ## Server logs
 
 Like any web server, ours writes logs. The web server's log holds the IP address, time and requested address of each request. Because the app sends an approved sender's e-mail address as part of the request address, logs can contain sender addresses, and the voicing log can contain what our check heard for a badly voiced sentence. Logs are used only to run and protect the service. They have no fixed time limit: older entries are deleted as the logs reach their size limit or are rotated (some copies after 5 weeks), or when the web server is reinstalled. We cannot delete single entries from them on request.
@@ -61,6 +67,8 @@ Like any web server, ours writes logs. The web server's log holds the IP address
 - Google (Gemini text-to-speech) and xAI (Grok voices) turn those sentences into speech.
 
 - Apple processes purchases and tells our server about them and about refunds.
+
+- Google (Firebase) receives the app's usage events and crash reports, as described in «Usage data» and «Crash reports», and processes them for us. It may process them outside the EU.
 
 - Hugging Face serves voice files when you download a voice. It sees your IP address and the file requested, nothing about you or your books.
 
@@ -86,11 +94,11 @@ If this policy changes, we will update this page and its effective date. New kin
 
 # Политика конфиденциальности BookSpeaks
 
-Действует с 1 октября 2026 года. Относится к BookSpeaks 1.0 для iPhone.
+Действует с 2 октября 2026 года. Относится к BookSpeaks 1.0 для iPhone.
 
 ## Коротко
 
-В BookSpeaks нет учётной записи и слежки, нет сторонних SDK аналитики, рекламы и отчётов о сбоях. Чтение и офлайн-голоса работают на iPhone, библиотека и место чтения хранятся на нём. Наш сервер нужен для отправки книг в приложение по почте, для озвучки заказанной книги, для онлайн-голосов, для ваших кредитов и покупок и для наших собственных записей об использовании и хранит лишь то, что для этого необходимо.
+В BookSpeaks нет учётной записи, рекламы и слежки. Чтобы видеть, как пользуются приложением, и исправлять сбои, оно использует Firebase Analytics и Crashlytics от Google, без рекламного идентификатора. Чтение и офлайн-голоса работают на iPhone, библиотека и место чтения хранятся на нём. Наш сервер нужен для отправки книг в приложение по почте, для озвучки заказанной книги, для онлайн-голосов, для ваших кредитов и покупок и для наших собственных записей об использовании и хранит лишь то, что для этого необходимо.
 
 ## Что хранится на iPhone
 
@@ -130,6 +138,12 @@ If this policy changes, we will update this page and its effective date. New kin
 
 Приложение отправляет нашему собственному серверу короткие события о том, как им пользуются: первый запуск, добавленная книга (формат и откуда — файл или почта), начало прослушивания и время прослушивания, прослушанные образцы голосов и выбранный голос, показанный и подтверждённый заказ озвучки (часы, кредиты, ожидание), показ экрана покупки и неудачная покупка с типом ошибки Apple. Сервер добавляет покупки, возвраты и заказы озвучки (кредиты, часы аудио, стоимость). У каждого события есть время, страна App Store и версия приложения. В них никогда нет текста, названий, имён файлов книг и ничего, что вы вводите; книга помечена случайным номером, созданным только для этого. События связаны с вашим appTransactionID, а не с именем или почтой; мы не используем рекламный идентификатор и не просим разрешения на отслеживание. Мы используем их только чтобы понимать, какие функции важны, и проверять покупки, — не для слежки и рекламы, и никому их не передаём. Они удаляются через 13 месяцев; остаются только итоговые цифры. Резервные копии могут хранить событие до 32 дней дольше.
 
+Ещё приложение использует Firebase Analytics, сервис Google, чтобы считать, как им пользуются. Оно отправляет Google события: первый запуск, сеансы, открытые экраны, покупки (продукт и цена) и события того же рода, что перечислены выше, — со случайным идентификатором, который Firebase создаёт для этой копии приложения, моделью устройства, версией iOS, версией и языком приложения и примерным местоположением (страна, регион, город), которое Google определяет по IP-адресу. В этих событиях никогда нет текста, названий, имён файлов книг и ничего, что вы вводите, и они не связаны с вашим appTransactionID, именем или почтой. Рекламный идентификатор мы отключили, данные Firebase не используются для рекламы и слежки. Google хранит эти события 14 месяцев, после этого остаются только итоговые цифры. Найти ваши данные в Firebase по почте или адресу BookSpeaks мы не можем, поэтому по просьбе они не удаляются: они исчезают через 14 месяцев. Записи нашего собственного сервера — покупки, кредиты и стоимость озвучки — хранятся так, как описано выше.
+
+## Отчёты о сбоях
+
+Если приложение падает, Firebase Crashlytics, сервис Google, отправляет Google отчёт о сбое: место в коде, где приложение остановилось (трассировку стека), и его состояние в этот момент, модель устройства, версию iOS, версию приложения, последние события приложения перед сбоем и случайный идентификатор установки, созданный Firebase. В отчёте нет текста книг, и он не связан с вашим appTransactionID, именем или почтой. Google хранит отчёты о сбоях и их идентификаторы установки 90 дней, затем удаляет.
+
 ## Журналы сервера
 
 Как любой веб-сервер, наш ведёт журналы. Журнал веб-сервера хранит IP-адрес, время и запрошенный адрес каждого запроса. Приложение передаёт адрес разрешённого отправителя в адресе запроса, поэтому в журналах могут оказаться адреса отправителей, а в журнале озвучки — то, что наша проверка расслышала в плохо озвученном предложении. Журналы нужны только для работы и защиты сервиса. Срока хранения по времени у них нет: старые записи удаляются, когда журнал достигает предельного размера или сменяется (часть копий — через 5 недель), или при переустановке веб-сервера. Удалить из них отдельные записи по просьбе мы не можем.
@@ -147,6 +161,8 @@ If this policy changes, we will update this page and its effective date. New kin
 - Google (синтез речи Gemini) и xAI (голоса Grok) превращают эти предложения в речь.
 
 - Apple проводит покупки и сообщает нашему серверу о них и о возвратах.
+
+- Google (Firebase) получает события об использовании приложения и отчёты о сбоях, как сказано в разделах «Данные об использовании» и «Отчёты о сбоях», и обрабатывает их для нас. Он может обрабатывать их за пределами ЕС.
 
 - Hugging Face отдаёт файлы голосов, когда вы скачиваете голос. Он видит ваш IP-адрес и запрошенный файл, но ничего о вас и ваших книгах.
 

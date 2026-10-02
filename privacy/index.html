@@ -30,10 +30,11 @@
 
 <main id="main" class="wrap doc">
 <h1>BookSpeaks privacy policy</h1>
-<p>Effective date: 1 October 2026. This policy covers BookSpeaks 1.0 for iPhone.</p>
+<p>Effective date: 2 October 2026. This policy covers BookSpeaks 1.0 for iPhone.</p>
 
 <h2>In short</h2>
-<p>BookSpeaks has no account and no tracking, and no third-party analytics, advertising or crash reporting SDKs. Reading
+<p>BookSpeaks has no account, no advertising and no tracking. To see how the app is used and to fix crashes it uses
+Google's Firebase Analytics and Crashlytics, without the advertising ID. Reading
 and offline voices work on your iPhone, and your library and reading position are kept there. Our server is used for
 sending books to the app by e-mail, for voicing a book you order, for the online voices, for your credits and
 purchases, and for our own usage records, and it keeps as little as that needs.</p>
@@ -97,6 +98,22 @@ is marked by a random number made only for this, not the id used elsewhere. Even
 not to your name or e-mail; we do not use the advertising ID and do not ask to track you. We use them only to
 understand which features matter and to check purchases, not for tracking or advertising, and we do not share them.
 They are deleted after 13 months; only totals are kept. Backups can hold an event up to 32 days longer.</p>
+<p>The app also uses Firebase Analytics, a Google service, to count how it is used. It sends Google events such as
+the first launch, sessions, screens opened, purchases (product and price) and the kinds of events listed above, with a
+random app-instance ID that Firebase makes for this copy of the app, the device model, iOS version, app version and
+language, and an approximate location (country, region, city) that Google derives from your IP address. These events
+never contain book text, titles, file names or anything you type, and they are not linked to your appTransactionID,
+your name or your e-mail. We have turned off the advertising ID, and Firebase data is not used for advertising or
+tracking. Google keeps this event data for 14 months; after that only totals remain. We cannot find your Firebase data
+by your e-mail or BookSpeaks address, so it is not deleted on request: it ages out after 14 months. The records our own
+server keeps — purchases, credits and voicing costs — stay as described above.</p>
+
+<h2>Crash reports</h2>
+<p>If the app crashes, Firebase Crashlytics, a Google service, sends Google a crash report: where in the code the app
+stopped (the stack trace) and its state at that moment, the device model, iOS version, app version, the last app events
+before the crash, and a random installation ID made by Firebase. A crash report contains no book text and is not
+linked to your appTransactionID, your name or your e-mail. Google keeps crash reports and their installation IDs for
+90 days, then deletes them.</p>
 
 <h2>Server logs</h2>
 <p>Like any web server, ours writes logs. The web server's log holds the IP address, time and requested address of
@@ -117,6 +134,8 @@ delivery status — for 31 days.</li>
 that voice.</li>
 <li><b>Google</b> (Gemini text-to-speech) and <b>xAI</b> (Grok voices) turn those sentences into speech.</li>
 <li><b>Apple</b> processes purchases and tells our server about them and about refunds.</li>
+<li><b>Google (Firebase)</b> receives the app's usage events and crash reports, as described in «Usage data» and
+«Crash reports», and processes them for us. It may process them outside the EU.</li>
 <li><b>Hugging Face</b> serves voice files when you download a voice. It sees your IP address and the file requested,
 nothing about you or your books.</li>
 </ul>
@@ -148,10 +167,11 @@ before they ship.</p>
 
 <section id="ru" lang="ru">
 <h1>Политика конфиденциальности BookSpeaks</h1>
-<p>Действует с 1 октября 2026 года. Относится к BookSpeaks 1.0 для iPhone.</p>
+<p>Действует с 2 октября 2026 года. Относится к BookSpeaks 1.0 для iPhone.</p>
 
 <h2>Коротко</h2>
-<p>В BookSpeaks нет учётной записи и слежки, нет сторонних SDK аналитики, рекламы и отчётов о сбоях. Чтение и
+<p>В BookSpeaks нет учётной записи, рекламы и слежки. Чтобы видеть, как пользуются приложением, и исправлять сбои, оно
+использует Firebase Analytics и Crashlytics от Google, без рекламного идентификатора. Чтение и
 офлайн-голоса работают на iPhone, библиотека и место чтения хранятся на нём. Наш сервер нужен для отправки книг в
 приложение по почте, для озвучки заказанной книги, для онлайн-голосов, для ваших кредитов и покупок и для наших
 собственных записей об использовании и хранит лишь то, что для этого необходимо.</p>
@@ -219,6 +239,22 @@ before they ship.</p>
 просим разрешения на отслеживание. Мы используем их только чтобы понимать, какие функции важны, и проверять покупки, —
 не для слежки и рекламы, и никому их не передаём. Они удаляются через 13 месяцев; остаются только итоговые цифры.
 Резервные копии могут хранить событие до 32 дней дольше.</p>
+<p>Ещё приложение использует Firebase Analytics, сервис Google, чтобы считать, как им пользуются. Оно отправляет Google
+события: первый запуск, сеансы, открытые экраны, покупки (продукт и цена) и события того же рода, что перечислены
+выше, — со случайным идентификатором, который Firebase создаёт для этой копии приложения, моделью устройства, версией
+iOS, версией и языком приложения и примерным местоположением (страна, регион, город), которое Google определяет по
+IP-адресу. В этих событиях никогда нет текста, названий, имён файлов книг и ничего, что вы вводите, и они не связаны с
+вашим appTransactionID, именем или почтой. Рекламный идентификатор мы отключили, данные Firebase не используются для
+рекламы и слежки. Google хранит эти события 14 месяцев, после этого остаются только итоговые цифры. Найти ваши данные
+в Firebase по почте или адресу BookSpeaks мы не можем, поэтому по просьбе они не удаляются: они исчезают через 14
+месяцев. Записи нашего собственного сервера — покупки, кредиты и стоимость озвучки — хранятся так, как описано выше.</p>
+
+<h2>Отчёты о сбоях</h2>
+<p>Если приложение падает, Firebase Crashlytics, сервис Google, отправляет Google отчёт о сбое: место в коде, где
+приложение остановилось (трассировку стека), и его состояние в этот момент, модель устройства, версию iOS, версию
+приложения, последние события приложения перед сбоем и случайный идентификатор установки, созданный Firebase. В отчёте
+нет текста книг, и он не связан с вашим appTransactionID, именем или почтой. Google хранит отчёты о сбоях и их
+идентификаторы установки 90 дней, затем удаляет.</p>
 
 <h2>Журналы сервера</h2>
 <p>Как любой веб-сервер, наш ведёт журналы. Журнал веб-сервера хранит IP-адрес, время и запрошенный адрес каждого
@@ -240,6 +276,8 @@ Worker, который сам ничего не хранит). Cloudflare хра
 озвучивает этот голос.</li>
 <li><b>Google</b> (синтез речи Gemini) и <b>xAI</b> (голоса Grok) превращают эти предложения в речь.</li>
 <li><b>Apple</b> проводит покупки и сообщает нашему серверу о них и о возвратах.</li>
+<li><b>Google (Firebase)</b> получает события об использовании приложения и отчёты о сбоях, как сказано в разделах
+«Данные об использовании» и «Отчёты о сбоях», и обрабатывает их для нас. Он может обрабатывать их за пределами ЕС.</li>
 <li><b>Hugging Face</b> отдаёт файлы голосов, когда вы скачиваете голос. Он видит ваш IP-адрес и запрошенный файл,
 но ничего о вас и ваших книгах.</li>
 </ul>

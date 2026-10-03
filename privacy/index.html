@@ -66,7 +66,7 @@ that with your credit record (below). Offline voices and the Apple voice never s
 records, under the appTransactionID that the App Store gives your copy of the app: the App Store transaction ids of
 your purchases, the product and credits bought, the free credits granted, the credits held and spent for each voicing
 order and for online listening, and refunds Apple reports to us. This record is kept while your copy of the app may use its credits, until you ask us to delete it. Nightly copies of
-it are kept on the same server for up to 32 days.</p>
+it are kept for 30 days, on the same server and, encrypted, in an off-site backup (see «Who processes data for us»).</p>
 
 <h2>What our server receives and keeps</h2>
 <p>When you open the «add by mail» screen, listen with an online voice or download a Russian voice («Света» or
@@ -97,7 +97,7 @@ App Store country and the app version. They never contain book text, titles, fil
 is marked by a random number made only for this, not the id used elsewhere. Events are linked to your appTransactionID,
 not to your name or e-mail; we do not use the advertising ID and do not ask to track you. We use them only to
 understand which features matter and to check purchases, not for tracking or advertising, and we do not share them.
-They are deleted after 13 months; only totals are kept. Backups can hold an event up to 32 days longer.</p>
+They are deleted after 13 months; only totals are kept. Backups can hold an event up to 31 days longer.</p>
 <p>The app also uses Firebase Analytics, a Google service, to count how it is used. It sends Google events such as
 the first launch, sessions, screens opened, purchases (product and price) and the kinds of events listed above, with a
 random app-instance ID that Firebase makes for this copy of the app, the device model, iOS version, app version and
@@ -129,6 +129,10 @@ single entries from them on request.</p>
 a Worker that stores nothing itself). Cloudflare keeps a record of each mail — sender, recipient, subject and
 delivery status — for 31 days.</li>
 <li><b>Our server host</b> (Vultr), where book.slotik.app runs, in Poland (EU).</li>
+<li><b>Backblaze</b> (B2 storage, EU region) holds our encrypted nightly backup. It is a copy of the credit
+record, the usage events, any feedback you sent (with the e-mail you gave there) and the voicing costs, encrypted on our
+server before it leaves, so Backblaze sees only unreadable data. It holds no book text, audio, device tokens or mail
+addresses of the «add by mail» screen. Backups are kept for 30 days.</li>
 <li><b>Our GPU provider</b> (Lium) runs the machines that voice a book you order; they see its text while voicing it.</li>
 <li><b>OpenRouter</b> receives each sentence an online voice reads and passes it to the company whose model speaks
 that voice.</li>
@@ -147,7 +151,7 @@ import. The app cannot yet delete everything the server keeps about your device.
 <a href="mailto:support@bookspeaks.app">support@bookspeaks.app</a> from any address and include your BookSpeaks
 address (Settings → mail). We delete the device record, the address, the sender list and any waiting books within
 30 days. Ask in the same letter and we also delete your credit balance and purchase record within 30 days;
-unspent credits are lost. Nightly copies of the credit record age out within 32 days after that; server logs are not
+unspent credits are lost. Nightly copies of the credit record age out within 31 days after that; server logs are not
 edited (see «Server logs»).</p>
 <p>Deleting the app removes your books from the iPhone, but not the device token in the iPhone keychain: if you
 install BookSpeaks again, it reconnects to the same server record. Ask us to delete it as above.</p>
@@ -204,7 +208,7 @@ before they ship.</p>
 под appTransactionID, который App Store выдаёт вашей копии приложения: номера транзакций App Store ваших покупок,
 купленный продукт и кредиты, выданные бесплатные кредиты, кредиты, удержанные и потраченные на каждый заказ озвучки
 и на онлайн-прослушивание, и возвраты, о которых сообщает Apple. Эта запись хранится, пока ваша копия приложения может тратить кредиты, или до вашей просьбы удалить её. Ночные копии
-этой записи хранятся на том же сервере до 32 дней.</p>
+этой записи хранятся 30 дней на том же сервере и в зашифрованном виде во внешней резервной копии (см. «Кто обрабатывает данные для нас»).</p>
 
 <h2>Что получает и хранит наш сервер</h2>
 <p>Когда вы открываете экран «добавить по почте», слушаете онлайн-голосом или скачиваете русский голос («Света» или
@@ -238,7 +242,7 @@ before they ship.</p>
 События связаны с вашим appTransactionID, а не с именем или почтой; мы не используем рекламный идентификатор и не
 просим разрешения на отслеживание. Мы используем их только чтобы понимать, какие функции важны, и проверять покупки, —
 не для слежки и рекламы, и никому их не передаём. Они удаляются через 13 месяцев; остаются только итоговые цифры.
-Резервные копии могут хранить событие до 32 дней дольше.</p>
+Резервные копии могут хранить событие до 31 дня дольше.</p>
 <p>Ещё приложение использует Firebase Analytics, сервис Google, чтобы считать, как им пользуются. Оно отправляет Google
 события: первый запуск, сеансы, открытые экраны, покупки (продукт и цена) и события того же рода, что перечислены
 выше, — со случайным идентификатором, который Firebase создаёт для этой копии приложения, моделью устройства, версией
@@ -270,6 +274,10 @@ IP-адресу. В этих событиях никогда нет текста
 Worker, который сам ничего не хранит). Cloudflare хранит запись о каждом письме — отправитель, получатель, тема и
 статус доставки — 31 день.</li>
 <li><b>Хостинг нашего сервера</b> book.slotik.app (Vultr), страна: Польша (ЕС).</li>
+<li><b>Backblaze</b> (хранилище B2, регион ЕС) хранит нашу зашифрованную ночную резервную копию. В ней копия записи
+о кредитах, события об использовании, отправленные вами отзывы (с почтой, которую вы там указали) и стоимость озвучки;
+она шифруется на нашем сервере до отправки, поэтому Backblaze видит только нечитаемые данные. В ней нет текста книг,
+звука, токенов устройств и адресов почты с экрана «добавить по почте». Копии хранятся 30 дней.</li>
 <li><b>Наш поставщик GPU</b> (Lium) даёт машины, которые озвучивают заказанную книгу; они видят её текст, пока
 озвучивают.</li>
 <li><b>OpenRouter</b> получает каждое предложение, которое читает онлайн-голос, и передаёт его компании, чья модель
@@ -289,7 +297,7 @@ Worker, который сам ничего не хранит). Cloudflare хра
 на <a href="mailto:support@bookspeaks.app">support@bookspeaks.app</a> с любого адреса и укажите свой адрес BookSpeaks
 (Настройки → почта). Мы удалим запись устройства, адрес, список отправителей и ждущие книги в течение 30 дней.
 Попросите в том же письме, и в течение 30 дней мы удалим и баланс кредитов с записью о покупках; неистраченные
-кредиты при этом пропадут. Ночные копии записи о кредитах исчезают после этого в течение 32 дней; журналы сервера не
+кредиты при этом пропадут. Ночные копии записи о кредитах исчезают после этого в течение 31 дня; журналы сервера не
 правятся (см. «Журналы сервера»).</p>
 <p>Удаление приложения стирает книги с iPhone, но не токен устройства в связке ключей: после повторной установки
 BookSpeaks снова подключится к той же записи на сервере. Чтобы её удалить, напишите нам, как сказано выше.</p>

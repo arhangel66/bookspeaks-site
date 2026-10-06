@@ -213,7 +213,7 @@ EPUB, выберите голос — и получите по одному ау
   }
 
   function showAccount(account) {
-    $('balance').textContent = 'Баланс: ' + credits(account.balance);
+    $('balance').textContent = credits(account.balance);
     showBooks(account.books);
     clearTimeout(refreshTimer);
     const voicing = account.books.some((book) => book.state === 'queued' || book.state === 'running');

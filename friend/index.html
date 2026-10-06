@@ -113,7 +113,7 @@ back later. Files are kept for 7 days after upload.</p>
     no_gpu: 'no server was free for too long',
     over_budget: 'the daily server budget ran out',
   };
-  const DEFAULT_VOICE = 'qwen|en-warm-alto';
+  const DEFAULT_VOICE = 'en-warm-alto';
   const CLONE_VOICES = ['ru-tovarisch', 'en-karen-savage', 'en-mark-f-smith', 'en-elizabeth-klett'];
   const token = location.hash.slice(1);
   const $ = (id) => document.getElementById(id);
@@ -260,7 +260,8 @@ back later. Files are kept for 7 days after upload.</p>
           .map((voice) => new Option(voice.name + ' · ' + voice.engine, voice.id)));
         $('voice').append(group);
       }
-      if ([...$('voice').options].some((option) => option.value === DEFAULT_VOICE)) $('voice').value = DEFAULT_VOICE;
+      const defaultOption = [...$('voice').options].find((option) => option.value.endsWith('|' + DEFAULT_VOICE));
+      if (defaultOption) $('voice').value = defaultOption.value;
       showListenForVoice();
       $('loading').hidden = true;
       $('voicing').hidden = false;

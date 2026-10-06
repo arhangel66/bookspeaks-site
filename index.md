@@ -28,7 +28,7 @@ Offline voices run on your iPhone itself: no connection, no credits. The first h
 
 ### Generated on our server
 
-Have a whole book voiced ahead of time for a few credits. The finished audiobook stays on your phone and plays with no internet.
+Have a whole book voiced ahead of time for 100 credits per hour of audio. The finished audiobook stays on your phone and plays with no internet.
 
 - Nora
 
@@ -38,7 +38,7 @@ Have a whole book voiced ahead of time for a few credits. The finished audiobook
 
 ### Streamed as you listen
 
-The highest quality we have: natural AI voices streamed over the internet as you listen. It needs a connection and costs 2 or 3 credits per hour, depending on the voice.
+The highest quality we have: natural AI voices streamed over the internet as you listen. It needs a connection and costs about 33 or 50 credits a minute, depending on the voice.
 
 - Eve · AI voice
 
@@ -62,7 +62,7 @@ $0
 
 - 1 hour of offline listening
 
-- 2 credits to try server voices
+- 2,000 credits to try server voices
 
 ### Offline forever
 
@@ -70,7 +70,7 @@ $14.99 once
 
 - Offline listening, forever
 
-- 5 credits included
+- 5,000 credits included
 
 - One payment, not a subscription
 
@@ -78,9 +78,9 @@ $14.99 once
 
 from $2.99
 
-- 3 credits $2.99
+- 3,000 credits $2.99
 
-- 10 credits $9.99
+- 10,000 credits $9.99
 
 For streamed AI voices and pre-generated audiobooks. Buy them when you need them.
 

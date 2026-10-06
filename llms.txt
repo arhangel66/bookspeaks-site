@@ -24,14 +24,14 @@ How to use it: BookSpeaks is an app for people. It has no API, no MCP server and
 ## Three ways to listen
 
 - Offline on your phone: offline voices run on the iPhone itself, with no connection and no credits. The first hour is free; a single $14.99 purchase makes it unlimited, forever.
-- Generated on our server: a whole book is voiced ahead of time for a few credits. The finished audiobook stays on the phone and plays with no internet.
-- Streamed as you listen: the highest quality. Natural AI voices streamed over the internet as you listen; it needs a connection and costs 2 or 3 credits per hour, depending on the voice.
+- Generated on our server: a whole book is voiced ahead of time for 100 credits per hour of audio. The finished audiobook stays on the phone and plays with no internet.
+- Streamed as you listen: the highest quality. Natural AI voices streamed over the internet as you listen; it needs a connection and costs about 33 or 50 credits a minute, depending on the voice.
 
 ## Pricing
 
-- Free, $0: import and read your books, 1 hour of offline listening, 2 credits to try server voices.
-- Offline forever, $14.99 once: offline listening forever, 5 credits included. One payment, not a subscription.
-- Credits: 3 credits for $2.99, 10 credits for $9.99. For streamed AI voices and pre-generated audiobooks.
+- Free, $0: import and read your books, 1 hour of offline listening, 2,000 credits to try server voices.
+- Offline forever, $14.99 once: offline listening forever, 5,000 credits included. One payment, not a subscription.
+- Credits: 3,000 credits for $2.99, 10,000 credits for $9.99. For streamed AI voices and pre-generated audiobooks.
 
 ## Pages
 

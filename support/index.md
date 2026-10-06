@@ -22,21 +22,21 @@ Yes. Download a voice once (it needs the internet for that), then it reads on th
 
 ### What is free and what does it cost?
 
-BookSpeaks is free to try: 1 hour of offline listening in total, across all books, and 2 credits to start. Reading is always free. There is no subscription; the in-app purchases are:
+BookSpeaks is free to try: 1 hour of offline listening in total, across all books, and 2,000 credits to start. Reading is always free. There is no subscription; the in-app purchases are:
 
-- Offline forever, $14.99, once: unlimited offline listening, plus 5 credits.
+- Offline forever, $14.99, once: unlimited offline listening, plus 5,000 credits.
 
-- 3 credits, $2.99, and 10 credits, $9.99, as often as you need.
+- 3,000 credits, $2.99, and 10,000 credits, $9.99, as often as you need.
 
 Prices are in US dollars; the App Store shows the price for your country. When the free hour or your credits run out, the app offers these purchases.
 
 ### Pre-generation
 
-You can have an English or Russian book voiced ahead of time on our server. It takes 1 credit for each started 5 hours of the book, counted per order; before you order, the app shows the credits it will take and your balance. It takes 20 minutes to an hour, and the finished book plays offline. If a voicing job fails, its credits come back.
+You can have an English or Russian book voiced ahead of time on our server. It takes 100 credits for each hour of audio (at least 100 per order); before you order, the app shows the credits it will take and your balance. It takes 20 minutes to an hour, and the finished book plays offline. If a voicing job fails, its credits come back.
 
 ### Online voices
 
-Online voices read over the internet and spend credits while you listen. The Gemini voices (the default) spend 3 credits per hour of listening; the Grok voices Eve and Rex spend 2 credits per hour, charged 1 credit for each started 30 minutes of audio. Offline voices spend no credits.
+Online voices read over the internet and spend credits while you listen. The Gemini voices (the default) spend 50 credits a minute of listening; the Grok voices Eve and Rex spend about 33 credits a minute. You pay for the audio you get, not for a started block. Offline voices spend no credits.
 
 ### Restore purchases
 
@@ -70,21 +70,21 @@ BookSpeaks открывает EPUB, FB2 и TXT. Нажмите «+» в библ
 
 ### Что бесплатно и сколько стоит?
 
-BookSpeaks можно попробовать бесплатно: 1 час офлайн-прослушивания всего, на все книги, и 2 кредита на старте. Читать глазами можно всегда бесплатно. Подписки нет; покупки в приложении такие:
+BookSpeaks можно попробовать бесплатно: 1 час офлайн-прослушивания всего, на все книги, и 2 000 кредитов на старте. Читать глазами можно всегда бесплатно. Подписки нет; покупки в приложении такие:
 
-- «Офлайн навсегда», $14.99, один раз: офлайн-прослушивание без ограничений и 5 кредитов.
+- «Офлайн навсегда», $14.99, один раз: офлайн-прослушивание без ограничений и 5 000 кредитов.
 
-- 3 кредита за $2.99 и 10 кредитов за $9.99 — сколько угодно раз.
+- 3 000 кредитов за $2.99 и 10 000 кредитов за $9.99 — сколько угодно раз.
 
 Цены указаны в долларах США; App Store покажет цену для вашей страны. Когда бесплатный час или кредиты закончатся, приложение предложит эти покупки.
 
 ### Предгенерация
 
-Русскую или английскую книгу можно озвучить заранее на нашем сервере. Это стоит 1 кредит за каждые начатые 5 часов книги, считается на заказ; перед заказом приложение покажет, сколько кредитов уйдёт и сколько на балансе. Озвучка занимает от 20 минут до часа, готовая книга играет без интернета. Если озвучка не удалась, кредиты вернутся.
+Русскую или английскую книгу можно озвучить заранее на нашем сервере. Это стоит 100 кредитов за каждый час звука (не меньше 100 на заказ); перед заказом приложение покажет, сколько кредитов уйдёт и сколько на балансе. Озвучка занимает от 20 минут до часа, готовая книга играет без интернета. Если озвучка не удалась, кредиты вернутся.
 
 ### Онлайн-голоса
 
-Онлайн-голоса читают через интернет и тратят кредиты, пока вы слушаете. Голоса Gemini (они выбраны по умолчанию) тратят 3 кредита в час прослушивания; голоса Grok — Eve и Rex — 2 кредита в час: 1 кредит списывается за каждые начатые 30 минут звука. Офлайн-голоса кредиты не тратят.
+Онлайн-голоса читают через интернет и тратят кредиты, пока вы слушаете. Голоса Gemini (они выбраны по умолчанию) тратят 50 кредитов в минуту прослушивания; голоса Grok — Eve и Rex — около 33 кредитов в минуту. Платите за звук, который получили, а не за начатый блок. Офлайн-голоса кредиты не тратят.
 
 ### Восстановить покупки
 

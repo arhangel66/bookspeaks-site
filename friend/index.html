@@ -113,6 +113,8 @@ back later. Files are kept for 7 days after upload.</p>
     no_gpu: 'no server was free for too long',
     over_budget: 'the daily server budget ran out',
   };
+  const DEFAULT_VOICE = 'qwen|en-warm-alto';
+  const CLONE_VOICES = ['ru-tovarisch', 'en-karen-savage', 'en-mark-f-smith', 'en-elizabeth-klett'];
   const token = location.hash.slice(1);
   const $ = (id) => document.getElementById(id);
   let audio = null;
@@ -212,7 +214,15 @@ back later. Files are kept for 7 days after upload.</p>
     audio.play().catch(stopSample);
     $('listen').setAttribute('aria-pressed', 'true');
   });
-  $('voice').addEventListener('change', stopSample);
+  $('voice').addEventListener('change', () => {
+    stopSample();
+    showListenForVoice();
+  });
+  window.addEventListener('hashchange', () => location.reload());
+
+  function showListenForVoice() {
+    $('listen').hidden = CLONE_VOICES.includes($('voice').value.split('|')[1]);
+  }
 
   $('order').addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -250,6 +260,8 @@ back later. Files are kept for 7 days after upload.</p>
           .map((voice) => new Option(voice.name + ' · ' + voice.engine, voice.id)));
         $('voice').append(group);
       }
+      if ([...$('voice').options].some((option) => option.value === DEFAULT_VOICE)) $('voice').value = DEFAULT_VOICE;
+      showListenForVoice();
       $('loading').hidden = true;
       $('voicing').hidden = false;
       showAccount(account);

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Voice your book — BookSpeaks</title>
+<title>Озвучьте свою книгу — BookSpeaks</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" type="image/png" href="/assets/img/favicon.png">
@@ -33,11 +33,11 @@
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main">К содержимому</a>
 
 <header class="top">
   <div class="wrap top-row">
-    <a class="brand" href="/" aria-label="BookSpeaks, home">
+    <a class="brand" href="/ru/" aria-label="BookSpeaks, главная">
       <img src="/assets/img/icon.webp" alt="" width="40" height="40">
       <span>BookSpeaks</span>
     </a>
@@ -45,39 +45,39 @@
 </header>
 
 <main id="main" class="wrap doc friend">
-<h1>Voice your book</h1>
-<p>Turn your own DRM-free book into an audiobook read by a BookSpeaks server voice. Upload a TXT or EPUB file, choose
-a voice, and get one audio file per chapter.</p>
+<h1>Озвучьте свою книгу</h1>
+<p>Превратите свою книгу без DRM в аудиокнигу, которую прочитает голос с сервера BookSpeaks. Загрузите файл TXT или
+EPUB, выберите голос — и получите по одному аудиофайлу на каждую главу.</p>
 
 <section id="no-link" hidden>
-<h2>This page needs a personal link</h2>
-<p id="no-link-reason">Open it from the link you were sent. If the link does not work any more, ask for a new one.</p>
+<h2>Нужна персональная ссылка</h2>
+<p id="no-link-reason">Откройте страницу по ссылке, которую вам прислали. Если ссылка больше не работает, попросите новую.</p>
 </section>
 
-<p id="loading">Loading…</p>
+<p id="loading">Загружаем…</p>
 
 <section id="voicing" hidden>
-<p>Balance: <b id="balance"></b> credits. A book takes about 100 credits per hour of audio, at least 100 credits.
-If voicing fails, the credits come back.</p>
+<p>Баланс: <b id="balance"></b>. Книга обходится примерно в 100 кредитов за час звука, минимум 100 кредитов.
+Если озвучить не получится, кредиты вернутся.</p>
 
 <form id="order">
-  <label>Book (TXT or EPUB, up to 50 MB)
+  <label>Книга (TXT или EPUB, до 50 МБ)
     <input id="book" type="file" accept=".txt,.epub" required>
   </label>
   <div class="voice-row">
-    <label>Voice
+    <label>Голос
       <select id="voice" required></select>
     </label>
-    <button class="sample" id="listen" type="button" aria-pressed="false">Listen</button>
+    <button class="sample" id="listen" type="button" aria-pressed="false">Послушать</button>
   </div>
-  <button class="start" id="start" type="submit">Start</button>
+  <button class="start" id="start" type="submit">Начать</button>
   <p class="error" id="error" role="alert"></p>
 </form>
-<p class="note">Voicing takes from 20 minutes to a few hours, depending on the book. You can close this page and come
-back later. Files are kept for 7 days after upload.</p>
+<p class="note">Озвучивание занимает от 20 минут до нескольких часов, в зависимости от книги. Страницу можно закрыть и
+вернуться позже. Файлы хранятся 7 дней после загрузки.</p>
 
-<h2>Your books</h2>
-<p id="no-books">No books yet.</p>
+<h2>Ваши книги</h2>
+<p id="no-books">Пока нет книг.</p>
 <ul class="books" id="books" aria-live="polite"></ul>
 </section>
 </main>
@@ -88,12 +88,12 @@ back later. Files are kept for 7 days after upload.</p>
       <img src="/assets/img/icon.webp" alt="" width="40" height="40" loading="lazy">
       <div>
         <p class="foot-name">BookSpeaks</p>
-        <p>Coming soon to the App Store</p>
+        <p>Скоро в App Store</p>
       </div>
     </div>
-    <nav class="foot-nav" aria-label="Footer">
-      <a href="/support/">Support</a>
-      <a href="/privacy/">Privacy</a>
+    <nav class="foot-nav" aria-label="Подвал">
+      <a href="/support/#ru">Поддержка</a>
+      <a href="/privacy/#ru">Конфиденциальность</a>
       <a href="mailto:support@bookspeaks.app">support@bookspeaks.app</a>
     </nav>
   </div>
@@ -102,22 +102,51 @@ back later. Files are kept for 7 days after upload.</p>
 (() => {
   const API = 'https://book.slotik.app';
   const MAX_BYTES = 50e6;
-  const LANGUAGES = { ru: 'Russian', en: 'English' };
+  const LANGUAGES = { ru: 'Русские', en: 'Английские' };
+  const VOICE_NAMES = {
+    'ru-tovarisch': 'Товарищ', 'ru-young-clear': 'Молодой, ясный', 'ru-bright-storyteller': 'Живой рассказчик',
+    'ru-confident-anchor': 'Уверенная ведущая', 'ru-older-cosy': 'Уютная',
+  };
   const WAITING = {
-    daily_cap: 'Waiting for a server — paused until tomorrow',
-    kill_switch: 'Waiting for a server — voicing is switched off for now',
-    disk_low: 'Waiting for a server — the server is short of space',
+    daily_cap: 'Ждём сервер — пауза до завтра',
+    kill_switch: 'Ждём сервер — озвучивание пока выключено',
+    disk_low: 'Ждём сервер — на сервере не хватает места',
   };
   const FAILED = {
-    pods_lost: 'the servers dropped out',
-    no_gpu: 'no server was free for too long',
-    over_budget: 'the daily server budget ran out',
+    pods_lost: 'серверы отключились',
+    no_gpu: 'слишком долго не было свободного сервера',
+    over_budget: 'дневной бюджет на серверы закончился',
   };
-  const DEFAULT_VOICE = 'en-warm-alto';
+  const ERRORS = {
+    bad_file: 'В этом файле нет текста для озвучивания. Выберите книгу в формате TXT или EPUB.',
+    bad_voice: 'Этот голос недоступен. Выберите другой.',
+    too_big: 'Книга слишком длинная для одного заказа. Разделите её на части до 2 миллионов знаков.',
+    voicing_off: 'Озвучивание на сервере пока выключено. Попробуйте позже.',
+    server_full: 'На сервере сейчас не хватает места. Попробуйте позже.',
+    bad_token: 'Эта ссылка не работает. Попросите новую.',
+    link_expired: 'Ссылка для скачивания устарела. Обновите страницу.',
+  };
+  const NETWORK_ERROR = 'Нет связи с сервером. Проверьте интернет и попробуйте ещё раз; файл должен быть меньше 50 МБ.';
+  const OTHER_ERROR = 'Что-то пошло не так. Попробуйте позже.';
+  const DEFAULT_VOICE = 'ru-tovarisch';
+  const DEFAULT_ENGINE = 'voxcpm';
   const token = location.hash.slice(1);
   const $ = (id) => document.getElementById(id);
+  const plurals = new Intl.PluralRules('ru');
   let audio = null;
   let refreshTimer = 0;
+
+  function credits(count) {
+    const word = { one: 'кредит', few: 'кредита' }[plurals.select(count)] || 'кредитов';
+    return count.toLocaleString('ru-RU') + ' ' + word;
+  }
+
+  function errorMessage(body) {
+    if (body.code === 'not_enough_credits') {
+      return 'Не хватает кредитов: на балансе ' + credits(body.balance) + ', нужно ' + credits(body.needed) + '.';
+    }
+    return ERRORS[body.code] || OTHER_ERROR;
+  }
 
   function showNoLink(reason) {
     $('loading').hidden = true;
@@ -131,21 +160,21 @@ back later. Files are kept for 7 days after upload.</p>
     try {
       response = await fetch(API + path, { ...options, headers: { 'X-Friend-Token': token } });
     } catch {
-      throw new Error('Could not reach the server. Check your connection and try again; a file must be under 50 MB.');
+      throw new Error(NETWORK_ERROR);
     }
     const body = await response.json().catch(() => ({}));
     if (response.ok) return body;
-    if (body.code === 'bad_token') showNoLink(body.message);
-    throw new Error(body.message || 'Something went wrong. Try again later.');
+    if (body.code === 'bad_token') showNoLink(errorMessage(body));
+    throw new Error(errorMessage(body));
   }
 
   function bookState(book) {
-    if (book.state === 'done') return 'Ready';
-    if (book.state === 'failed') return 'Failed — ' + (FAILED[book.code] || 'something went wrong on the server') + '. The credits came back.';
-    if (book.state === 'cancelled') return 'Cancelled';
-    if (book.state === 'running' && book.total) return 'Voicing — ' + Math.floor(100 * book.done / book.total) + '%';
-    if (book.state === 'running') return 'Voicing';
-    return WAITING[book.code] || 'Waiting for a server';
+    if (book.state === 'done') return 'Готово';
+    if (book.state === 'failed') return 'Ошибка — ' + (FAILED[book.code] || 'что-то пошло не так на сервере') + '. Кредиты вернулись.';
+    if (book.state === 'cancelled') return 'Отменено';
+    if (book.state === 'running' && book.total) return 'Озвучиваем — ' + Math.floor(100 * book.done / book.total) + '%';
+    if (book.state === 'running') return 'Озвучиваем';
+    return WAITING[book.code] || 'Ждём сервер';
   }
 
   function link(text, path) {
@@ -175,8 +204,8 @@ back later. Files are kept for 7 days after upload.</p>
       if (book.state === 'done') {
         const downloads = document.createElement('p');
         downloads.className = 'downloads';
-        downloads.append(link('Download all (zip)', book.zip),
-          ...book.chapters.map((chapter) => link('Chapter ' + chapter.number, chapter.url)));
+        downloads.append(link('Готово — скачать всё (zip)', book.zip),
+          ...book.chapters.map((chapter) => link('Глава ' + chapter.number, chapter.url)));
         item.append(downloads);
       }
       return item;
@@ -184,7 +213,7 @@ back later. Files are kept for 7 days after upload.</p>
   }
 
   function showAccount(account) {
-    $('balance').textContent = account.balance.toLocaleString('en-US');
+    $('balance').textContent = 'Баланс: ' + credits(account.balance);
     showBooks(account.books);
     clearTimeout(refreshTimer);
     const voicing = account.books.some((book) => book.state === 'queued' || book.state === 'running');
@@ -218,19 +247,24 @@ back later. Files are kept for 7 days after upload.</p>
   });
   window.addEventListener('hashchange', () => location.reload());
 
+  function voiceLabel(voice) {
+    const name = VOICE_NAMES[voice.id.split('|')[1]] || voice.name;
+    return name + ' · ' + voice.engine.replace('clean', 'чистый').replace('fast', 'быстрый');
+  }
+
   $('order').addEventListener('submit', async (event) => {
     event.preventDefault();
     const file = $('book').files[0];
     $('error').textContent = '';
     if (file.size > MAX_BYTES) {
-      $('error').textContent = 'This file is over 50 MB. Choose a smaller TXT or EPUB file.';
+      $('error').textContent = 'Файл больше 50 МБ. Выберите файл TXT или EPUB поменьше.';
       return;
     }
     const form = new FormData();
     form.append('book', file);
     form.append('voice', $('voice').value);
     $('start').disabled = true;
-    $('start').textContent = 'Uploading…';
+    $('start').textContent = 'Загружаем…';
     try {
       await call('/friend/api/upload', { method: 'POST', body: form });
       $('book').value = '';
@@ -239,7 +273,7 @@ back later. Files are kept for 7 days after upload.</p>
       $('error').textContent = error.message;
     } finally {
       $('start').disabled = false;
-      $('start').textContent = 'Start';
+      $('start').textContent = 'Начать';
     }
   });
 
@@ -251,10 +285,13 @@ back later. Files are kept for 7 days after upload.</p>
         const group = document.createElement('optgroup');
         group.label = title;
         group.append(...account.voices.filter((voice) => voice.language === language)
-          .map((voice) => new Option(voice.name + ' · ' + voice.engine, voice.id)));
+          .map((voice) => new Option(voiceLabel(voice), voice.id)));
         $('voice').append(group);
       }
-      const defaultOption = [...$('voice').options].find((option) => option.value.endsWith('|' + DEFAULT_VOICE));
+      const defaultOption = [...$('voice').options].find((option) => {
+        const [model, voice] = option.value.split('|');
+        return voice === DEFAULT_VOICE && model.toLowerCase().startsWith(DEFAULT_ENGINE);
+      });
       if (defaultOption) $('voice').value = defaultOption.value;
       $('loading').hidden = true;
       $('voicing').hidden = false;

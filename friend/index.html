@@ -13,7 +13,14 @@
 <style>
 .friend form { display: grid; gap: 1.25rem; margin-top: 1.5rem; padding: 1.5rem; background: var(--mist); border-radius: 1.5rem; }
 .friend label { display: grid; gap: 0.375rem; font-weight: 600; }
-.friend input[type="file"], .friend select { width: 100%; min-height: 2.75rem; padding: 0.5rem 0.75rem; border: 1px solid var(--line); border-radius: 0.75rem; background: var(--paper); color: var(--ink); font: 1rem/1.4 var(--sans); }
+.friend .field-title { font-weight: 600; }
+.friend .file-field { display: grid; gap: 0.375rem; position: relative; }
+.friend .file-native { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; pointer-events: none; }
+.friend .file-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; }
+.friend .pick { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 1.5rem; border-radius: 99px; background: var(--cobalt); color: #fff; font: 600 1rem/1 var(--sans); cursor: pointer; }
+.friend .file-native:focus-visible + .file-row .pick { outline: 3px solid var(--cobalt); outline-offset: 3px; }
+.friend .file-row .note { margin: 0; overflow-wrap: anywhere; }
+.friend select { width: 100%; min-height: 2.75rem; padding: 0.5rem 0.75rem; border: 1px solid var(--line); border-radius: 0.75rem; background: var(--paper); color: var(--ink); font: 1rem/1.4 var(--sans); }
 .friend .voice-row { display: flex; flex-wrap: wrap; align-items: end; gap: 0.75rem; }
 .friend .voice-row label { flex: 1 1 14rem; }
 .friend .sample { background: var(--paper); }
@@ -61,9 +68,14 @@ a voice, and get one audio file per chapter.</p>
 If voicing fails, the credits come back.</p>
 
 <form id="order">
-  <label>Book (TXT or EPUB, up to 50 MB)
-    <input id="book" type="file" accept=".txt,.epub" required>
-  </label>
+  <div class="file-field">
+    <span id="book-title" class="field-title">Book (TXT or EPUB, up to 50 MB)</span>
+    <input id="book" class="file-native" type="file" accept=".txt,.epub" required aria-labelledby="book-title">
+    <div class="file-row">
+      <label class="pick" for="book">Choose file</label>
+      <span id="book-name" class="note" aria-live="polite">No file chosen</span>
+    </div>
+  </div>
   <div class="voice-row">
     <label>Voice
       <select id="voice" required></select>
@@ -213,6 +225,11 @@ back later. Files are kept for 7 days after upload.</p>
     audio.play().catch(stopSample);
     $('listen').setAttribute('aria-pressed', 'true');
   });
+  function showFileName() {
+    $('book-name').textContent = $('book').files[0]?.name || 'No file chosen';
+  }
+
+  $('book').addEventListener('change', showFileName);
   $('voice').addEventListener('change', () => {
     stopSample();
   });
@@ -234,6 +251,7 @@ back later. Files are kept for 7 days after upload.</p>
     try {
       await call('/friend/api/upload', { method: 'POST', body: form });
       $('book').value = '';
+      showFileName();
       await refresh();
     } catch (error) {
       $('error').textContent = error.message;

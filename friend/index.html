@@ -209,7 +209,7 @@ back later. Files are kept for 7 days after upload.</p>
   $('listen').addEventListener('click', () => {
     if (audio) return stopSample();
     const [model, voice] = $('voice').value.split('|');
-    audio = new Audio('/friend/samples/' + (model.startsWith('voxcpm') ? 'voxcpm-' : 'qwen-') + voice + '.m4a');
+    audio = new Audio('/friend/samples/' + (model.toLowerCase().startsWith('voxcpm') ? 'voxcpm-' : 'qwen-') + voice + '.m4a');
     audio.addEventListener('ended', stopSample);
     audio.play().catch(stopSample);
     $('listen').setAttribute('aria-pressed', 'true');

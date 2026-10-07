@@ -50,7 +50,7 @@ Import the EPUB, FB2 or TXT files you already have, as long as they have no DRM.
 
 BookSpeaks does not sell books. There is no account to create and there are no ads.
 
-## Pay once. No subscription.
+## Offline voices: pay once, no subscription.
 
 Start free. Buy offline listening once and keep it. Credits are only for the voices made on our server.
 
@@ -92,7 +92,7 @@ EPUB, FB2 and TXT files without DRM. Books bought with copy protection cannot be
 
 **Do I need internet?**
 
-Only for streamed AI voices and while an audiobook is being pre-generated. Offline voices and finished audiobooks play with no connection.
+A voice is downloaded once, about 96 MB, the first time you play it. After that, offline voices and finished audiobooks play with no connection. Online voices and server voiceover need the internet.
 
 **Is there a subscription?**
 

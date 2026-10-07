@@ -6,7 +6,7 @@ Write to [support@bookspeaks.app](mailto:support@bookspeaks.app). Tell us your i
 
 ### How do I add a book?
 
-BookSpeaks opens EPUB, FB2 and TXT. Tap «+» in the library and pick a file, or open a file from another app with «Open in» / Share → BookSpeaks.
+BookSpeaks opens EPUB, FB2 and TXT. Tap “+” in the library and pick a file, or open a file from another app with “Open in” / Share → BookSpeaks.
 
 ### Can I send a book by e-mail?
 
@@ -14,11 +14,11 @@ Yes. In Settings, open the mail screen to get your personal address (random lett
 
 ### AirDrop and Files
 
-AirDrop an EPUB, FB2 or TXT file to your iPhone and choose BookSpeaks, or save it to Files and add it from the library's «+».
+AirDrop an EPUB, FB2 or TXT file to your iPhone and choose BookSpeaks, or save it to Files and add it from the library's “+”.
 
 ### Do voices work offline?
 
-Yes. Download a voice once (it needs the internet for that), then it reads on the iPhone without a connection. Until a voice is downloaded, the built-in Apple voice reads.
+Yes. Download a voice once (it needs the internet for that), then it reads on the iPhone without a connection. Until a voice is downloaded, the player waits for it, and pauses if the download fails; no other voice reads in its place.
 
 ### What is free and what does it cost?
 
@@ -32,7 +32,7 @@ Prices are in US dollars; the App Store shows the price for your country. When t
 
 ### Pre-generation
 
-You can have an English or Russian book voiced ahead of time on our server. It takes 100 credits for each hour of audio (at least 100 per order); before you order, the app shows the credits it will take and your balance. It takes 20 minutes to an hour, and the finished book plays offline. If a voicing job fails, its credits come back.
+You can have an English or Russian book voiced ahead of time on our server. It takes 100 credits for each hour of audio (at least 100 per order); before you order, the app shows the credits it will take and your balance. It takes from 20 minutes to a few hours, depending on the book, and the finished book plays offline. If a voicing job fails, its credits come back.
 
 ### Online voices
 
@@ -40,11 +40,11 @@ Online voices read over the internet and spend credits while you listen. The Gem
 
 ### Restore purchases
 
-Tap «Restore purchases» in Settings. «Offline forever» comes back from the App Store, and your credit balance comes back from our server, as long as you use the same Apple ID.
+Tap “Restore purchases” in Settings. “Offline forever” comes back from the App Store, and your credit balance comes back from our server, as long as you use the same Apple ID.
 
 ### How do I delete my data?
 
-Books are on your iPhone: delete them in the library, or delete the app. The mail address, the sender list and any waiting books are on our server: write to support@bookspeaks.app with your BookSpeaks address and we delete them within 30 days. Details in the [privacy policy](https://bookspeaks.app/privacy/).
+Books are on your iPhone: delete them in the library, or delete the app. The mail address, the sender list and any waiting books are on our server: write to support@bookspeaks.app with your BookSpeaks address (Settings → mail) and we delete them within 30 days. If you cannot find your address, write anyway, say roughly when you installed the app and what you bought, and we will find the record with you. Details in the [privacy policy](https://bookspeaks.app/privacy/).
 
 # Поддержка BookSpeaks
 
@@ -66,7 +66,7 @@ BookSpeaks открывает EPUB, FB2 и TXT. Нажмите «+» в библ
 
 ### Голоса работают без интернета?
 
-Да. Скачайте голос один раз (для этого нужен интернет), дальше он читает на iPhone без связи. Пока голос не скачан, читает встроенный голос Apple.
+Да. Скачайте голос один раз (для этого нужен интернет), дальше он читает на iPhone без связи. Пока голос не скачан, плеер ждёт его, а если загрузка не удалась — встаёт на паузу; другой голос вместо него не читает.
 
 ### Что бесплатно и сколько стоит?
 
@@ -80,7 +80,7 @@ BookSpeaks можно попробовать бесплатно: 1 час офл
 
 ### Предгенерация
 
-Русскую или английскую книгу можно озвучить заранее на нашем сервере. Это стоит 100 кредитов за каждый час звука (не меньше 100 на заказ); перед заказом приложение покажет, сколько кредитов уйдёт и сколько на балансе. Озвучка занимает от 20 минут до часа, готовая книга играет без интернета. Если озвучка не удалась, кредиты вернутся.
+Русскую или английскую книгу можно озвучить заранее на нашем сервере. Это стоит 100 кредитов за каждый час звука (не меньше 100 на заказ); перед заказом приложение покажет, сколько кредитов уйдёт и сколько на балансе. Озвучка занимает от 20 минут до нескольких часов, в зависимости от книги, готовая книга играет без интернета. Если озвучка не удалась, кредиты вернутся.
 
 ### Онлайн-голоса
 
@@ -92,4 +92,4 @@ BookSpeaks можно попробовать бесплатно: 1 час офл
 
 ### Как удалить мои данные?
 
-Книги лежат на iPhone: удалите их в библиотеке или удалите приложение. Почтовый адрес, список отправителей и ждущие книги хранятся на нашем сервере: напишите на support@bookspeaks.app, укажите свой адрес BookSpeaks, и мы удалим их в течение 30 дней. Подробно — в [политике конфиденциальности](https://bookspeaks.app/privacy/#ru).
+Книги лежат на iPhone: удалите их в библиотеке или удалите приложение. Почтовый адрес, список отправителей и ждущие книги хранятся на нашем сервере: напишите на support@bookspeaks.app, укажите свой адрес BookSpeaks (Настройки → почта), и мы удалим их в течение 30 дней. Если адрес не найти, всё равно напишите, скажите примерно, когда вы установили приложение и что покупали, и мы найдём запись вместе с вами. Подробно — в [политике конфиденциальности](https://bookspeaks.app/privacy/#ru).

@@ -176,7 +176,7 @@ you bought, and we will find the record with you. Details in the <a href="/priva
   </div>
 </footer>
 <script>
-// the #ru part of the page gets Russian header, footer, skip link and tab title
+/* the #ru part of the page gets Russian header, footer, skip link and tab title */
 (function () {
   var nodes = Array.prototype.slice.call(document.querySelectorAll('[data-ru]'));
   var english = nodes.map(function (node) { return [node.textContent, node.getAttribute('href')]; });

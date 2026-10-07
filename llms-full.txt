@@ -230,7 +230,7 @@ Write to support@bookspeaks.app. Tell us your iPhone model, iOS version and what
 
 #### How do I add a book?
 
-BookSpeaks opens EPUB, FB2 and TXT. Tap «+» in the library and pick a file, or open a file from another app with «Open in» / Share → BookSpeaks.
+BookSpeaks opens EPUB, FB2 and TXT. Tap “+” in the library and pick a file, or open a file from another app with “Open in” / Share → BookSpeaks.
 
 #### Can I send a book by e-mail?
 
@@ -238,11 +238,11 @@ Yes. In Settings, open the mail screen to get your personal address (random lett
 
 #### AirDrop and Files
 
-AirDrop an EPUB, FB2 or TXT file to your iPhone and choose BookSpeaks, or save it to Files and add it from the library's «+».
+AirDrop an EPUB, FB2 or TXT file to your iPhone and choose BookSpeaks, or save it to Files and add it from the library's “+”.
 
 #### Do voices work offline?
 
-Yes. Download a voice once (it needs the internet for that), then it reads on the iPhone without a connection. Until a voice is downloaded, the built-in Apple voice reads.
+Yes. Download a voice once (it needs the internet for that), then it reads on the iPhone without a connection. Until a voice is downloaded, the player waits for it, and pauses if the download fails; no other voice reads in its place.
 
 #### What is free and what does it cost?
 
@@ -256,7 +256,7 @@ Prices are in US dollars; the App Store shows the price for your country. When t
 
 #### Pre-generation
 
-You can have an English or Russian book voiced ahead of time on our server. It takes 100 credits for each hour of audio (at least 100 per order); before you order, the app shows the credits it will take and your balance. It takes 20 minutes to an hour, and the finished book plays offline. If a voicing job fails, its credits come back.
+You can have an English or Russian book voiced ahead of time on our server. It takes 100 credits for each hour of audio (at least 100 per order); before you order, the app shows the credits it will take and your balance. It takes from 20 minutes to a few hours, depending on the book, and the finished book plays offline. If a voicing job fails, its credits come back.
 
 #### Online voices
 
@@ -264,11 +264,11 @@ Online voices read over the internet and spend credits while you listen. The Gem
 
 #### Restore purchases
 
-Tap «Restore purchases» in Settings. «Offline forever» comes back from the App Store, and your credit balance comes back from our server, as long as you use the same Apple ID.
+Tap “Restore purchases” in Settings. “Offline forever” comes back from the App Store, and your credit balance comes back from our server, as long as you use the same Apple ID.
 
 #### How do I delete my data?
 
-Books are on your iPhone: delete them in the library, or delete the app. The mail address, the sender list and any waiting books are on our server: write to support@bookspeaks.app with your BookSpeaks address and we delete them within 30 days. Details in the privacy policy.
+Books are on your iPhone: delete them in the library, or delete the app. The mail address, the sender list and any waiting books are on our server: write to support@bookspeaks.app with your BookSpeaks address (Settings → mail) and we delete them within 30 days. If you cannot find your address, write anyway, say roughly when you installed the app and what you bought, and we will find the record with you. Details in the privacy policy.
 
 ## Поддержка BookSpeaks
 
@@ -290,7 +290,7 @@ BookSpeaks открывает EPUB, FB2 и TXT. Нажмите «+» в библ
 
 #### Голоса работают без интернета?
 
-Да. Скачайте голос один раз (для этого нужен интернет), дальше он читает на iPhone без связи. Пока голос не скачан, читает встроенный голос Apple.
+Да. Скачайте голос один раз (для этого нужен интернет), дальше он читает на iPhone без связи. Пока голос не скачан, плеер ждёт его, а если загрузка не удалась — встаёт на паузу; другой голос вместо него не читает.
 
 #### Что бесплатно и сколько стоит?
 
@@ -304,7 +304,7 @@ BookSpeaks можно попробовать бесплатно: 1 час офл
 
 #### Предгенерация
 
-Русскую или английскую книгу можно озвучить заранее на нашем сервере. Это стоит 100 кредитов за каждый час звука (не меньше 100 на заказ); перед заказом приложение покажет, сколько кредитов уйдёт и сколько на балансе. Озвучка занимает от 20 минут до часа, готовая книга играет без интернета. Если озвучка не удалась, кредиты вернутся.
+Русскую или английскую книгу можно озвучить заранее на нашем сервере. Это стоит 100 кредитов за каждый час звука (не меньше 100 на заказ); перед заказом приложение покажет, сколько кредитов уйдёт и сколько на балансе. Озвучка занимает от 20 минут до нескольких часов, в зависимости от книги, готовая книга играет без интернета. Если озвучка не удалась, кредиты вернутся.
 
 #### Онлайн-голоса
 
@@ -316,7 +316,7 @@ BookSpeaks можно попробовать бесплатно: 1 час офл
 
 #### Как удалить мои данные?
 
-Книги лежат на iPhone: удалите их в библиотеке или удалите приложение. Почтовый адрес, список отправителей и ждущие книги хранятся на нашем сервере: напишите на support@bookspeaks.app, укажите свой адрес BookSpeaks, и мы удалим их в течение 30 дней. Подробно — в политике конфиденциальности.
+Книги лежат на iPhone: удалите их в библиотеке или удалите приложение. Почтовый адрес, список отправителей и ждущие книги хранятся на нашем сервере: напишите на support@bookspeaks.app, укажите свой адрес BookSpeaks (Настройки → почта), и мы удалим их в течение 30 дней. Если адрес не найти, всё равно напишите, скажите примерно, когда вы установили приложение и что покупали, и мы найдём запись вместе с вами. Подробно — в политике конфиденциальности.
 
 ---
 
@@ -324,7 +324,11 @@ Source: https://bookspeaks.app/privacy/
 
 ## BookSpeaks privacy policy
 
-Effective date: 2 October 2026. This policy covers BookSpeaks 1.0 for iPhone.
+Effective date: 7 October 2026. This policy covers BookSpeaks 1.0 for iPhone and the web upload page described below.
+
+### Who we are
+
+BookSpeaks is run by Mikhail Derbichev, the name in the app's copyright line on the App Store. He decides what the app and its server collect and why. Contact: support@bookspeaks.app.
 
 ### In short
 
@@ -332,23 +336,23 @@ BookSpeaks has no account, no advertising and no tracking. To see how the app is
 
 ### What is kept on your iPhone
 
-Books you add from Files, AirDrop or «Open in», your library, bookmarks, reading and listening position, settings, downloaded voices and the count of your free offline hour. We do not receive them, except the text you send to be voiced: a book you order for server voicing, or the sentences an online voice reads (below).
+Books you add from Files, AirDrop or “Open in”, your library, bookmarks, reading and listening position, settings, downloaded voices and the count of your free offline hour; the count is also in the iPhone keychain. We do not receive them, except the text you send to be voiced: a book you order for server voicing, or the sentences an online voice reads (below).
 
 ### Server voicing
 
-If you order a book to be voiced ahead of time on our server, paid in credits, the app sends that book's text (split into sentences, with the chosen voice and language) to our server. The server passes the text to a GPU machine rented from our GPU provider, Lium, and that machine turns it into audio. The GPU machine keeps the text only while it voices it and is removed when the job ends; the audio is deleted from it as soon as our server collects it. Our server deletes the audio when the app has downloaded it, and at most 48 hours after it was made; it keeps the job record with the text for 7 days after the job ends, then deletes it when it next handles a request. If our automatic check finds a sentence that was voiced badly, the server log keeps what the check heard for that sentence, as long as the logs (below). Books you do not order are never sent.
+If you order a book to be voiced ahead of time on our server, paid in credits, the app sends that book's text (split into sentences, with the chosen voice and language) to our server. The server passes the text to a GPU machine rented from our GPU provider, Lium, and that machine turns it into audio. The GPU machine keeps the text only while it voices it and is removed when the job ends; the audio is deleted from it as soon as our server collects it. Our server deletes the audio when the app has downloaded it, and at most 48 hours after it was made; it keeps the job record with the text for 7 days after the job ends, then deletes it when it next handles a request. If our automatic check finds a sentence that was voiced badly, the job record keeps what the check heard for that sentence, as long as the record itself; the server log keeps only the check's scores, no text. Books you do not order are never sent.
 
 ### Online voices
 
-The online voices read over the internet and spend credits for every hour of listening. While one reads, the app sends each sentence to our server, which passes it through OpenRouter to the company whose model speaks that voice — Google (the Gemini voices) or xAI (the Grok voices Eve and Rex) — to turn it into speech, and streams the audio back. Our server does not keep the text or the audio: it records only the request, the day and the credits spent, and keeps that with your credit record (below). Offline voices and the Apple voice never send text anywhere.
+The online voices read over the internet and spend credits by the minute: 50 credits a minute for the Gemini voices and about 33 for the Grok voices, charged per minute played. While one reads, the app sends each sentence to our server, which passes it through OpenRouter to the company whose model speaks that voice — Google (the Gemini voices) or xAI (the Grok voices Eve and Rex) — to turn it into speech, and streams the audio back. Our server does not keep the text or the audio: it records only the request, the day and the credits spent, and keeps that with your credit record (below). Offline voices and the Apple voice never send text anywhere.
 
 ### Purchases and credits
 
-Purchases are made through Apple; we never see your card or Apple ID. To keep your credit balance, our server records, under the appTransactionID that the App Store gives your copy of the app: the App Store transaction ids of your purchases, the product and credits bought, the free credits granted, the credits held and spent for each voicing order and for online listening, and refunds Apple reports to us. This record is kept while your copy of the app may use its credits, until you ask us to delete it. Nightly copies of it are kept for 30 days, on the same server and, encrypted, in an off-site backup (see «Who processes data for us»).
+Purchases are made through Apple; we never see your card or Apple ID. To keep your credit balance, our server records, under the appTransactionID that the App Store gives your copy of the app: the App Store transaction ids of your purchases, the product and credits bought, the free credits granted, the credits held and spent for each voicing order and for online listening, and refunds Apple reports to us. This record is kept while your copy of the app may use its credits, until you ask us to delete it. Nightly copies of it are kept for up to 31 days, on the same server and, encrypted, in an off-site backup (see “Who processes data for us”).
 
 ### What our server receives and keeps
 
-When you open the «add by mail» screen, listen with an online voice or download a Russian voice («Света» or «Дима»), the app registers with our server (Vultr, Warsaw, Poland). For mail, the server keeps:
+When you open the “add by mail” screen, listen with an online voice or download a Russian voice (“Света” or “Дима”), the app registers with our server (Vultr, Warsaw, Poland). For mail, the server keeps:
 
 - Device token. A random token issued to the app, kept in the iPhone keychain. The server stores only its hash, not the token. It is not the advertising ID or any Apple device ID. Kept until you ask us to delete it.
 
@@ -368,7 +372,7 @@ The 7-day and 24-hour limits are enforced when the server next handles a request
 
 The app sends our own server short events about how it is used: first launch, a book imported (its format and whether by file or mail), listening started and listening time, voice samples played and the voice chosen, a voicing order shown and confirmed (hours, credits, wait), the purchase screen shown, and a failed purchase with Apple's error type. Our server adds purchases, refunds and voicing jobs (credits, audio hours, cost). Each event has its time, the App Store country and the app version. They never contain book text, titles, file names or anything you type; a book is marked by a random number made only for this, not the id used elsewhere. Events are linked to your appTransactionID, not to your name or e-mail; we do not use the advertising ID and do not ask to track you. We use them only to understand which features matter and to check purchases, not for tracking or advertising, and we do not share them. They are deleted after 13 months; only totals are kept. Backups can hold an event up to 31 days longer.
 
-The app also uses Firebase Analytics, a Google service, to count how it is used. It sends Google events such as the first launch, sessions, screens opened, purchases (product and price) and the kinds of events listed above, with a random app-instance ID that Firebase makes for this copy of the app, the device model, iOS version, app version and language, and an approximate location (country, region, city) that Google derives from your IP address. These events never contain book text, titles, file names or anything you type, and they are not linked to your appTransactionID, your name or your e-mail. We have turned off the advertising ID, and Firebase data is not used for advertising or tracking. Google keeps this event data for 14 months; after that only totals remain. We cannot find your Firebase data by your e-mail or BookSpeaks address, so it is not deleted on request: it ages out after 14 months. The records our own server keeps — purchases, credits and voicing costs — stay as described above.
+The app also uses Firebase Analytics, a Google service, to count how it is used. It sends Google events such as the first launch, sessions, purchases (product and price) and the kinds of events listed above, with a random app-instance ID that Firebase makes for this copy of the app, the device model, iOS version, app version and language, and an approximate location (country, region, city) that Google derives from your IP address. These events never contain book text, titles, file names or anything you type, and they are not linked to your appTransactionID, your name or your e-mail. We have turned off the advertising ID, and Firebase data is not used for advertising or tracking. Google keeps this event data for 14 months; after that only totals remain. We cannot find your Firebase data by your e-mail or BookSpeaks address, so it is not deleted on request: it ages out after 14 months. The records our own server keeps — purchases, credits and voicing costs — stay as described above.
 
 ### Crash reports
 
@@ -376,7 +380,7 @@ If the app crashes, Firebase Crashlytics, a Google service, sends Google a crash
 
 ### Server logs
 
-Like any web server, ours writes logs. The web server's log holds the IP address, time and requested address of each request. Because the app sends an approved sender's e-mail address as part of the request address, logs can contain sender addresses, and the voicing log can contain what our check heard for a badly voiced sentence. Logs are used only to run and protect the service. They have no fixed time limit: older entries are deleted as the logs reach their size limit or are rotated (some copies after 5 weeks), or when the web server is reinstalled. We cannot delete single entries from them on request.
+Like any web server, ours writes logs. The web server's log holds the IP address, time and requested address of each request. Because the app sends an approved sender's e-mail address as part of the request address, logs can contain sender addresses, and the voicing log holds the scores of our check for a badly voiced sentence, never its text. Logs are used only to run and protect the service. They have no fixed time limit: older entries are deleted as the logs reach their size limit or are rotated (some copies after 5 weeks), or when the web server is reinstalled. We cannot delete single entries from them on request.
 
 ### Who processes data for us
 
@@ -384,7 +388,7 @@ Like any web server, ours writes logs. The web server's log holds the IP address
 
 - Our server host (Vultr), in Warsaw, Poland (EU).
 
-- Backblaze (B2 storage, EU region) holds our encrypted nightly backup. It is a copy of the credit record, the usage events, any feedback you sent (with the e-mail you gave there) and the voicing costs, encrypted on our server before it leaves, so Backblaze sees only unreadable data. It holds no book text, audio, device tokens or mail addresses of the «add by mail» screen. Backups are kept for 30 days.
+- Backblaze (B2 storage, EU region) holds our encrypted nightly backup. It is a copy of the credit record, the usage events and the voicing costs, encrypted on our server before it leaves, so Backblaze sees only unreadable data. It holds no book text, audio, device tokens or mail addresses of the “add by mail” screen. Backups are kept for up to 31 days.
 
 - Our GPU provider (Lium) runs the machines that voice a book you order; they see its text while voicing it.
 
@@ -394,7 +398,7 @@ Like any web server, ours writes logs. The web server's log holds the IP address
 
 - Apple processes purchases and tells our server about them and about refunds.
 
-- Google (Firebase) receives the app's usage events and crash reports, as described in «Usage data» and «Crash reports», and processes them for us. It may process them outside the EU.
+- Google (Firebase) receives the app's usage events and crash reports, as described in “Usage data” and “Crash reports”, and processes them for us. It may process them outside the EU.
 
 - Hugging Face serves voice files when you download a voice. It sees your IP address and the file requested, nothing about you or your books.
 
@@ -402,9 +406,29 @@ We do not sell or share your data, and we do not use it for advertising.
 
 ### Deleting your data
 
-In the app you can remove an approved sender, change your address, decline a held book and discard a failed import. The app cannot yet delete everything the server keeps about your device. To delete it, write to support@bookspeaks.app from any address and include your BookSpeaks address (Settings → mail). We delete the device record, the address, the sender list and any waiting books within 30 days. Ask in the same letter and we also delete your credit balance and purchase record within 30 days; unspent credits are lost. Nightly copies of the credit record age out within 31 days after that; server logs are not edited (see «Server logs»).
+In the app you can remove an approved sender, change your address, decline a held book and discard a failed import. The app cannot yet delete everything the server keeps about your device. To delete it, write to support@bookspeaks.app from any address and include your BookSpeaks address (Settings → mail). If you cannot find it, write anyway, say roughly when you installed the app and what you bought, and we will find the record with you. We delete the device record, the address, the sender list and any waiting books within 30 days. Ask in the same letter and we also delete your credit balance and purchase record within 30 days; unspent credits are lost. Nightly copies of the credit record age out within 31 days after that; server logs are not edited (see “Server logs”).
 
-Deleting the app removes your books from the iPhone, but not the device token in the iPhone keychain: if you install BookSpeaks again, it reconnects to the same server record. Ask us to delete it as above.
+Deleting the app removes your books from the iPhone, but not the device token and the free-hour counter in the iPhone keychain: if you install BookSpeaks again, it reconnects to the same server record and the free hour is not renewed. Ask us to delete the server record as above; the counter is only on your iPhone and stays there.
+
+### Why we may use your data
+
+- To give you what you asked for (a contract): mail delivery, voicing, credits and purchases.
+
+- Your consent: text goes to the AI voices only when you choose an online voice or order a server voicing. You withdraw it by choosing an offline voice.
+
+- Our legitimate interest: Firebase usage events and crash reports, to see how the app is used and to fix crashes. The app has no switch for them. You can object by writing to us; we cannot find Firebase data by your name, so it ages out as described in “Usage data”.
+
+### Your rights
+
+You can ask us for a copy of the data we hold about you, to correct or delete it, and to stop using it. Write to support@bookspeaks.app; we answer within 30 days. Data we cannot link to you (Firebase events, server logs) we cannot look up or delete. You can also complain to the data protection authority of your country.
+
+### Transfers outside the EU
+
+Our server and its backups are in the EU (Vultr in Warsaw, Backblaze EU region). These processors may handle data outside the EU: Google (Firebase, Gemini voices), xAI (Grok voices), OpenRouter, Lium (the GPU machines that voice a book you order), Cloudflare (mail) and Hugging Face (voice downloads).
+
+### Web upload page
+
+The page bookspeaks.app/friend/ is separate from the app and opens only from a personal link. It lets you upload a TXT or EPUB book and get it voiced by a server voice. The link's token is in the address after “#”, which your browser never sends to bookspeaks.app; the page sends it to our server. The book is voiced as in “Server voicing”, and the book, its text and its audio are kept for 7 days after upload, then deleted. The page sets no cookies and uses no analytics.
 
 ### Children
 
@@ -420,27 +444,31 @@ support@bookspeaks.app
 
 ## Политика конфиденциальности BookSpeaks
 
-Действует с 2 октября 2026 года. Относится к BookSpeaks 1.0 для iPhone.
+Действует с 7 октября 2026 года. Относится к BookSpeaks 1.0 для iPhone и странице загрузки книг в браузере, описанной ниже.
+
+### Кто мы
+
+BookSpeaks ведёт Михаил Дербичев — это имя в строке об авторских правах приложения в App Store. Он решает, какие данные собирают приложение и сервер и зачем. Связь: support@bookspeaks.app.
 
 ### Коротко
 
-В BookSpeaks нет учётной записи, рекламы и слежки. Чтобы видеть, как пользуются приложением, и исправлять сбои, оно использует Firebase Analytics и Crashlytics от Google, без рекламного идентификатора. Чтение и офлайн-голоса работают на iPhone, библиотека и место чтения хранятся на нём. Наш сервер нужен для отправки книг в приложение по почте, для озвучки заказанной книги, для онлайн-голосов, для ваших кредитов и покупок и для наших собственных записей об использовании и хранит лишь то, что для этого необходимо.
+В BookSpeaks нет учётной записи, рекламы и слежки. Чтобы видеть, как пользуются приложением, и исправлять сбои, оно использует Firebase Analytics и Crashlytics от Google, без рекламного идентификатора. Чтение и офлайн-голоса работают на iPhone, библиотека и место чтения хранятся на нём. Наш сервер нужен для отправки книг в приложение по почте, для озвучки заказанной книги, для онлайн-голосов, для ваших кредитов и покупок и для наших собственных записей об использовании, и хранит лишь то, что для этого необходимо.
 
 ### Что хранится на iPhone
 
-Книги, добавленные из «Файлов», через AirDrop или «Открыть в», библиотека, закладки, место чтения и прослушивания, настройки, скачанные голоса и счётчик бесплатного офлайн-часа. Мы их не получаем, кроме текста, который вы отдаёте на озвучку: книги, заказанной для озвучки на сервере, или предложений, которые читает онлайн-голос (ниже).
+Книги, добавленные из «Файлов», через AirDrop или «Открыть в», библиотека, закладки, место чтения и прослушивания, настройки, скачанные голоса и счётчик бесплатного офлайн-часа; счётчик есть и в связке ключей iPhone. Мы их не получаем, кроме текста, который вы отдаёте на озвучку: книги, заказанной для озвучки на сервере, или предложений, которые читает онлайн-голос (ниже).
 
 ### Озвучка на сервере
 
-Если вы заказываете озвучку книги заранее на нашем сервере за кредиты, приложение отправляет текст этой книги (по предложениям, с выбранным голосом и языком) на наш сервер. Сервер передаёт текст GPU-машине, арендованной у нашего поставщика вычислений Lium, и она превращает его в звук. GPU-машина держит текст только пока озвучивает его и удаляется после окончания заказа; звук стирается с неё, как только наш сервер его забрал. Наш сервер удаляет звук, когда приложение его скачало, и не позже чем через 48 часов после создания; запись заказа с текстом он хранит 7 дней после окончания заказа и удаляет её при следующем обращении к серверу. Если наша автоматическая проверка находит плохо озвученное предложение, журнал сервера хранит то, что проверка в нём расслышала, столько же, сколько сами журналы (ниже). Книги, которые вы не заказывали, никуда не отправляются.
+Если вы заказываете озвучку книги заранее на нашем сервере за кредиты, приложение отправляет текст этой книги (по предложениям, с выбранным голосом и языком) на наш сервер. Сервер передаёт текст GPU-машине, арендованной у нашего поставщика вычислений Lium, и она превращает его в звук. GPU-машина держит текст только пока озвучивает его и удаляется после окончания заказа; звук стирается с неё, как только наш сервер его заберёт. Наш сервер удаляет звук, когда приложение его скачало, и не позже чем через 48 часов после создания; запись заказа с текстом он хранит 7 дней после окончания заказа и удаляет её при следующем обращении к серверу. Если наша автоматическая проверка находит плохо озвученное предложение, запись заказа хранит то, что проверка в нём расслышала, столько же, сколько сама запись; журнал сервера хранит только оценки проверки, без текста. Книги, которые вы не заказывали, никуда не отправляются.
 
 ### Онлайн-голоса
 
-Онлайн-голоса читают через интернет и тратят кредиты за каждый час прослушивания. Пока такой голос читает, приложение отправляет каждое предложение на наш сервер, а он передаёт его через OpenRouter компании, чья модель озвучивает этот голос, — Google (голоса Gemini) или xAI (голоса Grok: Eve и Rex), — чтобы превратить в речь, и возвращает звук в приложение. Наш сервер не хранит ни текст, ни звук: он записывает только запрос, день и потраченные кредиты и хранит это вместе с записью о ваших кредитах (ниже). Офлайн-голоса и голос Apple никуда не отправляют текст.
+Онлайн-голоса читают через интернет и тратят кредиты поминутно: 50 кредитов в минуту голоса Gemini и около 33 — голоса Grok, за каждую проигранную минуту. Пока такой голос читает, приложение отправляет каждое предложение на наш сервер, а он передаёт его через OpenRouter компании, чья модель озвучивает этот голос, — Google (голоса Gemini) или xAI (голоса Grok: Eve и Rex), — чтобы превратить в речь, и возвращает звук в приложение. Наш сервер не хранит ни текст, ни звук: он записывает только запрос, день и потраченные кредиты и хранит это вместе с записью о ваших кредитах (ниже). Офлайн-голоса и голос Apple никуда не отправляют текст.
 
 ### Покупки и кредиты
 
-Покупки проходят через Apple; мы не видим вашу карту и Apple ID. Чтобы вести баланс кредитов, наш сервер хранит под appTransactionID, который App Store выдаёт вашей копии приложения: номера транзакций App Store ваших покупок, купленный продукт и кредиты, выданные бесплатные кредиты, кредиты, удержанные и потраченные на каждый заказ озвучки и на онлайн-прослушивание, и возвраты, о которых сообщает Apple. Эта запись хранится, пока ваша копия приложения может тратить кредиты, или до вашей просьбы удалить её. Ночные копии этой записи хранятся 30 дней на том же сервере и в зашифрованном виде во внешней резервной копии (см. «Кто обрабатывает данные для нас»).
+Покупки проходят через Apple; мы не видим вашу карту и Apple ID. Чтобы вести баланс кредитов, наш сервер хранит под appTransactionID, который App Store выдаёт вашей копии приложения: номера транзакций App Store ваших покупок, купленный продукт и кредиты, выданные бесплатные кредиты, кредиты, удержанные и потраченные на каждый заказ озвучки и на онлайн-прослушивание, и возвраты, о которых сообщает Apple. Эта запись хранится, пока ваша копия приложения может тратить кредиты, или до вашей просьбы удалить её. Ночные копии этой записи хранятся до 31 дня на том же сервере и в зашифрованном виде во внешней резервной копии (см. «Кто обрабатывает данные для нас»).
 
 ### Что получает и хранит наш сервер
 
@@ -450,7 +478,7 @@ support@bookspeaks.app
 
 - Ваш личный адрес BookSpeaks (случайные буквы @bookspeaks.app). Хранится, пока вы не попросите его удалить. При смене адреса старый выводится из работы и никому больше не выдаётся.
 
-- Разрешённые отправители: адреса, с которых вам можно присылать книги, и правило для остальных (спрашивать или отклонять). Хранятся, пока вы не удалите их в приложении или не попросите удалить нас.
+- Разрешённые отправители: адреса, с которых вам можно присылать книги, и правило для остальных (спрашивать или отклонять). Хранятся, пока вы не удалите их в приложении или не попросите нас их удалить.
 
 - Присланные книги. Файл книги, пришедший на ваш адрес, с названием, автором и обложкой хранится, пока приложение его не скачает, но не дольше 7 дней. Текст и заголовки письма не сохраняются.
 
@@ -462,9 +490,9 @@ support@bookspeaks.app
 
 ### Данные об использовании
 
-Приложение отправляет нашему собственному серверу короткие события о том, как им пользуются: первый запуск, добавленная книга (формат и откуда — файл или почта), начало прослушивания и время прослушивания, прослушанные образцы голосов и выбранный голос, показанный и подтверждённый заказ озвучки (часы, кредиты, ожидание), показ экрана покупки и неудачная покупка с типом ошибки Apple. Сервер добавляет покупки, возвраты и заказы озвучки (кредиты, часы аудио, стоимость). У каждого события есть время, страна App Store и версия приложения. В них никогда нет текста, названий, имён файлов книг и ничего, что вы вводите; книга помечена случайным номером, созданным только для этого. События связаны с вашим appTransactionID, а не с именем или почтой; мы не используем рекламный идентификатор и не просим разрешения на отслеживание. Мы используем их только чтобы понимать, какие функции важны, и проверять покупки, — не для слежки и рекламы, и никому их не передаём. Они удаляются через 13 месяцев; остаются только итоговые цифры. Резервные копии могут хранить событие до 31 дня дольше.
+Приложение отправляет нашему собственному серверу короткие события о том, как им пользуются: первый запуск, добавленная книга (формат и откуда — файл или почта), начало прослушивания и время прослушивания, прослушанные образцы голосов и выбранный голос, показанный и подтверждённый заказ озвучки (часы, кредиты, ожидание), показ экрана покупки и неудачная покупка с типом ошибки Apple. Сервер добавляет покупки, возвраты и заказы озвучки (кредиты, часы аудио, стоимость). У каждого события есть время, страна App Store и версия приложения. В них никогда нет текста, названий, имён файлов книг и ничего, что вы вводите; книга помечена случайным номером, созданным только для этого, а не тем, что используется в других местах. События связаны с вашим appTransactionID, а не с именем или почтой; мы не используем рекламный идентификатор и не просим разрешения на отслеживание. Мы используем их только чтобы понимать, какие функции важны, и проверять покупки, — не для слежки и рекламы, и никому их не передаём. Они удаляются через 13 месяцев; остаются только итоговые цифры. Резервные копии могут хранить событие до 31 дня дольше.
 
-Ещё приложение использует Firebase Analytics, сервис Google, чтобы считать, как им пользуются. Оно отправляет Google события: первый запуск, сеансы, открытые экраны, покупки (продукт и цена) и события того же рода, что перечислены выше, — со случайным идентификатором, который Firebase создаёт для этой копии приложения, моделью устройства, версией iOS, версией и языком приложения и примерным местоположением (страна, регион, город), которое Google определяет по IP-адресу. В этих событиях никогда нет текста, названий, имён файлов книг и ничего, что вы вводите, и они не связаны с вашим appTransactionID, именем или почтой. Рекламный идентификатор мы отключили, данные Firebase не используются для рекламы и слежки. Google хранит эти события 14 месяцев, после этого остаются только итоговые цифры. Найти ваши данные в Firebase по почте или адресу BookSpeaks мы не можем, поэтому по просьбе они не удаляются: они исчезают через 14 месяцев. Записи нашего собственного сервера — покупки, кредиты и стоимость озвучки — хранятся так, как описано выше.
+Ещё приложение использует Firebase Analytics, сервис Google, чтобы считать, как им пользуются. Оно отправляет Google события: первый запуск, сеансы, покупки (продукт и цена) и события того же рода, что перечислены выше, — со случайным идентификатором, который Firebase создаёт для этой копии приложения, моделью устройства, версией iOS, версией и языком приложения и примерным местоположением (страна, регион, город), которое Google определяет по IP-адресу. В этих событиях никогда нет текста, названий, имён файлов книг и ничего, что вы вводите, и они не связаны с вашим appTransactionID, именем или почтой. Рекламный идентификатор мы отключили, данные Firebase не используются для рекламы и слежки. Google хранит эти события 14 месяцев, после этого остаются только итоговые цифры. Найти ваши данные в Firebase по почте или адресу BookSpeaks мы не можем, поэтому по просьбе они не удаляются: они исчезают через 14 месяцев. Записи нашего собственного сервера — покупки, кредиты и стоимость озвучки — хранятся так, как описано выше.
 
 ### Отчёты о сбоях
 
@@ -472,7 +500,7 @@ support@bookspeaks.app
 
 ### Журналы сервера
 
-Как любой веб-сервер, наш ведёт журналы. Журнал веб-сервера хранит IP-адрес, время и запрошенный адрес каждого запроса. Приложение передаёт адрес разрешённого отправителя в адресе запроса, поэтому в журналах могут оказаться адреса отправителей, а в журнале озвучки — то, что наша проверка расслышала в плохо озвученном предложении. Журналы нужны только для работы и защиты сервиса. Срока хранения по времени у них нет: старые записи удаляются, когда журнал достигает предельного размера или сменяется (часть копий — через 5 недель), или при переустановке веб-сервера. Удалить из них отдельные записи по просьбе мы не можем.
+Как любой веб-сервер, наш ведёт журналы. Журнал веб-сервера хранит IP-адрес, время и запрошенный адрес каждого запроса. Приложение передаёт адрес разрешённого отправителя в адресе запроса, поэтому в журналах могут оказаться адреса отправителей, а в журнале озвучки — оценки нашей проверки для плохо озвученного предложения, но не его текст. Журналы нужны только для работы и защиты сервиса. Срока хранения по времени у них нет: старые записи удаляются, когда журнал достигает предельного размера или сменяется (часть копий — через 5 недель), или при переустановке веб-сервера. Удалить из них отдельные записи по просьбе мы не можем.
 
 ### Кто обрабатывает данные для нас
 
@@ -480,7 +508,7 @@ support@bookspeaks.app
 
 - Хостинг нашего сервера (Vultr), Варшава, Польша (ЕС).
 
-- Backblaze (хранилище B2, регион ЕС) хранит нашу зашифрованную ночную резервную копию. В ней копия записи о кредитах, события об использовании, отправленные вами отзывы (с почтой, которую вы там указали) и стоимость озвучки; она шифруется на нашем сервере до отправки, поэтому Backblaze видит только нечитаемые данные. В ней нет текста книг, звука, токенов устройств и адресов почты с экрана «добавить по почте». Копии хранятся 30 дней.
+- Backblaze (хранилище B2, регион ЕС) хранит нашу зашифрованную ночную резервную копию. В ней копия записи о кредитах, события об использовании и стоимость озвучки; она шифруется на нашем сервере до отправки, поэтому Backblaze видит только нечитаемые данные. В ней нет текста книг, звука, токенов устройств и адресов почты с экрана «добавить по почте». Копии хранятся до 31 дня.
 
 - Наш поставщик GPU (Lium) даёт машины, которые озвучивают заказанную книгу; они видят её текст, пока озвучивают.
 
@@ -498,9 +526,29 @@ support@bookspeaks.app
 
 ### Удаление данных
 
-В приложении можно удалить разрешённого отправителя, сменить адрес, отклонить задержанную книгу и убрать неудавшийся импорт. Удалить всё, что сервер хранит о вашем устройстве, приложение пока не умеет. Для этого напишите на support@bookspeaks.app с любого адреса и укажите свой адрес BookSpeaks (Настройки → почта). Мы удалим запись устройства, адрес, список отправителей и ждущие книги в течение 30 дней. Попросите в том же письме, и в течение 30 дней мы удалим и баланс кредитов с записью о покупках; неистраченные кредиты при этом пропадут. Ночные копии записи о кредитах исчезают после этого в течение 31 дня; журналы сервера не правятся (см. «Журналы сервера»).
+В приложении можно удалить разрешённого отправителя, сменить адрес, отклонить задержанную книгу и убрать неудавшийся импорт. Удалить всё, что сервер хранит о вашем устройстве, приложение пока не умеет. Для этого напишите на support@bookspeaks.app с любого адреса и укажите свой адрес BookSpeaks (Настройки → почта). Если его не найти, всё равно напишите, скажите примерно, когда вы установили приложение и что покупали, и мы найдём запись вместе с вами. Мы удалим запись устройства, адрес, список отправителей и ждущие книги в течение 30 дней. Попросите в том же письме, и в течение 30 дней мы удалим и баланс кредитов с записью о покупках; неистраченные кредиты при этом пропадут. Ночные копии записи о кредитах исчезают после этого в течение 31 дня; журналы сервера не правятся (см. «Журналы сервера»).
 
-Удаление приложения стирает книги с iPhone, но не токен устройства в связке ключей: после повторной установки BookSpeaks снова подключится к той же записи на сервере. Чтобы её удалить, напишите нам, как сказано выше.
+Удаление приложения стирает книги с iPhone, но не токен устройства и не счётчик бесплатного часа в связке ключей: после повторной установки BookSpeaks снова подключится к той же записи на сервере, а бесплатный час не начнётся заново. Чтобы удалить запись на сервере, напишите нам, как сказано выше; счётчик есть только на вашем iPhone и остаётся на нём.
+
+### На каком основании мы используем данные
+
+- Чтобы дать вам то, о чём вы просили (договор): доставка почты, озвучка, кредиты и покупки.
+
+- Ваше согласие: текст уходит к голосам ИИ, только когда вы выбираете онлайн-голос или заказываете озвучку на сервере. Согласие отзывается выбором офлайн-голоса.
+
+- Наш законный интерес: события использования и отчёты о сбоях Firebase — чтобы видеть, как пользуются приложением, и исправлять сбои. Выключателя для них в приложении нет. Вы можете возразить, написав нам; данные Firebase мы по имени не находим, поэтому они исчезают сами, как сказано в разделе «Данные об использовании».
+
+### Ваши права
+
+Вы можете попросить у нас копию данных о вас, исправить или удалить их и перестать их использовать. Напишите на support@bookspeaks.app; мы ответим в течение 30 дней. Данные, которые мы не можем связать с вами (события Firebase, журналы сервера), мы не можем ни найти, ни удалить. Ещё вы можете пожаловаться в орган по защите данных своей страны.
+
+### Передача данных за пределы ЕС
+
+Наш сервер и его резервные копии находятся в ЕС (Vultr в Варшаве, регион ЕС у Backblaze). Эти обработчики могут работать с данными за пределами ЕС: Google (Firebase, голоса Gemini), xAI (голоса Grok), OpenRouter, Lium (GPU-машины, которые озвучивают заказанную книгу), Cloudflare (почта) и Hugging Face (загрузка голосов).
+
+### Страница загрузки в браузере
+
+Страница bookspeaks.app/friend/ существует отдельно от приложения и открывается только по личной ссылке. На ней можно загрузить книгу TXT или EPUB и получить её озвученной голосом сервера. Токен ссылки стоит в адресе после «#», который браузер не отправляет на bookspeaks.app; страница отправляет его на наш сервер. Книга озвучивается так, как описано в разделе «Озвучка на сервере», а сама книга, её текст и звук хранятся 7 дней после загрузки, затем удаляются. Страница не ставит cookie и не использует аналитику.
 
 ### Дети
 

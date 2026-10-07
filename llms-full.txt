@@ -348,7 +348,7 @@ Purchases are made through Apple; we never see your card or Apple ID. To keep yo
 
 ### What our server receives and keeps
 
-When you open the «add by mail» screen, listen with an online voice or download a Russian voice («Света» or «Дима»), the app registers with our server (book.slotik.app). For mail, the server keeps:
+When you open the «add by mail» screen, listen with an online voice or download a Russian voice («Света» or «Дима»), the app registers with our server (Vultr, Warsaw, Poland). For mail, the server keeps:
 
 - Device token. A random token issued to the app, kept in the iPhone keychain. The server stores only its hash, not the token. It is not the advertising ID or any Apple device ID. Kept until you ask us to delete it.
 
@@ -382,7 +382,7 @@ Like any web server, ours writes logs. The web server's log holds the IP address
 
 - Cloudflare receives mail sent to @bookspeaks.app and passes it to our server (Email Routing and a Worker that stores nothing itself). Cloudflare keeps a record of each mail — sender, recipient, subject and delivery status — for 31 days.
 
-- Our server host (Vultr), where book.slotik.app runs, in Poland (EU).
+- Our server host (Vultr), in Warsaw, Poland (EU).
 
 - Backblaze (B2 storage, EU region) holds our encrypted nightly backup. It is a copy of the credit record, the usage events, any feedback you sent (with the e-mail you gave there) and the voicing costs, encrypted on our server before it leaves, so Backblaze sees only unreadable data. It holds no book text, audio, device tokens or mail addresses of the «add by mail» screen. Backups are kept for 30 days.
 
@@ -444,7 +444,7 @@ support@bookspeaks.app
 
 ### Что получает и хранит наш сервер
 
-Когда вы открываете экран «добавить по почте», слушаете онлайн-голосом или скачиваете русский голос («Света» или «Дима»), приложение регистрируется на нашем сервере (book.slotik.app). Для почты сервер хранит:
+Когда вы открываете экран «добавить по почте», слушаете онлайн-голосом или скачиваете русский голос («Света» или «Дима»), приложение регистрируется на нашем сервере (Vultr, Варшава, Польша). Для почты сервер хранит:
 
 - Токен устройства. Случайный токен, выданный приложению и хранящийся в связке ключей iPhone. Сервер хранит только его хеш, а не сам токен. Это не рекламный идентификатор и не идентификатор устройства Apple. Хранится, пока вы не попросите его удалить.
 
@@ -478,7 +478,7 @@ support@bookspeaks.app
 
 - Cloudflare принимает письма на @bookspeaks.app и передаёт их нашему серверу (Email Routing и Worker, который сам ничего не хранит). Cloudflare хранит запись о каждом письме — отправитель, получатель, тема и статус доставки — 31 день.
 
-- Хостинг нашего сервера book.slotik.app (Vultr), страна: Польша (ЕС).
+- Хостинг нашего сервера (Vultr), Варшава, Польша (ЕС).
 
 - Backblaze (хранилище B2, регион ЕС) хранит нашу зашифрованную ночную резервную копию. В ней копия записи о кредитах, события об использовании, отправленные вами отзывы (с почтой, которую вы там указали) и стоимость озвучки; она шифруется на нашем сервере до отправки, поэтому Backblaze видит только нечитаемые данные. В ней нет текста книг, звука, токенов устройств и адресов почты с экрана «добавить по почте». Копии хранятся 30 дней.
 

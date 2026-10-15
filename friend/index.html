@@ -67,6 +67,7 @@ a voice, and get one audio file per chapter.</p>
 <p>Balance: <b id="balance"></b> credits. A book takes about 100 credits per hour of audio, at least 100 credits.
 If voicing fails, the credits come back.</p>
 
+<p id="drama-trial" hidden>Free private Drama 3 evaluation. Built with Fish Audio. Synthetic voices; please do not share this personal link.</p>
 <form id="order">
   <div class="file-field">
     <span id="book-title" class="field-title">Book (TXT or EPUB, up to 50 MB)</span>
@@ -220,7 +221,7 @@ back later. Files are kept for 7 days after upload.</p>
   $('listen').addEventListener('click', () => {
     if (audio) return stopSample();
     const [model, voice] = $('voice').value.split('|');
-    audio = new Audio('/friend/samples/' + (model.toLowerCase().startsWith('voxcpm') ? 'voxcpm-' : 'qwen-') + voice + '.m4a');
+    audio = new Audio('/friend/samples/' + (model === 'fishaudio/drama-3' ? 'drama-' : model.toLowerCase().startsWith('voxcpm') ? 'voxcpm-' : 'qwen-') + voice + '.m4a');
     audio.addEventListener('ended', stopSample);
     audio.play().catch(stopSample);
     $('listen').setAttribute('aria-pressed', 'true');
@@ -265,6 +266,7 @@ back later. Files are kept for 7 days after upload.</p>
     if (!/^[A-Za-z0-9_-]{16,}$/.test(token)) return showNoLink();
     try {
       const account = await call('/friend/api/account');
+      $('drama-trial').hidden = !account.private_evaluation;
       for (const [language, title] of Object.entries(LANGUAGES)) {
         const group = document.createElement('optgroup');
         group.label = title;

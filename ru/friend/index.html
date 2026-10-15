@@ -67,6 +67,7 @@ EPUB, выберите голос — и получите по одному ау
 <p>Баланс: <b id="balance"></b>. Книга обходится примерно в 100 кредитов за час звука, минимум 100 кредитов.
 Если озвучить не получится, кредиты вернутся.</p>
 
+<p id="drama-trial" hidden>Бесплатный закрытый тест Drama 3. Built with Fish Audio. Синтетические голоса; пожалуйста, не передавайте личную ссылку.</p>
 <form id="order">
   <div class="file-field">
     <span id="book-title" class="field-title">Книга (TXT или EPUB, до 50 МБ)</span>
@@ -249,7 +250,7 @@ EPUB, выберите голос — и получите по одному ау
   $('listen').addEventListener('click', () => {
     if (audio) return stopSample();
     const [model, voice] = $('voice').value.split('|');
-    audio = new Audio('/friend/samples/' + (model.toLowerCase().startsWith('voxcpm') ? 'voxcpm-' : 'qwen-') + voice + '.m4a');
+    audio = new Audio('/friend/samples/' + (model === 'fishaudio/drama-3' ? 'drama-' : model.toLowerCase().startsWith('voxcpm') ? 'voxcpm-' : 'qwen-') + voice + '.m4a');
     audio.addEventListener('ended', stopSample);
     audio.play().catch(stopSample);
     $('listen').setAttribute('aria-pressed', 'true');
@@ -266,7 +267,7 @@ EPUB, выберите голос — и получите по одному ау
 
   function voiceLabel(voice) {
     const name = VOICE_NAMES[voice.id.split('|')[1]] || voice.name;
-    return name + ' · ' + voice.engine.replace('clean', 'чистый').replace('fast', 'быстрый');
+    return name + ' · ' + voice.engine.replace('clean', 'чистый').replace('fast', 'быстрый').replace('private trial', 'закрытый тест');
   }
 
   $('order').addEventListener('submit', async (event) => {
@@ -299,6 +300,7 @@ EPUB, выберите голос — и получите по одному ау
     if (!/^[A-Za-z0-9_-]{16,}$/.test(token)) return showNoLink();
     try {
       const account = await call('/friend/api/account');
+      $('drama-trial').hidden = !account.private_evaluation;
       for (const [language, title] of Object.entries(LANGUAGES)) {
         const group = document.createElement('optgroup');
         group.label = title;

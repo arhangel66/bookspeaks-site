@@ -73,9 +73,9 @@ you do not order are never sent.</p>
 
 <h2>Online voices</h2>
 <p>The online voices read over the internet and spend credits by the minute: 50 credits a minute for the Gemini voices
-and about 33 for the Grok voices, charged per minute played. While one reads, the app
+and about 33 for the Grok and Drama 3 voices, charged per minute played. While one reads, the app
 sends each sentence to our server, which passes it through OpenRouter to the company whose model speaks that voice —
-Google (the Gemini voices) or xAI (the Grok voices Eve and Rex) — to turn it into speech, and streams the audio back.
+Google (the Gemini voices), xAI (the Grok voices Eve and Rex) or Fish Audio (Drama 3) — to turn it into speech, and streams the audio back.
 Our server does not keep the text or the audio: it records only the request, the day and the credits spent, and keeps
 that with your credit record (below). Offline voices and the Apple voice never send text anywhere.</p>
 
@@ -154,7 +154,7 @@ addresses of the “add by mail” screen. Backups are kept for up to 31 days.</
 <li><b>Our GPU provider</b> (Lium) runs the machines that voice a book you order; they see its text while voicing it.</li>
 <li><b>OpenRouter</b> receives each sentence an online voice reads and passes it to the company whose model speaks
 that voice.</li>
-<li><b>Google</b> (Gemini text-to-speech) and <b>xAI</b> (Grok voices) turn those sentences into speech.</li>
+<li><b>Google</b> (Gemini text-to-speech), <b>xAI</b> (Grok voices) and <b>Fish Audio</b> (Drama 3) turn those sentences into speech.</li>
 <li><b>Apple</b> processes purchases and tells our server about them and about refunds.</li>
 <li><b>Google (Firebase)</b> receives the app's usage events and crash reports, as described in “Usage data” and
 “Crash reports”, and processes them for us. It may process them outside the EU.</li>
@@ -194,7 +194,7 @@ your country.</p>
 
 <h2>Transfers outside the EU</h2>
 <p>Our server and its backups are in the EU (Vultr in Warsaw, Backblaze EU region). These processors may handle data
-outside the EU: Google (Firebase, Gemini voices), xAI (Grok voices), OpenRouter, Lium (the GPU machines that voice a book
+outside the EU: Google (Firebase, Gemini voices), xAI (Grok voices), Fish Audio (Drama 3), OpenRouter, Lium (the GPU machines that voice a book
 you order), Cloudflare (mail) and Hugging Face (voice downloads).</p>
 
 <h2>Web upload page</h2>
@@ -250,9 +250,9 @@ before they ship.</p>
 
 <h2>Онлайн-голоса</h2>
 <p>Онлайн-голоса читают через интернет и тратят кредиты поминутно: 50 кредитов в минуту голоса Gemini и около 33 — голоса
-Grok, за каждую проигранную минуту. Пока такой голос читает, приложение
+Grok и Drama 3, за каждую проигранную минуту. Пока такой голос читает, приложение
 отправляет каждое предложение на наш сервер, а он передаёт его через OpenRouter компании, чья модель озвучивает этот
-голос, — Google (голоса Gemini) или xAI (голоса Grok: Eve и Rex), — чтобы превратить в речь, и
+голос, — Google (голоса Gemini), xAI (голоса Grok: Eve и Rex) или Fish Audio (Drama 3), — чтобы превратить в речь, и
 возвращает звук в приложение. Наш сервер не хранит ни текст, ни звук: он записывает только запрос, день и потраченные кредиты и хранит это вместе
 с записью о ваших кредитах (ниже). Офлайн-голоса и голос Apple никуда не отправляют текст.</p>
 
@@ -335,7 +335,7 @@ Worker, который сам ничего не хранит). Cloudflare хра
 озвучивают.</li>
 <li><b>OpenRouter</b> получает каждое предложение, которое читает онлайн-голос, и передаёт его компании, чья модель
 озвучивает этот голос.</li>
-<li><b>Google</b> (синтез речи Gemini) и <b>xAI</b> (голоса Grok) превращают эти предложения в речь.</li>
+<li><b>Google</b> (синтез речи Gemini), <b>xAI</b> (голоса Grok) и <b>Fish Audio</b> (Drama 3) превращают эти предложения в речь.</li>
 <li><b>Apple</b> проводит покупки и сообщает нашему серверу о них и о возвратах.</li>
 <li><b>Google (Firebase)</b> получает события об использовании приложения и отчёты о сбоях, как сказано в разделах
 «Данные об использовании» и «Отчёты о сбоях», и обрабатывает их для нас. Он может обрабатывать их за пределами ЕС.</li>
@@ -375,7 +375,7 @@ Worker, который сам ничего не хранит). Cloudflare хра
 
 <h2>Передача данных за пределы ЕС</h2>
 <p>Наш сервер и его резервные копии находятся в ЕС (Vultr в Варшаве, регион ЕС у Backblaze). Эти обработчики могут
-работать с данными за пределами ЕС: Google (Firebase, голоса Gemini), xAI (голоса Grok), OpenRouter, Lium (GPU-машины,
+работать с данными за пределами ЕС: Google (Firebase, голоса Gemini), xAI (голоса Grok), Fish Audio (Drama 3), OpenRouter, Lium (GPU-машины,
 которые озвучивают заказанную книгу), Cloudflare (почта) и Hugging Face (загрузка голосов).</p>
 
 <h2>Страница загрузки в браузере</h2>

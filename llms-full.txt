@@ -344,7 +344,7 @@ If you order a book to be voiced ahead of time on our server, paid in credits, t
 
 ### Online voices
 
-The online voices read over the internet and spend credits by the minute: 50 credits a minute for the Gemini voices and about 33 for the Grok voices, charged per minute played. While one reads, the app sends each sentence to our server, which passes it through OpenRouter to the company whose model speaks that voice — Google (the Gemini voices) or xAI (the Grok voices Eve and Rex) — to turn it into speech, and streams the audio back. Our server does not keep the text or the audio: it records only the request, the day and the credits spent, and keeps that with your credit record (below). Offline voices and the Apple voice never send text anywhere.
+The online voices read over the internet and spend credits by the minute: 50 credits a minute for the Gemini voices and about 33 for the Grok and Drama 3 voices, charged per minute played. While one reads, the app sends each sentence to our server, which passes it through OpenRouter to the company whose model speaks that voice — Google (the Gemini voices), xAI (the Grok voices Eve and Rex) or Fish Audio (Drama 3) — to turn it into speech, and streams the audio back. Our server does not keep the text or the audio: it records only the request, the day and the credits spent, and keeps that with your credit record (below). Offline voices and the Apple voice never send text anywhere.
 
 ### Purchases and credits
 
@@ -394,7 +394,7 @@ Like any web server, ours writes logs. The web server's log holds the IP address
 
 - OpenRouter receives each sentence an online voice reads and passes it to the company whose model speaks that voice.
 
-- Google (Gemini text-to-speech) and xAI (Grok voices) turn those sentences into speech.
+- Google (Gemini text-to-speech), xAI (Grok voices) and Fish Audio (Drama 3) turn those sentences into speech.
 
 - Apple processes purchases and tells our server about them and about refunds.
 
@@ -424,7 +424,7 @@ You can ask us for a copy of the data we hold about you, to correct or delete it
 
 ### Transfers outside the EU
 
-Our server and its backups are in the EU (Vultr in Warsaw, Backblaze EU region). These processors may handle data outside the EU: Google (Firebase, Gemini voices), xAI (Grok voices), OpenRouter, Lium (the GPU machines that voice a book you order), Cloudflare (mail) and Hugging Face (voice downloads).
+Our server and its backups are in the EU (Vultr in Warsaw, Backblaze EU region). These processors may handle data outside the EU: Google (Firebase, Gemini voices), xAI (Grok voices), Fish Audio (Drama 3), OpenRouter, Lium (the GPU machines that voice a book you order), Cloudflare (mail) and Hugging Face (voice downloads).
 
 ### Web upload page
 
@@ -464,7 +464,7 @@ BookSpeaks ведёт Михаил Дербичев — это имя в стр�
 
 ### Онлайн-голоса
 
-Онлайн-голоса читают через интернет и тратят кредиты поминутно: 50 кредитов в минуту голоса Gemini и около 33 — голоса Grok, за каждую проигранную минуту. Пока такой голос читает, приложение отправляет каждое предложение на наш сервер, а он передаёт его через OpenRouter компании, чья модель озвучивает этот голос, — Google (голоса Gemini) или xAI (голоса Grok: Eve и Rex), — чтобы превратить в речь, и возвращает звук в приложение. Наш сервер не хранит ни текст, ни звук: он записывает только запрос, день и потраченные кредиты и хранит это вместе с записью о ваших кредитах (ниже). Офлайн-голоса и голос Apple никуда не отправляют текст.
+Онлайн-голоса читают через интернет и тратят кредиты поминутно: 50 кредитов в минуту голоса Gemini и около 33 — голоса Grok и Drama 3, за каждую проигранную минуту. Пока такой голос читает, приложение отправляет каждое предложение на наш сервер, а он передаёт его через OpenRouter компании, чья модель озвучивает этот голос, — Google (голоса Gemini), xAI (голоса Grok: Eve и Rex) или Fish Audio (Drama 3), — чтобы превратить в речь, и возвращает звук в приложение. Наш сервер не хранит ни текст, ни звук: он записывает только запрос, день и потраченные кредиты и хранит это вместе с записью о ваших кредитах (ниже). Офлайн-голоса и голос Apple никуда не отправляют текст.
 
 ### Покупки и кредиты
 
@@ -514,7 +514,7 @@ BookSpeaks ведёт Михаил Дербичев — это имя в стр�
 
 - OpenRouter получает каждое предложение, которое читает онлайн-голос, и передаёт его компании, чья модель озвучивает этот голос.
 
-- Google (синтез речи Gemini) и xAI (голоса Grok) превращают эти предложения в речь.
+- Google (синтез речи Gemini), xAI (голоса Grok) и Fish Audio (Drama 3) превращают эти предложения в речь.
 
 - Apple проводит покупки и сообщает нашему серверу о них и о возвратах.
 
@@ -544,7 +544,7 @@ BookSpeaks ведёт Михаил Дербичев — это имя в стр�
 
 ### Передача данных за пределы ЕС
 
-Наш сервер и его резервные копии находятся в ЕС (Vultr в Варшаве, регион ЕС у Backblaze). Эти обработчики могут работать с данными за пределами ЕС: Google (Firebase, голоса Gemini), xAI (голоса Grok), OpenRouter, Lium (GPU-машины, которые озвучивают заказанную книгу), Cloudflare (почта) и Hugging Face (загрузка голосов).
+Наш сервер и его резервные копии находятся в ЕС (Vultr в Варшаве, регион ЕС у Backblaze). Эти обработчики могут работать с данными за пределами ЕС: Google (Firebase, голоса Gemini), xAI (голоса Grok), Fish Audio (Drama 3), OpenRouter, Lium (GPU-машины, которые озвучивают заказанную книгу), Cloudflare (почта) и Hugging Face (загрузка голосов).
 
 ### Страница загрузки в браузере
 

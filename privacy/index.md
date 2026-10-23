@@ -8,7 +8,7 @@ BookSpeaks is run by Mikhail Derbichev, the name in the app's copyright line on 
 
 ## In short
 
-BookSpeaks has no account, no advertising and no tracking. To see how the app is used and to fix crashes it uses Google's Firebase Analytics and Crashlytics, without the advertising ID. Reading and offline voices work on your iPhone, and your library and reading position are kept there. Our server is used for sending books to the app by e-mail, for voicing a book you order, for the online voices, for your credits and purchases, and for our own usage records, and it keeps as little as that needs.
+The BookSpeaks iPhone app requires no sign-in and uses no advertising or tracking. The separate web wallet and Claude connection are described below. To see how the app is used and to fix crashes it uses Google's Firebase Analytics and Crashlytics, without the advertising ID. Reading and offline voices work on your iPhone, and your library and reading position are kept there. Our server is used for sending books to the app by e-mail, for voicing a book you order, for the online voices, for your credits and purchases, and for our own usage records, and it keeps as little as that needs.
 
 ## What is kept on your iPhone
 
@@ -24,7 +24,7 @@ The online voices read over the internet and spend credits by the minute: 50 cre
 
 ## Purchases and credits
 
-Purchases are made through Apple; we never see your card or Apple ID. To keep your credit balance, our server records, under the appTransactionID that the App Store gives your copy of the app: the App Store transaction ids of your purchases, the product and credits bought, the free credits granted, the credits held and spent for each voicing order and for online listening, and refunds Apple reports to us. This record is kept while your copy of the app may use its credits, until you ask us to delete it. Nightly copies of it are kept for up to 31 days, on the same server and, encrypted, in an off-site backup (see “Who processes data for us”).
+Purchases in the iPhone app are made through Apple; we never see your card or Apple ID. To keep your credit balance, our server records, under the appTransactionID that the App Store gives your copy of the app: the App Store transaction ids of your purchases, the product and credits bought, the free credits granted, the credits held and spent for each voicing order and for online listening, and refunds Apple reports to us. This record is kept while your copy of the app may use its credits, until you ask us to delete it. Nightly copies of it are kept for up to 31 days, on the same server and, encrypted, in an off-site backup (see “Who processes data for us”).
 
 ## What our server receives and keeps
 
@@ -102,6 +102,18 @@ You can ask us for a copy of the data we hold about you, to correct or delete it
 
 Our server and its backups are in the EU (Vultr in Warsaw, Backblaze EU region). These processors may handle data outside the EU: Google (Firebase, Gemini voices), xAI (Grok voices), Fish Audio (Drama 3), OpenRouter, Lium (the GPU machines that voice a book you order), Cloudflare (mail) and Hugging Face (voice downloads).
 
+## Web wallets and Claude
+
+When this feature is enabled, you can connect BookSpeaks in Claude and create a separate web wallet without an iPhone. Its initial balance is zero; it is not linked to your Apple purchases or iPhone balance. We store a random wallet identifier and a hash of its recovery key, not the key itself. The connection lets Claude use your balance, upload, quotation and narration tools. The workflow asks for approval before spending credits.
+
+The browser consent page uses a necessary secure cookie for ten minutes. We store the connecting application's identifier, name and callback addresses, pending consent and hashed authorization credentials. Consent expires after ten minutes, authorization codes after two minutes, access tokens after one hour and refresh tokens after 30 days. Rotated refresh hashes remain until their original expiry to detect reuse. Expired records are cleaned at startup and on later connection requests. Client metadata becomes eligible for deletion after 90 days without use when no live credential or pending consent remains. Abuse-prevention counters store the client address, route, count and expiry; connection counters expire after at most an hour and wallet-registration rows are pruned on a later registration. Normal server-log retention also applies.
+
+You select a TXT or EPUB in the upload card or browser page, and it goes directly to our server. MCP tools return book metadata, quotes, status and private audio links to Claude, without the book text in tool arguments. A file you separately attach or paste into Claude is subject to Anthropic's own handling. An unsubmitted upload becomes eligible for deletion after 24 hours. Staging data is removed when narration starts. Finished job records become eligible for deletion seven days after submission, and audio after 48 hours. Cleanup is request-driven and can happen later. Queued or running text is retained until the order finishes or is cancelled and cleanup applies. GPU processing uses Lium as described above. These upload and consent pages use no advertising or analytics scripts.
+
+When web top-ups are enabled, Creem separately processes checkout and payment details. Our credit record stores the wallet identifier, checkout and order references, product, amount, currency, credits, payment confirmation and refund or dispute adjustments. We do not receive your card details. A signed payment notification is required to add credits; returning from checkout is not proof of payment. Credit and payment records remain while the balance can be used and for reconciliation, subject to deletion requests and applicable retention duties. The encrypted backup retention described above also applies.
+
+For connection revocation or web-wallet deletion, contact support@bookspeaks.app with your wallet identifier or checkout reference. Do not email recovery keys, access tokens or card details. We verify ownership before making changes. Disconnecting in Claude does not itself erase completed orders, credit records or the payment provider's records. Creem and Anthropic also process information under their own privacy policies.
+
 ## Web upload page
 
 The page bookspeaks.app/friend/ is separate from the app and opens only from a personal link. It lets you upload a TXT or EPUB book and get it voiced by a server voice. The link's token is in the address after “#”, which your browser never sends to bookspeaks.app; the page sends it to our server. The book is voiced as in “Server voicing”, and the book, its text and its audio are kept for 7 days after upload, then deleted. The page sets no cookies and uses no analytics.
@@ -128,7 +140,7 @@ BookSpeaks ведёт Михаил Дербичев — это имя в стр�
 
 ## Коротко
 
-В BookSpeaks нет учётной записи, рекламы и слежки. Чтобы видеть, как пользуются приложением, и исправлять сбои, оно использует Firebase Analytics и Crashlytics от Google, без рекламного идентификатора. Чтение и офлайн-голоса работают на iPhone, библиотека и место чтения хранятся на нём. Наш сервер нужен для отправки книг в приложение по почте, для озвучки заказанной книги, для онлайн-голосов, для ваших кредитов и покупок и для наших собственных записей об использовании, и хранит лишь то, что для этого необходимо.
+Приложение BookSpeaks для iPhone не требует входа, не использует рекламу и слежку. Отдельный кошелёк в браузере и подключение Claude описаны ниже. Чтобы видеть, как пользуются приложением, и исправлять сбои, оно использует Firebase Analytics и Crashlytics от Google, без рекламного идентификатора. Чтение и офлайн-голоса работают на iPhone, библиотека и место чтения хранятся на нём. Наш сервер нужен для отправки книг в приложение по почте, для озвучки заказанной книги, для онлайн-голосов, для ваших кредитов и покупок и для наших собственных записей об использовании, и хранит лишь то, что для этого необходимо.
 
 ## Что хранится на iPhone
 
@@ -144,7 +156,7 @@ BookSpeaks ведёт Михаил Дербичев — это имя в стр�
 
 ## Покупки и кредиты
 
-Покупки проходят через Apple; мы не видим вашу карту и Apple ID. Чтобы вести баланс кредитов, наш сервер хранит под appTransactionID, который App Store выдаёт вашей копии приложения: номера транзакций App Store ваших покупок, купленный продукт и кредиты, выданные бесплатные кредиты, кредиты, удержанные и потраченные на каждый заказ озвучки и на онлайн-прослушивание, и возвраты, о которых сообщает Apple. Эта запись хранится, пока ваша копия приложения может тратить кредиты, или до вашей просьбы удалить её. Ночные копии этой записи хранятся до 31 дня на том же сервере и в зашифрованном виде во внешней резервной копии (см. «Кто обрабатывает данные для нас»).
+Покупки в приложении для iPhone проходят через Apple; мы не видим вашу карту и Apple ID. Чтобы вести баланс кредитов, наш сервер хранит под appTransactionID, который App Store выдаёт вашей копии приложения: номера транзакций App Store ваших покупок, купленный продукт и кредиты, выданные бесплатные кредиты, кредиты, удержанные и потраченные на каждый заказ озвучки и на онлайн-прослушивание, и возвраты, о которых сообщает Apple. Эта запись хранится, пока ваша копия приложения может тратить кредиты, или до вашей просьбы удалить её. Ночные копии этой записи хранятся до 31 дня на том же сервере и в зашифрованном виде во внешней резервной копии (см. «Кто обрабатывает данные для нас»).
 
 ## Что получает и хранит наш сервер
 
@@ -221,6 +233,18 @@ BookSpeaks ведёт Михаил Дербичев — это имя в стр�
 ## Передача данных за пределы ЕС
 
 Наш сервер и его резервные копии находятся в ЕС (Vultr в Варшаве, регион ЕС у Backblaze). Эти обработчики могут работать с данными за пределами ЕС: Google (Firebase, голоса Gemini), xAI (голоса Grok), Fish Audio (Drama 3), OpenRouter, Lium (GPU-машины, которые озвучивают заказанную книгу), Cloudflare (почта) и Hugging Face (загрузка голосов).
+
+## Кошельки в браузере и Claude
+
+Когда эта возможность включена, вы можете подключить BookSpeaks в Claude и создать отдельный кошелёк без iPhone. Его начальный баланс — ноль; он не связан с покупками Apple и балансом приложения на iPhone. Мы храним случайный идентификатор кошелька и хэш ключа восстановления, но не сам ключ. Подключение даёт Claude инструменты просмотра баланса, загрузки книги, расчёта цены и заказа озвучки. Перед расходованием кредитов пользователь должен подтвердить заказ.
+
+Страница согласия использует необходимый защищённый cookie на десять минут. Мы храним идентификатор, имя и адреса обратного перехода подключаемого приложения, ожидающее согласие и хэши данных авторизации. Запрос согласия действует десять минут, код авторизации — две минуты, токен доступа — час, токен обновления — 30 дней. Хэши заменённых токенов обновления остаются до первоначального окончания срока, чтобы выявлять повторное использование. Просроченные записи очищаются при запуске сервера и последующих запросах подключения. Данные приложения подлежат удалению через 90 дней без обращений, если у него больше нет действующих токенов и ожидающего согласия. Счётчики защиты от злоупотреблений хранят адрес клиента, маршрут, число обращений и срок действия; счётчики подключений истекают не позднее чем через час, записи регистрации кошельков очищаются при последующей регистрации. Также действуют обычные сроки хранения серверных журналов.
+
+Вы выбираете TXT или EPUB в карточке загрузки или на странице в браузере, и файл отправляется прямо на наш сервер. Инструменты MCP передают Claude сведения о книге, цену, состояние заказа и личные ссылки на звук, но не текст книги в аргументах вызовов. Если вы отдельно прикрепляете файл или вставляете текст в Claude, его обработку регулируют правила Anthropic. Книга без заказа озвучки подлежит удалению через 24 часа после загрузки. Промежуточные данные убираются при запуске озвучки. Записи завершённого заказа подлежат удалению через семь дней после отправки заказа, звук — через 48 часов. Очистка выполняется при последующих запросах и может произойти позднее. Текст ожидающего или выполняемого заказа сохраняется до завершения или отмены и последующей очистки. Для озвучки используется GPU у Lium, как описано выше. На страницах загрузки и согласия нет рекламных и аналитических скриптов.
+
+Когда включены пополнения в браузере, сведения об оформлении и оплате отдельно обрабатывает Creem. Наша запись кредитов хранит идентификатор кошелька, номера оформления платежа и заказа, продукт, сумму, валюту, кредиты, подтверждение оплаты и изменения при возвратах или оспаривании. Мы не получаем данные вашей карты. Для начисления кредитов нужно подписанное уведомление об успешном платеже; переход со страницы оплаты сам по себе ничего не подтверждает. Записи кредитов и платежей сохраняются, пока баланс можно использовать и пока они нужны для сверки, с учётом запросов удаления и применимых обязанностей по хранению. Описанные выше сроки зашифрованных резервных копий также действуют.
+
+Чтобы отозвать подключение или запросить удаление кошелька, напишите на support@bookspeaks.app и укажите идентификатор кошелька или номер оформления платежа. Не отправляйте по почте ключ восстановления, токен доступа или данные карты. Перед изменениями мы проверим владение кошельком. Отключение в Claude само по себе не удаляет завершённые заказы, записи кредитов и платёжные записи у провайдера. Creem и Anthropic также обрабатывают сведения по своим политикам конфиденциальности.
 
 ## Страница загрузки в браузере
 

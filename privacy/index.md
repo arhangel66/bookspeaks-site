@@ -1,6 +1,6 @@
 # BookSpeaks privacy policy
 
-Effective date: 7 October 2026. This policy covers BookSpeaks 1.0 for iPhone and the web upload page described below.
+Effective date: 23 October 2026. This policy covers BookSpeaks 1.0 for iPhone and the web upload page described below.
 
 ## Who we are
 
@@ -132,7 +132,7 @@ If this policy changes, we will update this page and its effective date. New kin
 
 # Политика конфиденциальности BookSpeaks
 
-Действует с 7 октября 2026 года. Относится к BookSpeaks 1.0 для iPhone и странице загрузки книг в браузере, описанной ниже.
+Действует с 23 октября 2026 года. Относится к BookSpeaks 1.0 для iPhone и странице загрузки книг в браузере, описанной ниже.
 
 ## Кто мы
 

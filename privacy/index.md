@@ -1,6 +1,6 @@
 # BookSpeaks privacy policy
 
-Effective date: 23 October 2026. This policy covers BookSpeaks 1.0 for iPhone and the web upload page described below.
+Effective date: 24 October 2026. This policy covers BookSpeaks 1.0 for iPhone and the web upload page described below.
 
 ## Who we are
 
@@ -20,7 +20,7 @@ If you order a book to be voiced ahead of time on our server, paid in credits, t
 
 ## Online voices
 
-The online voices read over the internet and spend credits by the minute: 50 credits a minute for the Gemini voices and about 33 for the Grok and Drama 3 voices, charged per minute played. While one reads, the app sends each sentence to our server, which passes it through OpenRouter to the company whose model speaks that voice — Google (the Gemini voices), xAI (the Grok voices Eve and Rex) or Fish Audio (Drama 3) — to turn it into speech, and streams the audio back. Our server does not keep the text or the audio: it records only the request, the day and the credits spent, and keeps that with your credit record (below). Offline voices and the Apple voice never send text anywhere.
+The online voices read over the internet and spend credits by the minute: 50 credits a minute for the Gemini voices and about 33 for the Grok, Mistral and Drama 3 voices, charged per minute played. While one reads, the app sends each sentence to our server, which passes it through OpenRouter to the company whose model speaks that voice — Google (the Gemini voices), xAI (the Grok voices Eve and Rex), Mistral (Voxtral) or Fish Audio (Drama 3 in older versions) — to turn it into speech, and streams the audio back. Our server does not keep the text or the audio: it records only the request, the day and the credits spent, and keeps that with your credit record (below). Offline voices and the Apple voice never send text anywhere.
 
 ## Purchases and credits
 
@@ -70,7 +70,7 @@ Like any web server, ours writes logs. The web server's log holds the IP address
 
 - OpenRouter receives each sentence an online voice reads and passes it to the company whose model speaks that voice.
 
-- Google (Gemini text-to-speech), xAI (Grok voices) and Fish Audio (Drama 3) turn those sentences into speech.
+- Google (Gemini text-to-speech), xAI (Grok voices), Mistral (Voxtral) and Fish Audio (Drama 3) turn those sentences into speech.
 
 - Apple processes purchases and tells our server about them and about refunds.
 
@@ -100,15 +100,17 @@ You can ask us for a copy of the data we hold about you, to correct or delete it
 
 ## Transfers outside the EU
 
-Our server and its backups are in the EU (Vultr in Warsaw, Backblaze EU region). These processors may handle data outside the EU: Google (Firebase, Gemini voices), xAI (Grok voices), Fish Audio (Drama 3), OpenRouter, Lium (the GPU machines that voice a book you order), Cloudflare (mail) and Hugging Face (voice downloads).
+Our server and its backups are in the EU (Vultr in Warsaw, Backblaze EU region). These processors may handle data outside the EU: Google (Firebase, Gemini voices), xAI (Grok voices), Mistral (Voxtral), Fish Audio (Drama 3), OpenRouter, Lium (the GPU machines that voice a book you order), Cloudflare (mail and the web connection) and Hugging Face (voice downloads).
 
 ## Web wallets and Claude
+
+For the BookSpeaks connection at bookspeaks.app/mcp, Cloudflare handles HTTPS and forwards connection requests, book uploads and audio downloads between your client and our server. Cloudflare therefore processes your IP address, request metadata and the data sent through this route, including authorization credentials, uploaded book text and downloaded audio. Our gateway code does not log, store or cache these request or response bodies. Cloudflare's own security processing also applies.
 
 When this feature is enabled, you can connect BookSpeaks in Claude and create a separate web wallet without an iPhone. Its initial balance is zero; it is not linked to your Apple purchases or iPhone balance. We store a random wallet identifier and a hash of its recovery key, not the key itself. The connection lets Claude use your balance, upload, quotation and narration tools. The workflow asks for approval before spending credits.
 
 The browser consent page uses a necessary secure cookie for ten minutes. We store the connecting application's identifier, name and callback addresses, pending consent and hashed authorization credentials. Consent expires after ten minutes, authorization codes after two minutes, access tokens after one hour and refresh tokens after 30 days. Rotated refresh hashes remain until their original expiry to detect reuse. Expired records are cleaned at startup and on later connection requests. Client metadata becomes eligible for deletion after 90 days without use when no live credential or pending consent remains. Abuse-prevention counters store the client address, route, count and expiry; connection counters expire after at most an hour and wallet-registration rows are pruned on a later registration. Normal server-log retention also applies.
 
-You select a TXT or EPUB in the upload card or browser page, and it goes directly to our server. MCP tools return book metadata, quotes, status and private audio links to Claude, without the book text in tool arguments. A file you separately attach or paste into Claude is subject to Anthropic's own handling. An unsubmitted upload becomes eligible for deletion after 24 hours. Staging data is removed when narration starts. Finished job records become eligible for deletion seven days after submission, and audio after 48 hours. Cleanup is request-driven and can happen later. Queued or running text is retained until the order finishes or is cancelled and cleanup applies. GPU processing uses Lium as described above. These upload and consent pages use no advertising or analytics scripts.
+You select a TXT or EPUB in the upload card or browser page, and it is sent to our server through Cloudflare when using the bookspeaks.app connection. MCP tools return book metadata, quotes, status and private audio links to Claude, without the book text in tool arguments. A file you separately attach or paste into Claude is subject to Anthropic's own handling. An unsubmitted upload becomes eligible for deletion after 24 hours. Staging data is removed when narration starts. Finished job records become eligible for deletion seven days after submission, and audio after 48 hours. Cleanup is request-driven and can happen later. Queued or running text is retained until the order finishes or is cancelled and cleanup applies. GPU processing uses Lium as described above. These upload and consent pages use no advertising or analytics scripts.
 
 When web top-ups are enabled, Creem separately processes checkout and payment details. Our credit record stores the wallet identifier, checkout and order references, product, amount, currency, credits, payment confirmation and refund or dispute adjustments. We do not receive your card details. A signed payment notification is required to add credits; returning from checkout is not proof of payment. Credit and payment records remain while the balance can be used and for reconciliation, subject to deletion requests and applicable retention duties. The encrypted backup retention described above also applies.
 
@@ -132,7 +134,7 @@ If this policy changes, we will update this page and its effective date. New kin
 
 # Политика конфиденциальности BookSpeaks
 
-Действует с 23 октября 2026 года. Относится к BookSpeaks 1.0 для iPhone и странице загрузки книг в браузере, описанной ниже.
+Действует с 24 октября 2026 года. Относится к BookSpeaks 1.0 для iPhone и странице загрузки книг в браузере, описанной ниже.
 
 ## Кто мы
 
@@ -152,7 +154,7 @@ BookSpeaks ведёт Михаил Дербичев — это имя в стр�
 
 ## Онлайн-голоса
 
-Онлайн-голоса читают через интернет и тратят кредиты поминутно: 50 кредитов в минуту голоса Gemini и около 33 — голоса Grok и Drama 3, за каждую проигранную минуту. Пока такой голос читает, приложение отправляет каждое предложение на наш сервер, а он передаёт его через OpenRouter компании, чья модель озвучивает этот голос, — Google (голоса Gemini), xAI (голоса Grok: Eve и Rex) или Fish Audio (Drama 3), — чтобы превратить в речь, и возвращает звук в приложение. Наш сервер не хранит ни текст, ни звук: он записывает только запрос, день и потраченные кредиты и хранит это вместе с записью о ваших кредитах (ниже). Офлайн-голоса и голос Apple никуда не отправляют текст.
+Онлайн-голоса читают через интернет и тратят кредиты поминутно: 50 кредитов в минуту голоса Gemini и около 33 — голоса Grok, Mistral и Drama 3, за каждую проигранную минуту. Пока такой голос читает, приложение отправляет каждое предложение на наш сервер, а он передаёт его через OpenRouter компании, чья модель озвучивает этот голос, — Google (голоса Gemini), xAI (голоса Grok: Eve и Rex), Mistral (Voxtral) или Fish Audio (Drama 3 в старых версиях), — чтобы превратить в речь, и возвращает звук в приложение. Наш сервер не хранит ни текст, ни звук: он записывает только запрос, день и потраченные кредиты и хранит это вместе с записью о ваших кредитах (ниже). Офлайн-голоса и голос Apple никуда не отправляют текст.
 
 ## Покупки и кредиты
 
@@ -202,7 +204,7 @@ BookSpeaks ведёт Михаил Дербичев — это имя в стр�
 
 - OpenRouter получает каждое предложение, которое читает онлайн-голос, и передаёт его компании, чья модель озвучивает этот голос.
 
-- Google (синтез речи Gemini), xAI (голоса Grok) и Fish Audio (Drama 3) превращают эти предложения в речь.
+- Google (синтез речи Gemini), xAI (голоса Grok), Mistral (Voxtral) и Fish Audio (Drama 3) превращают эти предложения в речь.
 
 - Apple проводит покупки и сообщает нашему серверу о них и о возвратах.
 
@@ -232,15 +234,17 @@ BookSpeaks ведёт Михаил Дербичев — это имя в стр�
 
 ## Передача данных за пределы ЕС
 
-Наш сервер и его резервные копии находятся в ЕС (Vultr в Варшаве, регион ЕС у Backblaze). Эти обработчики могут работать с данными за пределами ЕС: Google (Firebase, голоса Gemini), xAI (голоса Grok), Fish Audio (Drama 3), OpenRouter, Lium (GPU-машины, которые озвучивают заказанную книгу), Cloudflare (почта) и Hugging Face (загрузка голосов).
+Наш сервер и его резервные копии находятся в ЕС (Vultr в Варшаве, регион ЕС у Backblaze). Эти обработчики могут работать с данными за пределами ЕС: Google (Firebase, голоса Gemini), xAI (голоса Grok), Mistral (Voxtral), Fish Audio (Drama 3), OpenRouter, Lium (GPU-машины, которые озвучивают заказанную книгу), Cloudflare (почта и веб-подключение) и Hugging Face (загрузка голосов).
 
 ## Кошельки в браузере и Claude
+
+Для подключения BookSpeaks по адресу bookspeaks.app/mcp Cloudflare обслуживает HTTPS и передаёт запросы подключения, загружаемые книги и скачиваемое аудио между вашим клиентом и нашим сервером. Поэтому Cloudflare обрабатывает ваш IP-адрес, сведения о запросах и передаваемые по этому маршруту данные, включая данные авторизации, текст загружаемых книг и скачиваемое аудио. Код нашего шлюза не записывает в журналы, не хранит и не кеширует содержимое этих запросов и ответов. Также применяется собственная обработка Cloudflare для обеспечения безопасности.
 
 Когда эта возможность включена, вы можете подключить BookSpeaks в Claude и создать отдельный кошелёк без iPhone. Его начальный баланс — ноль; он не связан с покупками Apple и балансом приложения на iPhone. Мы храним случайный идентификатор кошелька и хэш ключа восстановления, но не сам ключ. Подключение даёт Claude инструменты просмотра баланса, загрузки книги, расчёта цены и заказа озвучки. Перед расходованием кредитов пользователь должен подтвердить заказ.
 
 Страница согласия использует необходимый защищённый cookie на десять минут. Мы храним идентификатор, имя и адреса обратного перехода подключаемого приложения, ожидающее согласие и хэши данных авторизации. Запрос согласия действует десять минут, код авторизации — две минуты, токен доступа — час, токен обновления — 30 дней. Хэши заменённых токенов обновления остаются до первоначального окончания срока, чтобы выявлять повторное использование. Просроченные записи очищаются при запуске сервера и последующих запросах подключения. Данные приложения подлежат удалению через 90 дней без обращений, если у него больше нет действующих токенов и ожидающего согласия. Счётчики защиты от злоупотреблений хранят адрес клиента, маршрут, число обращений и срок действия; счётчики подключений истекают не позднее чем через час, записи регистрации кошельков очищаются при последующей регистрации. Также действуют обычные сроки хранения серверных журналов.
 
-Вы выбираете TXT или EPUB в карточке загрузки или на странице в браузере, и файл отправляется прямо на наш сервер. Инструменты MCP передают Claude сведения о книге, цену, состояние заказа и личные ссылки на звук, но не текст книги в аргументах вызовов. Если вы отдельно прикрепляете файл или вставляете текст в Claude, его обработку регулируют правила Anthropic. Книга без заказа озвучки подлежит удалению через 24 часа после загрузки. Промежуточные данные убираются при запуске озвучки. Записи завершённого заказа подлежат удалению через семь дней после отправки заказа, звук — через 48 часов. Очистка выполняется при последующих запросах и может произойти позднее. Текст ожидающего или выполняемого заказа сохраняется до завершения или отмены и последующей очистки. Для озвучки используется GPU у Lium, как описано выше. На страницах загрузки и согласия нет рекламных и аналитических скриптов.
+Вы выбираете TXT или EPUB в карточке загрузки или на странице в браузере; при подключении через bookspeaks.app файл отправляется на наш сервер через Cloudflare. Инструменты MCP передают Claude сведения о книге, цену, состояние заказа и личные ссылки на звук, но не текст книги в аргументах вызовов. Если вы отдельно прикрепляете файл или вставляете текст в Claude, его обработку регулируют правила Anthropic. Книга без заказа озвучки подлежит удалению через 24 часа после загрузки. Промежуточные данные убираются при запуске озвучки. Записи завершённого заказа подлежат удалению через семь дней после отправки заказа, звук — через 48 часов. Очистка выполняется при последующих запросах и может произойти позднее. Текст ожидающего или выполняемого заказа сохраняется до завершения или отмены и последующей очистки. Для озвучки используется GPU у Lium, как описано выше. На страницах загрузки и согласия нет рекламных и аналитических скриптов.
 
 Когда включены пополнения в браузере, сведения об оформлении и оплате отдельно обрабатывает Creem. Наша запись кредитов хранит идентификатор кошелька, номера оформления платежа и заказа, продукт, сумму, валюту, кредиты, подтверждение оплаты и изменения при возвратах или оспаривании. Мы не получаем данные вашей карты. Для начисления кредитов нужно подписанное уведомление об успешном платеже; переход со страницы оплаты сам по себе ничего не подтверждает. Записи кредитов и платежей сохраняются, пока баланс можно использовать и пока они нужны для сверки, с учётом запросов удаления и применимых обязанностей по хранению. Описанные выше сроки зашифрованных резервных копий также действуют.
 

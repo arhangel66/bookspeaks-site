@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Каждый герой — своим голосом — BookSpeaks</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/bookspeaks-serif-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+.voices .hero-card { display: flex; gap: 1.5rem; margin-top: 1.5rem; padding: 1.5rem; background: var(--mist); border-radius: 1.5rem; }
+.voices .hero-card img { width: 10rem; height: 10rem; border-radius: 1rem; object-fit: cover; flex: none; }
+.voices .hero-card > div { flex: 1; min-width: 0; }
+.voices h2 { margin-top: 0; }
+.voices .label { margin-top: 0.75rem; color: var(--muted); font-size: 0.8125rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.voices .voice { margin-top: 0.25rem; font-size: 1.1875rem; line-height: 1.45; }
+.voices audio { display: block; width: 100%; margin-top: 0.375rem; }
+.voices blockquote { margin: 1rem 0 0; color: var(--muted); font-size: 0.9375rem; font-style: italic; }
+@media (max-width: 36rem) { .voices .hero-card { flex-direction: column; } .voices .hero-card img { width: 100%; height: auto; aspect-ratio: 1; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержимому</a>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="/ru/" aria-label="BookSpeaks, главная">
+      <img src="/assets/img/icon.webp" alt="" width="40" height="40">
+      <span>BookSpeaks</span>
+    </a>
+  </div>
+</header>
+
+<main id="main" class="wrap doc voices">
+  <h1>Каждый герой — своим голосом</h1>
+  <p>«Око мира» Роберта Джордана в BookSpeaks. Голос каждого персонажа создан по короткому текстовому описанию — без актёров и записей. Сравните, каким голос задумывался и как он звучит.</p>
+
+  <article class="hero-card">
+    <img src="rand.jpg" alt="Ранд аль'Тор" width="320" height="320" loading="lazy">
+    <div>
+      <h2>Ранд аль'Тор</h2>
+      <p class="label">Каким должен быть голос</p>
+      <p class="voice">Мужчина, 19 лет, высокий широкоплечий деревенский парень из глуши. Говорит просто и искренне, немного упрямо, без лоска и манерности. Чистый тёплый баритон молодого человека, средне-низкая высота.</p>
+      <p class="label">Как он звучит</p>
+      <audio controls preload="none" src="rand.m4a"></audio>
+      <blockquote>Если бы вам сказали о человеке в лесу... человеке, который приводит людей в ужас одним лишь взглядом... могло бы это вас остановить? Человек, лошадь которого ступает совсем беззвучно? А ветер не колеблет его плаща? Могли бы вы узнать, что надвигалось? Могли бы вы и Морейн Седай предотвратить случившееся, знай вы об этом человеке?</blockquote>
+    </div>
+  </article>
+  <article class="hero-card">
+    <img src="moiraine.jpg" alt="Морейн" width="320" height="320" loading="lazy">
+    <div>
+      <h2>Морейн</h2>
+      <p class="label">Каким должен быть голос</p>
+      <p class="voice">Женщина около 40 лет, но голос без возраста; маленькая хрупкая аристократка. Говорит спокойно и точно, с негромкой властностью; холодная, сдержанная, чуть загадочная, никогда не повышает голос. Чистое мелодичное меццо-сопрано, благородный, царственный тон.</p>
+      <p class="label">Как он звучит</p>
+      <audio controls preload="none" src="moiraine.m4a"></audio>
+      <blockquote>Около двух столетий Троллоковы Войны опустошали мир, и, где бы ни кипела битва, стяг с Красным Орлом, знамя Манетерен, реял в самой гуще сражения. Воины Манетерен были занозой в ступне Темного и куманикой в его руках. Пойте о Манетерен, что никогда не склонялась перед Тенью. Пойте о Манетерен, меч которой нельзя было сломать.</blockquote>
+    </div>
+  </article>
+  <article class="hero-card">
+    <img src="lan.jpg" alt="Лан" width="320" height="320" loading="lazy">
+    <div>
+      <h2>Лан</h2>
+      <p class="label">Каким должен быть голос</p>
+      <p class="voice">Мужчина около 45 лет, закалённый ветеран-воин и телохранитель. Говорит скупо, короткими ровными фразами, холодно и сдержанно, привык отдавать приказы. Низкий жёсткий, чуть хрипловатый бас-баритон, каменный и ровный.</p>
+      <p class="label">Как он звучит</p>
+      <audio controls preload="none" src="lan.m4a"></audio>
+      <blockquote>Хочется поболтать об этом, да? Троллоки всегда бывают в Пограничных Землях, кузнец. Просто хорошенько вбейте себе в голову, что мы хотим привлекать к себе столько же внимания, сколько мышь в поле. Запомните это. Морейн желает доставить вас всех в Тар Валон живыми, и, если это можно сделать, я сделаю, но если вы хоть чем-то причините ей вред...</blockquote>
+    </div>
+  </article>
+  <article class="hero-card">
+    <img src="loial.jpg" alt="Лойал" width="320" height="320" loading="lazy">
+    <div>
+      <h2>Лойал</h2>
+      <p class="label">Каким должен быть голос</p>
+      <p class="voice">Мужчина, добродушный великан ростом около трёх метров с огромной грудной клеткой; не человек, но говорит как вежливый книжный учёный. Неторопливый, учтивый и серьёзный, легко загорается разговором о книгах и истории. Очень глубокий раскатистый рокочущий бас, как далёкий гром, но говорит негромко.</p>
+      <p class="label">Как он звучит</p>
+      <audio controls preload="none" src="loial.m4a"></audio>
+      <blockquote>Еще десять лет, и я смогу обращаться к Пню. Думаю, Старейшины должны были бы позволить мне высказаться, когда решали, можно ли мне уходить или нет. Но они всегда беспокоятся о любом, любого возраста, собирающемся во Внешний Мир. Вы, люди, так торопливы и опрометчивы, так сумасбродны.</blockquote>
+    </div>
+  </article>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <div class="foot-brand">
+      <img src="/assets/img/icon.webp" alt="" width="40" height="40" loading="lazy">
+      <div>
+        <p class="foot-name">BookSpeaks</p>
+        <p>Скоро в App Store</p>
+      </div>
+    </div>
+    <nav class="foot-nav" aria-label="Подвал">
+      <a href="/support/#ru">Поддержка</a>
+      <a href="/privacy/#ru">Конфиденциальность</a>
+      <a href="mailto:support@bookspeaks.app">support@bookspeaks.app</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

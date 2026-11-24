@@ -2,7 +2,7 @@
 
 > BookSpeaks is an iPhone app that reads your own EPUB, FB2 and TXT books aloud: offline voices on the phone, a whole audiobook made in advance, or natural AI voices streamed over the internet. You can read the books on screen, too. No subscription, no account, no ads.
 
-Status: Coming soon to the App Store. The app cannot be downloaded yet and there is no store link.
+Status: available on the App Store. Download: https://apps.apple.com/us/app/bookspeaks/id6818035285
 
 ## When to use BookSpeaks
 

@@ -55,7 +55,14 @@ h3 { font-size: 1.25rem; line-height: 1.3; }
 .lang a, .lang [aria-hidden] { color: var(--muted); text-decoration: none; }
 .lang [aria-current] { font-weight: 600; }
 .pill { font-size: 0.8125rem; font-weight: 600; color: var(--cobalt-text); background: var(--mist); padding: 0.375rem 0.75rem; border-radius: 99px; white-space: nowrap; }
-@media (max-width: 419px) { .top .pill { display: none; } .top .lang { margin-right: -0.375rem; } }
+@media (max-width: 419px) { .top-row { gap: 0.5rem; } .brand { gap: 0.5rem; font-size: 1.0625rem; } .brand img { width: 2rem; height: 2rem; } .top .lang svg { display: none; } .top .pill { padding-inline: 0.625rem; } }
+
+/* the app is on the App Store: added by scripts/go_live.py */
+.store { display: flex; margin-top: 1.5rem; }
+.store a { border-radius: 0.5rem; }
+.store img { display: block; height: 3rem; width: auto; }
+a.pill { text-decoration: none; }
+.foot-brand a { color: #fff; }
 
 /* hero */
 .hero { position: relative; overflow: hidden; padding-block: 1.5rem 3.5rem; }
